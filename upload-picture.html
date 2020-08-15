@@ -21,10 +21,10 @@ function draw() {
   var c = document.getElementById('canvas');
   var ctx = c.getContext("2d");
   var img = document.getElementById('output');
-  var height = img.clientHeight;
-  var width = img.clientWidth;
+  var height = img.naturalHeight;
+  var width = img.naturalWidth;
   var x = 512*(width/height);
-  ctx.drawImage(img,0,0,x,512);
+  ctx.drawImage(img,0,0,height,width);
 };
 </script>
 	
