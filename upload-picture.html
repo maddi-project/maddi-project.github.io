@@ -11,23 +11,15 @@
     function upload() {
         var canvas = document.getElementById("canvas");
         var ctx = canvas.getContext("2d");
-        var img = document.getElementById('display');
+        var img = document.getElementById('finput');
         ctx.drawImage(img, 10, 10);
     };
 </script>
     
-<form action="/action_page.php">
-  <input type="file" id="myFile" name="filename">
-  <img id="display" src='myFile'>
-  <input type="submit"
-  onclick="upload1()">
-</form>
-    
 <form action="myform.cgi"> 
   <input type="file" multiple="false"
   accept="image/*" id="finput"
-  onchange="upload()">
-  <img id="display" src='finput'>
+  onchange=<img id="display" src='finput'>"upload()">
 </form>
     
 <button type="button"
