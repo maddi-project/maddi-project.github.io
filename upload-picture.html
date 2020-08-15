@@ -1,27 +1,22 @@
 <body>
 <head>
     <script type="text/javascript" src='upload.js'> </script>
-    <title>abc</title><meta charset="utf-8"/>
-</head>
-<form action="/action_page.php">
-  <input type="file" id="myFile" name="filename">
-  <input type="submit">
-</form>
-<form action="myform.cgi"> 
-  <input type="file" name="fileupload" value="fileupload" id="fileupload"> 
-  <label for="fileupload"> Select a file to upload</label> 
-  <input type="submit" value="submit"> 
-</form>
-<form action="myform.cgi"> 
-  <input type="file" multiple="false"
-  accept="image/*" id="finput"
-  onchange=<script>
+    <title>upload()</title><meta charset="utf-8"/>
+    <script>
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
     var img = document.getElementById("finput");
     ctx.drawImage(img, 10, 10);
-  </script> >
-</form>
+    </script> 
+</head>
+
 <canvas id="canvas" width=400 height=400 style="background-color:#808080;">
 </canvas>
+    
+<form action="myform.cgi"> 
+  <input type="file" multiple="false"
+  accept="image/*" id="finput"
+  onchange="upload()">
+</form>
+
 </body>
