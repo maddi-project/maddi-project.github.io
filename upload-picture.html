@@ -8,11 +8,13 @@
 <canvas id="canvas" width=400 height=400 style="background-color:#808080;">
 </canvas>
 
+<img id="display" src="tree3.jpg">
+    
 <script>
     function upload1() {
         var canvas = document.getElementById("canvas");
         var ctx = canvas.getContext("2d");
-        var img = document.getElementById("tree3.jpg");
+        var img = document.getElementById('display');
         ctx.drawImage(img, 10, 10, 200, 200);
     }
 </script>
@@ -25,8 +27,5 @@
     
 <button type="button"
 Onclick="upload1()">Show</button>
-    
-<button type="button"
-Onclick="upload1();">Show;</button>
 
 </body>
