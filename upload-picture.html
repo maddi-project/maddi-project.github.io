@@ -7,11 +7,20 @@
 <canvas id="canvas" width=400 height=400 style="background-color:#808080;">
 </canvas>
 
+<script>
+    function upload() {
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        var img = document.getElementById('display');
+        ctx.drawImage(img, 10, 10);
+    };
+</script>
+    
 <form action="myform.cgi"> 
   <input type="file" multiple="false"
   accept="image/*" id="finput"
   <img id="display" src='finput'>
-  Onchange="upload()">
+  onchange="upload()">
 </form>
     
 <button type="button"
