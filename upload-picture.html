@@ -9,7 +9,6 @@
 
 <script>
     function upload() {
-        <img id="display" src='finput'>
         var canvas = document.getElementById("canvas");
         var ctx = canvas.getContext("2d");
         var img = document.getElementById('finput');
@@ -20,7 +19,7 @@
 <form action="myform.cgi"> 
   <input type="file" multiple="false"
   accept="image/*" id="finput"
-  onchange="upload()">
+  onchange="<img id="display" src='finput'> upload()">
 </form>
     
 <button type="button"
