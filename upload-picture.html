@@ -21,8 +21,8 @@ function draw() {
   var c = document.getElementById('canvas');
   var ctx = c.getContext("2d");
   var img = document.getElementById('output');
-  var height = img.height/100;
-  var width = img.width/100;
+  var height = img.clientHeight;
+  var width = img.clientWidth;
   ctx.drawImage(img,0,0,height,width);
 };
 </script>
