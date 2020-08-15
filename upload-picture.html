@@ -1,31 +1,7 @@
 <body>
 <head>
-    <script type="text/javascript" src='upload.js'> </script>
-    <title>MADDI</title><meta charset="utf-8"/>
+    <title>MADDI</title>
 </head>
-  
-<canvas id="canvas" width=400 height=400 style="background-color:#808080;">
-</canvas>
-
-<script>
-    function upload() {
-        var canvas = document.getElementById("canvas");
-        var ctx = canvas.getContext("2d");
-        var img = document.getElementById('output');
-	img.src = URL.createObjectURL(event.target.files[0]);
-        ctx.drawImage(img, 10, 10);
-    };
-</script>
-    
-<form action="myform.cgi"> 
-  <input type="file" multiple="false"
-  accept="image/*" id="finput">
-</form>
-    
-<img id="display" src='finput'>
-    
-<button type="button"
-Onclick="upload()">Show</button>
 
 <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
 <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
@@ -35,7 +11,6 @@ Onclick="upload()">Show</button>
 var loadFile = function(event) {
 	var image = document.getElementById('output');
 	image.src = URL.createObjectURL(event.target.files[0]);
-    upload();
 };
 </script>
     
