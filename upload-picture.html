@@ -3,20 +3,24 @@
     <script type="text/javascript" src='upload.js'> </script>
     <title>MADDI</title><meta charset="utf-8"/>
 </head>
-<script>
-    var canvas = document.getElementById("canvas");
-    var ctx = canvas.getContext("2d");
-    var img = document.getElementById("finput");
-    ctx.drawImage(img, 10, 10);
-</script>
+
     
 <canvas id="canvas" width=400 height=400 style="background-color:#808080;">
 </canvas>
+
+<script>
+    function upload1() {
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        var img = document.getElementById("tree3.jpg");
+        ctx.drawImage(img, 10, 10, 200, 200);
+    }
+</script>
     
 <form action="myform.cgi"> 
   <input type="file" multiple="false"
   accept="image/*" id="finput"
-  onchange="upload()">
+  onchange="upload1()">
 </form>
 
 </body>
