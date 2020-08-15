@@ -4,8 +4,8 @@
 	<link rel="icon" href="75.ico">
 </head>
 
-<p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)"></p>
-<p><img id="output" height="0" /></p>
+<section><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)">
+<img id="output" height="0" />
 	
 <script>
 var loadFile = function(event) {
@@ -14,7 +14,7 @@ var loadFile = function(event) {
 };
 </script>
 
-<canvas id="canvas" width=910 height=512 style="background-color:#808080;"></canvas>
+<canvas id="canvas" width=910 height=512 style="background-color:#808080;"></canvas></section>
 	
 <script>
 function draw() {
@@ -28,6 +28,6 @@ function draw() {
 };
 </script>
 	
-<button type="button" onclick="draw()">Draw</button>
+<aside><button type="button" onclick="draw()">Draw</button></aside>
 
 </body>
