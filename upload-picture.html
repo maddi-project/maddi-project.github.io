@@ -14,21 +14,14 @@ var loadFile = function(event) {
 };
 </script>
 
-<canvas id="canvas" width=910 height=512>
-	<style>
-		body {
- 	 	background-image: url('tree3.jpg');
-  		background-repeat: no-repeat;
-		}
-	</style>
-</canvas>
+<canvas id="canvas" width=910 height=512 style="background-color:#808080;"></canvas>
 	
 <script>
 function draw() {
   var c = document.getElementById('canvas');
   var ctx = c.getContext("2d");
   var img = document.getElementById('output');
-  ctx.drawImage(img, 0, 0);
+  ctx.drawImage(img,0,0,100,200,10,10,200,100);
 };
 </script>
 	
