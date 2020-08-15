@@ -5,7 +5,7 @@
 </head>
 
 <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)"></p>
-<p><img id="output" width="200" /></p>
+<p><img id="output" height="500" /></p>
 	
 <script>
 var loadFile = function(event) {
@@ -13,5 +13,18 @@ var loadFile = function(event) {
 	image.src = URL.createObjectURL(event.target.files[0]);
 };
 </script>
-    
+
+<canvas id="canvas" width=400 height=400 style="background-color:#808080;"></canvas>
+	
+<script>
+function draw() {
+  var c = document.getElementById('canvas');
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("scream");
+  ctx.drawImage(image, 10, 10);
+};
+</script>
+	
+
+
 </body>
