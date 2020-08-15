@@ -21,7 +21,9 @@ function draw() {
   var c = document.getElementById('canvas');
   var ctx = c.getContext("2d");
   var img = document.getElementById('output');
-  ctx.drawImage(img,0,0,910,512);
+  var height = img.height;
+  var width = img.width;
+  ctx.drawImage(img,0,0,height,width);
 };
 </script>
 	
