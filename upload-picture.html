@@ -1,24 +1,68 @@
-<body>
 <head>
     <title>MADDI</title>
 	<link rel="icon" href="75.ico">
+	<style> 
+        .head1 { 
+            font-size:40px; 
+            color:#009900; 
+            font-weight:bold; 
+        } 
+        .head2 { 
+            font-size:17px; 
+            margin-left:10px; 
+            margin-bottom:15px; 
+        } 
+        body { 
+            margin: 0 auto; 
+            background-position:center; 
+            background-size: contain; 
+        } 
+      
+        .menu {    
+            position: sticky; 
+            top: 0; 
+            background-color: #009900; 
+            padding:10px 0px 10px 0px; 
+            color:white; 
+            margin: 0 auto; 
+            overflow: hidden; 
+        } 
+        .menu a { 
+            float: left; 
+            color: white; 
+            text-align: center; 
+            padding: 14px 16px; 
+            text-decoration: none; 
+            font-size: 20px; 
+        } 
+        .menu-log { 
+            right: auto; 
+            float: right; 
+        } 
+        footer { 
+            width: 100%; 
+            bottom: 0px; 
+            background-color: #000; 
+            color: #fff; 
+            position: absolute; 
+            padding-top:20px; 
+            padding-bottom:50px; 
+            text-align:center; 
+            font-size:30px; 
+            font-weight:bold; 
+        } 
+        .body_sec { 
+            margin-left:20px; 
+        } 
+    </style> 
 </head>
 
-<section style="background-color:grey;">
-<input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)">
-<img id="output" height="0" />
-	
 <script>
 var loadFile = function(event) {
 	var image = document.getElementById('output');
 	image.src = URL.createObjectURL(event.target.files[0]);
 };
-</script>
-
-<canvas id="canvas" width=910 height=512 style="background-color:#808080;"></canvas>
-</section>
 	
-<script>
 function draw() {
   var c = document.getElementById('canvas');
   var ctx = c.getContext("2d");
@@ -29,7 +73,35 @@ function draw() {
   ctx.drawImage(img,0,0,x,512);
 };
 </script>
-	
-<aside style="background-color:red;"><button type="button" onclick="draw()">Draw</button></aside>
+
+<body>
+<!-- Header Section -->
+    <header> 
+        <div class="head1">MADDI</div> 
+        <div class="head2">Microplate Analysis by Decomposition of Digital Images</div> 
+    </header> 
+      
+    <!-- Menu Navigation Bar -->
+    <div class="menu"> 
+        <a href="index.html">HOME</a> 
+        <a href="#news">NEWS</a> 
+        <a href="#notification">NOTIFICATIONS</a> 
+        <div class="menu-log"> 
+            <a href="#login">LOGIN</a> 
+        </div> 
+    </div> 
+      
+    <!-- Body section -->
+    <div class = "body_sec"> 
+        <section id="Content"> 
+            <h3><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)">
+		<img id="output" height="0" />
+		<canvas id="canvas" width=910 height=512 style="background-color:white;"></canvas>
+		</h3> 
+        </section> 
+    </div> 
+      
+    <!-- Footer Section -->
+    <footer><button type="button" onclick="draw()">Draw</button></footer> 
 
 </body>
