@@ -16,12 +16,10 @@
             margin-bottom:15px;
         } 
         body { 
-	    width: 50%;
             margin: 0 auto; 
             background-position:center; 
             background-size: contain; 
         } 
-      
         .menu {    
             position: sticky; 
             top: 0; 
@@ -56,7 +54,14 @@
             font-weight:bold; 
         } 
         .body_sec { 
+	    float: left;
+	    width: 90%;
             margin-left:20px; 
+        } 
+	.body_sec1 { 
+	    width: 10%;
+            margin-left:20px; 
+	    background-color: black;
         } 
     </style> 
 </head>
@@ -105,6 +110,13 @@ function draw() {
             <h3><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)">
 		<img id="output" height="0" />
 		<canvas id="canvas" width=910 height=512 style="background-color:grey;"></canvas>
+		</h3> 
+        </section> 
+    </div> 
+    <!-- Aside section -->
+    <div class = "body_sec1"> 
+        <section id="Content"> 
+            <h3>aside
 		</h3> 
         </section> 
     </div> 
