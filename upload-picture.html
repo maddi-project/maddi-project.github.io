@@ -60,6 +60,7 @@
 	.body_sec1 { 
 	    float: right;
 	    width: 20%;
+	    height: 500;
 	    background-color: black;
         } 
     </style> 
@@ -86,13 +87,15 @@ function draw() {
 <!-- Header Section -->
     <header>
 	<div>
-	<p style="float: left;">
+	<div style="float: left;">
 	<img src="75.png" 
        		width="70" 
        		height="65" 
-	     alt="logo"></p>
+	     alt="logo"></div>
+	<div>
         <p class="head1">MADDI</p> 
         <p class="head2">Microplate Analysis by Decomposition of Digital Images</p>
+	</div>
 	    </div>
     </header> 
       
@@ -115,12 +118,12 @@ function draw() {
     <!-- Aside section -->
     <div class = "body_sec1"> 
         <section id="Content"> 
-            <h3>aside
+            <h3><button type="button" onclick="draw()">Draw</button>
 		</h3> 
         </section> 
     </div> 
       
     <!-- Footer Section -->
-    <footer><button type="button" onclick="draw()">Draw</button></footer> 
+    <footer></footer> 
 
 </body>
