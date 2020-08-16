@@ -18,33 +18,11 @@
             margin-left:5px; 
             margin-top:5px;
 	    height: 100;
-	    background-color: grey;
         }
         body { 
             margin: 0 auto; 
             background-position:center; 
             background-size: contain; 
-        } 
-        .menu {    
-            position: sticky; 
-            top: 0; 
-            background-color: grey; 
-            padding:10px 0px 10px 0px; 
-            color:white; 
-            margin: 0 auto; 
-            overflow: hidden; 
-        } 
-        .menu a { 
-            float: left; 
-            color: white; 
-            text-align: center; 
-            padding: 14px 16px; 
-            text-decoration: none; 
-            font-size: 20px; 
-        } 
-        .menu-log { 
-            right: auto; 
-            float: right; 
         } 
         footer { 
             width: 100%; 
@@ -90,7 +68,7 @@ function draw() {
 
 <body>
 <!-- Header Section -->
-    <header>
+    <header style="background-color: grey;">
 	<div class="header">
 	<a href="index.html">
 	<img style="float: left;"
@@ -114,7 +92,8 @@ function draw() {
 		<canvas id="canvas" width=910 height=512 style="background-color:grey;"></canvas>
 		</h3> 
         </section> 
-    </div> 
+    </div>
+	
     <!-- Aside section -->
     <div class = "body_sec1"> 
         <section id="Content"> 
