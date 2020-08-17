@@ -65,7 +65,6 @@ function draw() {
 var loadFile = function(event) {
 	var image = document.getElementById('output');
 	image.src = URL.createObjectURL(event.target.files[0]);
-	draw();
 };
 function update_slider() {
 	var slider = document.getElementById("zoom");
@@ -76,13 +75,8 @@ function update_number() {
 	var slider = document.getElementById("zoom");
 	var number = document.getElementById("zoom-value");
 	slider.value = number.value;
-	draw();
 };
 
-function loadFile1(event) {
-	loadFile(event);
-	draw();
-};
 function update_slider1() {
 	update_slider();
 	draw();
@@ -128,7 +122,7 @@ function update_number1() {
         </p>
 	<div>
 		<p>Zoom</p>
-  		<input type="range" min="1" max="10" value="1" step="0.1" class="slider" id="zoom" onchange="update_slider1(event)">
+  		<input type="range" min="1" max="10" value="1" step="0.1" class="slider" id="zoom" onchange="update_slider(event)">
 		<input type="number" min="1" max="10" value="1" step="0.1" id="zoom-value" onchange="update_number()">
 	</div>
     </div> 
