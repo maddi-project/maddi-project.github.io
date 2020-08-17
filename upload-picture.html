@@ -53,6 +53,7 @@
 var loadFile = function(event) {
 	var image = document.getElementById('output');
 	image.src = URL.createObjectURL(event.target.files[0]);
+	draw();
 };
 	
 function draw() {
@@ -62,8 +63,9 @@ function draw() {
   var number = document.getElementById("zoom-value");
   var height = img.naturalHeight;
   var width = img.naturalWidth;
-  var x = 490*(width/height);
-  ctx.drawImage(img,0,0,x*number/100,490*number/100);
+  var y = 490*(width/height)*number/100;
+  var x = 490*number/100
+  ctx.drawImage(img,0,0,y,x);
 };
 
 function update_slider() {
