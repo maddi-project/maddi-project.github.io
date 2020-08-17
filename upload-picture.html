@@ -60,7 +60,8 @@ function draw() {
   var c = document.getElementById('canvas');
   var ctx = c.getContext("2d");
   var img = document.getElementById('output');
-  var number = document.getElementById("zoom-value");
+  var val = document.getElementById("zoom-value");
+  var number = val.value;
   var height = img.naturalHeight;
   var width = img.naturalWidth;
   var x = 490*(width/height)*number;
