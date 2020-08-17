@@ -77,10 +77,6 @@ function update_number() {
 	slider.value = number.value;
 };
 
-function loadFile1(event) {
-	loadFile(event);
-	draw();
-};
 function update_slider1() {
 	update_slider();
 	draw();
@@ -112,19 +108,15 @@ function update_number1() {
     <!-- Body section -->
     <div class = "body_sec"> 
         <section id="Content"> 
-            <h3><input type="file"  accept="image/*" name="image" id="file" onchange="loadFile1(event)">
+            	<input type="file"  accept="image/*" name="image" id="file" onchange="loadFile(event)"><button type="button" onclick="draw()">Upload</button> 
 		<img id="output" height="0" />
 		<canvas id="canvas" width=744 height=490 style="background-color:grey;"></canvas>
-		</h3> 
         </section> 
     </div>
 	
     <!-- Aside section -->
     <div class = "body_sec1"> 
-        <p> 
-        <button type="button" onclick="draw()">Draw</button> 
-        </p>
-	<div>
+        <div>
 		<p>Zoom</p>
   		<input type="range" min="1" max="10" value="1" step="0.1" class="slider" id="zoom" onchange="update_slider1()">
 		<input type="number" min="1" max="10" value="1" step="0.1" id="zoom-value" onchange="update_number1()">
