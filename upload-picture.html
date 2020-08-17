@@ -79,7 +79,7 @@ function update_number() {
 	draw();
 };
 
-function loadFile1() {
+function loadFile1(event) {
 	loadFile(event);
 	draw();
 };
@@ -128,8 +128,8 @@ function update_number1() {
         </p>
 	<div>
 		<p>Zoom</p>
-  		<input type="range" min="1" max="10" value="1" class="slider" id="zoom" onchange="update_slider1()">
-		<input type="number" id="zoom-value" value="1" onchange="update_number()">
+  		<input type="range" min="1" max="10" value="1" step="0.1" class="slider" id="zoom" onchange="update_slider1(event)">
+		<input type="number" min="1" max="10" value="1" step="0.1" id="zoom-value" onchange="update_number()">
 	</div>
     </div> 
 
