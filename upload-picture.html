@@ -63,9 +63,9 @@ function draw() {
   var number = document.getElementById("zoom-value");
   var height = img.naturalHeight;
   var width = img.naturalWidth;
-  var y = 490*(width/height)*number/100;
+  var y = 490*(width/height);
   var x = 490*number/100
-  ctx.drawImage(img,0,0,y,x);
+  ctx.drawImage(img,0,0,490,x);
 };
 
 function update_slider() {
@@ -101,7 +101,7 @@ function update_number() {
     <!-- Body section -->
     <div class = "body_sec"> 
         <section id="Content"> 
-            <h3><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)">
+            <h3><input type="file"  accept="image/*" name="image" id="file" onchange="loadFile(event)">
 		<img id="output" height="0" />
 		<canvas id="canvas" width=744 height=490 style="background-color:grey;"></canvas>
 		</h3> 
