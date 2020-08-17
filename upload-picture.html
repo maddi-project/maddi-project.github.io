@@ -55,25 +55,26 @@ function draw() {
   var ctx = c.getContext("2d");
   var img = document.getElementById('output');
   var val = document.getElementById("zoom-value");
-  var number = val.value;
+  var number = val.value/10;
   var height = img.naturalHeight;
   var width = img.naturalWidth;
   var x = 490*(width/height)*number;
   var y = 490*number;
   ctx.drawImage(img,0,0,x,y);
 };
-
 var loadFile = function(event) {
 	var image = document.getElementById('output');
 	image.src = URL.createObjectURL(event.target.files[0]);
 	draw();
 };
-
+function update_slider1() {
+	update_slider();
+	draw();
+};
 function update_slider() {
 	var slider = document.getElementById("zoom");
 	var number = document.getElementById("zoom-value");
 	number.value = slider.value;
-	draw();
 };
 function update_number() {
 	var slider = document.getElementById("zoom");
@@ -118,7 +119,7 @@ function update_number() {
         </p>
 	<div>
 		<p>Zoom</p>
-  		<input type="range" min="1" max="100" value="1" class="slider" id="zoom" onchange="update_slider()">
+  		<input type="range" min="1" max="100" value="1" class="slider" id="zoom" onchange="update_slider1()">
 		<input type="number" id="zoom-value" value="1" onchange="update_number()">
 	</div>
     </div> 
