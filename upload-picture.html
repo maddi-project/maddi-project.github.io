@@ -110,8 +110,8 @@ function draw() {
 		}
 	    </script>
 	<div>
-  		<input type="range" min="1" max="100" value="1" class="slider" id="zoom">
-		<input type="number" id="zoom-value" name="fname">
+  		<input type="range" min="1" max="100" value="1" class="slider" id="zoom" onchange="slider.oninput()">
+		<input type="number" id="zoom-value" value="1">
 	</div>
     </div> 
 
