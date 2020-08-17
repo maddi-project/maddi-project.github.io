@@ -49,13 +49,7 @@
     </style> 
 </head>
 
-<script>
-var loadFile = function(event) {
-	var image = document.getElementById('output');
-	image.src = URL.createObjectURL(event.target.files[0]);
-	draw();
-};
-	
+<script>	
 function draw() {
   var c = document.getElementById('canvas');
   var ctx = c.getContext("2d");
@@ -69,15 +63,23 @@ function draw() {
   ctx.drawImage(img,0,0,x,y);
 };
 
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+	draw();
+};
+
 function update_slider() {
 	var slider = document.getElementById("zoom");
 	var number = document.getElementById("zoom-value");
 	number.value = slider.value;
+	draw();
 };
 function update_number() {
 	var slider = document.getElementById("zoom");
 	var number = document.getElementById("zoom-value");
 	slider.value = number.value;
+	draw();
 };
 </script>
 
