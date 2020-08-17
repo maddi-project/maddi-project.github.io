@@ -100,15 +100,16 @@ function draw() {
         <button type="button" onclick="draw()">Draw</button> 
         </p>
 	<script>
-		slider.oninput = function() {
+		function = update_slider() {
 		var slider = document.getElementById("zoom");
 		var output = document.getElementById("zoom-value");
+		output.value = slider.value;
 		output.innerHTML = slider.value; // Display the default slider value
   		output.innerHTML = this.value;// Update the current slider value (each time you drag the slider handle)
 		}
 	    </script>
 	<div>
-  		<input type="range" min="1" max="100" value="1" class="slider" id="zoom" onchange="slider.oninput()">
+  		<input type="range" min="1" max="100" value="1" class="slider" id="zoom" onchange="update_slider()">
 		<input type="number" id="zoom-value" value="1">
 	</div>
     </div> 
