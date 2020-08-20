@@ -1,5 +1,5 @@
 function draw() {
-  var c = document.getElementById('canvas2');
+  var c = document.getElementById('canvas');
   var ctx = c.getContext("2d");
   var img = document.getElementById('output');
   var val = document.getElementById("zoom-value");
