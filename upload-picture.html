@@ -80,7 +80,7 @@
     <div class = "aside"> 
         <div>
 		<center>
-		<p class = "label">Zoom</p>
+		<p class = "label" style=“margin-top:100px;”>Zoom</p>
   		<input type="range" min="1" max="5" value="1" step="0.1" class="slider" id="zoom" onchange="update_slider1()">
 		<input type="number" min="1" max="5" value="1" step="0.1" id="zoom-value" onchange="update_number1()">
 		<p class = "label">X</p>
@@ -89,6 +89,9 @@
 		<p class = "label">Y</p>
   		<input type="range" min="0" max="100" value="50" class="slider" id="y" onchange="update_y1()">
 		<input type="number" min="0" max="100" value="50" id="y-value" onchange="update_ynumber1()">
+		<p style=“margin-top:30px;”>
+		<button type="button" onclick="draw()">Crop</button>
+		</p>
 		</center>
 	</div>
     </div> 
