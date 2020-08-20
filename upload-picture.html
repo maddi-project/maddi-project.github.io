@@ -64,10 +64,9 @@ function draw() {
   var width = img.naturalWidth;
   var w = 490*(width/height)*number;
   var h = 490*number;
-  var x = width*xp;
-  var y = height*yp;
-  xs.value = x;
-  ctx.drawImage(img,0-100,0-100,w,h);
+  var x = (744-w)*xp;
+  var y = (490-h)*yp;
+  ctx.drawImage(img,x,y,w,h);
 };
 var loadFile = function(event) {
 	var image = document.getElementById('output');
