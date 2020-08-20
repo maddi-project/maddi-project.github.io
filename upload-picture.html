@@ -3,22 +3,15 @@
     <title>MADDI</title>
 	<link rel="icon" href="tree1.png">
 	<style> 
-        .head1 { 
+        .label { 
 	    font-family: helvetica;
-            font-size:40px; 
-            font-weight:bold;
-	    /*margin-left:110px;*/
+            font-size:20px;
         } 
-        .head2 { 
-	    font-family: helvetica;
-            font-size:17px; 
-            /*margin-left:110px; 
-            margin-bottom:15px;*/
-        } 
+
 	.header {     
             position: sticky; 
             top: 0; 
-            background-color: grey;  
+            background-color: #E6E6E6;  
             margin: 0 auto;
 	    height: 90px
         }
@@ -47,7 +40,7 @@
 	    float: right;
 	    width: 30%;
 	    height: 100%;
-	    background-color: black;
+	    background-color: #BDBDBD;
         } 
 	
     </style> 
@@ -83,13 +76,13 @@
     <div class = "aside"> 
         <div>
 		<center>
-		<p>Zoom</p>
+		<p class = "label">Zoom</p>
   		<input type="range" min="1" max="5" value="1" step="0.1" class="slider" id="zoom" onchange="update_slider1()">
 		<input type="number" min="1" max="5" value="1" step="0.1" id="zoom-value" onchange="update_number1()">
-		<p>X</p>
+		<p class = "label">X</p>
   		<input type="range" min="0" max="100" value="50" class="slider" id="x" onchange="update_x1()">
 		<input type="number" min="0" max="100" value="50" id="x-value" onchange="update_xnumber1()">
-		<p>Y</p>
+		<p class = "label">Y</p>
   		<input type="range" min="0" max="100" value="50" class="slider" id="y" onchange="update_y1()">
 		<input type="number" min="0" max="100" value="50" id="y-value" onchange="update_ynumber1()">
 		</center>
