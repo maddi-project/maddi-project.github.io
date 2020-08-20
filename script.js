@@ -17,7 +17,7 @@ function draw() {
   ctx.drawImage(img,x,y,w,h);
 };
 
-window.scrollTo(0,document.body.scrollHeight);
+/*window.scrollTo(0,document.body.scrollHeight);*/
 
 var loadFile = function(event) {
 	var image = document.getElementById('output');
