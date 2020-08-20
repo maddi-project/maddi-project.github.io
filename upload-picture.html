@@ -66,6 +66,7 @@ function draw() {
   var h = 490*number;
   var x = width*xp;
   var y = height*yp;
+  xs.value = x;
   ctx.drawImage(img,0,0,w,h);
 };
 var loadFile = function(event) {
@@ -160,8 +161,8 @@ function update_ynumber1() {
     <div class = "aside"> 
         <div>
 		<p>Zoom</p>
-  		<input type="range" min="1" max="10" value="1" step="0.1" class="slider" id="zoom" onchange="update_slider1()">
-		<input type="number" min="1" max="10" value="1" step="0.1" id="zoom-value" onchange="update_number1()">
+  		<input type="range" min="1" max="5" value="1" step="0.1" class="slider" id="zoom" onchange="update_slider1()">
+		<input type="number" min="1" max="5" value="1" step="0.1" id="zoom-value" onchange="update_number1()">
 		<p>X</p>
   		<input type="range" min="0" max="100" value="50" class="slider" id="x" onchange="update_x1()">
 		<input type="number" min="0" max="100" value="50" id="x-value" onchange="update_xnumber1()">
