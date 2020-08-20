@@ -58,9 +58,11 @@ function draw() {
   var number = val.value;
   var height = img.naturalHeight;
   var width = img.naturalWidth;
-  var x = 490*(width/height)*number;
-  var y = 490*number;
-  ctx.drawImage(img,0,0,x,y);
+  var w = 490*(width/height)*number;
+  var h = 490*number;
+  var x = 0;
+  var y = 0;
+  ctx.drawImage(img,0,0,w,h,x,y);
 };
 var loadFile = function(event) {
 	var image = document.getElementById('output');
@@ -76,6 +78,26 @@ function update_number() {
 	var number = document.getElementById("zoom-value");
 	slider.value = number.value;
 };
+function update_x() {
+	var slider = document.getElementById("x");
+	var number = document.getElementById("x-value");
+	number.value = slider.value;
+};
+function update_xnumber() {
+	var slider = document.getElementById("x");
+	var number = document.getElementById("x-value");
+	slider.value = number.value;
+};
+function update_y() {
+	var slider = document.getElementById("y");
+	var number = document.getElementById("y-value");
+	number.value = slider.value;
+};
+function update_ynumber() {
+	var slider = document.getElementById("y");
+	var number = document.getElementById("y-value");
+	slider.value = number.value;
+};
 
 function update_slider1() {
 	update_slider();
@@ -83,6 +105,22 @@ function update_slider1() {
 };
 function update_number1() {
 	update_number();
+	draw();
+};
+function update_x1() {
+	update_x();
+	draw();
+};
+function update_xnumber1() {
+	update_xnumber();
+	draw();
+};
+function update_y1() {
+	update_y();
+	draw();
+};
+function update_ynumber1() {
+	update_ynumber();
 	draw();
 };
 </script>
@@ -120,6 +158,12 @@ function update_number1() {
 		<p>Zoom</p>
   		<input type="range" min="1" max="10" value="1" step="0.1" class="slider" id="zoom" onchange="update_slider1()">
 		<input type="number" min="1" max="10" value="1" step="0.1" id="zoom-value" onchange="update_number1()">
+		<p>X</p>
+  		<input type="range" min="0" max="100" value="1" class="slider" id="x" onchange="update_x1()">
+		<input type="number" min="0" max="100" value="1" id="x-value" onchange="update_xnumber1()">
+		<p>Y</p>
+  		<input type="range" min="0" max="100" value="1" class="slider" id="y" onchange="update_y1()">
+		<input type="number" min="0" max="100" value="1" id="y-value" onchange="update_ynumber1()">
 	</div>
     </div> 
 
