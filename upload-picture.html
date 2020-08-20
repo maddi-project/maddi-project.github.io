@@ -55,8 +55,8 @@
        		width="400" 
        		height="80" 
 	     	alt="logo"
-	     	style="margin-top:5px"
-		style="margin-left:15px"></a>
+	     	style="margin-top:5px;"
+		style="margin-left:15px;"></a>
 	</div>
     </header> 
       
@@ -64,9 +64,10 @@
     <div class = "body_sec"> 
         <section id="Content">
 		<center>
-            	<input type="file"  accept="image/*" name="image" id="file" onchange="loadFile(event)"><button type="button" onclick="draw()">Upload</button> 
+            	<input style=“margin-top:10px;” type="file"  accept="image/*" name="image" id="file" onchange="loadFile(event)">
+		<button type="button" onclick="draw()">Upload</button> 
 		<img id="output" height="0" />
-		<canvas id="canvas" width=744 height=490 style="background-color:grey;"></canvas>
+		<canvas style=“margin-top:10px;” id="canvas" width=744 height=490 style="background-color:grey;"></canvas>
 		</center>
         </section> 
     </div>
