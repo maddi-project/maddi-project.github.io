@@ -6,15 +6,19 @@
 </head>
   
 <body>
-<h1><center>MADDI</center></h1>
-<p><center>
+<center>
+<h1>MADDI</h1>
+<p>
   <img src="tree3.jpg" 
        width="400" 
        height="400" 
        alt="logo"> 
-</center></p>
-<p><center>Coming soon...</center></p>
-<center><button type="button"
-Onclick="window.location.href='https://maddi-project.github.io/upload-picture.html'">Enter</button></center>
+</p>
+<p>Coming soon...</p>
+<p>Key:
+<input type="text" id="key" value="insert key"/></p>
+<p><button type="button" onclick="{% if key.value == kaka %}
+window.location.href='https://maddi-project.github.io/upload-picture.html' {% endif %}">Enter</button></p>
+</center>
 </body>
 </html>
