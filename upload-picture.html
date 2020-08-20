@@ -64,10 +64,14 @@
     <div class = "body_sec"> 
         <section id="Content">
 		<center>
-            	<input style=“margin-top:10px;” type="file"  accept="image/*" name="image" id="file" onchange="loadFile(event)">
+		<p style=“margin-top:10px;”>
+            	<input type="file"  accept="image/*" name="image" id="file" onchange="loadFile(event)">
 		<button type="button" onclick="draw()">Upload</button> 
 		<img id="output" height="0" />
-		<canvas style=“margin-top:10px;” id="canvas" width=744 height=490 style="background-color:grey;"></canvas>
+		</p>
+		<p style=“margin-top:10px;”>
+		<canvas id="canvas" width=744 height=490 style="background-color:grey;"></canvas>
+		</p>
 		</center>
         </section> 
     </div>
