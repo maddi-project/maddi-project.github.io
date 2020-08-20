@@ -4,6 +4,15 @@
   <title>MADDI</title>
   <link rel="icon" href="75.ico">
 </head>
+
+<script>
+function check() {
+  var key = document.getElementById('key');
+  if (key.value == "kaka") {
+  window.open("https://maddi-project.github.io/upload-picture.html");
+  }
+};
+</script>
   
 <body>
 <center>
@@ -17,8 +26,7 @@
 <p>Coming soon...</p>
 <p>Key:
 <input type="text" id="key" value="insert key"/></p>
-<p><button type="button" onclick="{% if key.value == "kaka" %}
-window.location.href='https://maddi-project.github.io/upload-picture.html' {% endif %}">Enter</button></p>
+<p><button type="button" onclick="check()">Enter</button></p>
 </center>
 </body>
 </html>
