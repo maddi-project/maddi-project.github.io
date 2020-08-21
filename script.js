@@ -76,3 +76,7 @@ function update_ynumber1() {
 	update_ynumber();
 	draw();
 };
+
+function crop() {	
+	window.scrollTo(0,785);
+};
