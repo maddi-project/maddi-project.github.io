@@ -18,7 +18,7 @@
 	.separator {     
             position: absolute; 
 	    width: 100%;
-            top: 690px; 
+            top: 695px; 
             background-color: #E6E6E6;  
             margin: 0 auto;
 	    height: 90px;
@@ -36,7 +36,7 @@
 	    position: absolute;
 	    right: 0px;
 	    width: 30%;
-	    height: 600px;
+	    height: 605px;
 	    background-color: #BDBDBD;
         } 
 	
@@ -102,5 +102,41 @@
        		height="80" 
 	     	alt="logo"></a>
 
+    </div> 
+
+ <!-- Body section -->
+    <div class = "body_sec"> 
+        <section id="Content">
+		<center>
+		<p style=“margin-top:10px;”>
+            	<input type="file"  accept="image/*" name="image" id="file" onchange="loadFile(event)">
+		<button type="button" onclick="draw()">Upload</button> 
+		<img id="output" height="0" />
+		</p>
+		<p style=“margin-top:10px;”>
+		<canvas id="canvas" width=744 height=490 style="background-image: url('canvas.jpg')"></canvas>
+		</p>
+		</center>
+        </section> 
+    </div>
+	
+    <!-- Aside section -->
+    <div class = "aside"> 
+        <div>
+		<center>
+		<p class = "label" style=“margin-top:100px;”>Zoom</p>
+  		<input type="range" min="1" max="5" value="1" step="0.01" class="slider" id="zoom" onchange="update_slider1()">
+		<input type="number" min="1" max="5" value="1" step="0.01" id="zoom-value" onchange="update_number1()">
+		<p class = "label">X</p>
+  		<input type="range" min="0" max="100" value="50" class="slider" id="x" onchange="update_x1()">
+		<input type="number" min="0" max="100" value="50" id="x-value" onchange="update_xnumber1()">
+		<p class = "label">Y</p>
+  		<input type="range" min="0" max="100" value="50" class="slider" id="y" onchange="update_y1()">
+		<input type="number" min="0" max="100" value="50" id="y-value" onchange="update_ynumber1()">
+		<p style=“margin-top:30px;”>
+		<button type="button" onclick="">Crop</button>
+		</p>
+		</center>
+	</div>
     </div> 
 </body>
