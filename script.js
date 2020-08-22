@@ -102,7 +102,7 @@ function sleep(milliseconds) {
 }
 function crop() {
 	draw1();
-	sleep(2000);
+	/*sleep(2000);
 	draw1();
-	window.scrollTo(0,785);
+	window.scrollTo(0,785);*/
 };
