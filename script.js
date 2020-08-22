@@ -82,6 +82,7 @@ function draw1() {
      	/*var ctxt=canvas.getContext("2d");*/
      	var url = canvas.toDataURL();
       	var newImg = new Image();
+	img.setAttribute('crossOrigin', 'anonymous');
       	newImg.src = url;
       	/*document.body.appendChild(newImg);*/
   var c = document.getElementById('canvas2');
