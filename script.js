@@ -95,6 +95,6 @@ function draw1() {
 };
 function crop() {
 	draw1();
-	setTimeout(draw1(), 5000);
+	setTimeout(function () {draw1()}, 5000);
 	window.scrollTo(0,785);
 };
