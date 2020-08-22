@@ -93,8 +93,16 @@ function draw1() {
 	document.body.removeChild(newImg);
   ctx.drawImage(newImg,0,0);
 };
+function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+}
 function crop() {
 	draw1();
-	setTimeout(function () {draw1()}, 5000);
+	sleep(2000);
+	draw1();
 	window.scrollTo(0,785);
 };
