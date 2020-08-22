@@ -83,7 +83,7 @@ function draw1() {
      	var url = canvas.toDataURL();
       	var newImg = document.createElement("img"); // create img tag
       	newImg.src = url;
-      	document.body.appendChild(newImg);
+      	/*document.body.appendChild(newImg);*/
   var c = document.getElementById('canvas2');
   var ctx = c.getContext("2d");
   var img = document.getElementById('output');
