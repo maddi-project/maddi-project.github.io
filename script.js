@@ -82,15 +82,16 @@ function draw1() {
      	/*var ctxt=canvas.getContext("2d");*/
      	var url = canvas.toDataURL();
       	var newImg = document.createElement("img");
-      	newImg.src = url;
-      	document.body.appendChild(newImg);
-	document.body.removeChild(newImg);
+      	
   var c = document.getElementById('canvas2');
   var ctx = c.getContext("2d");
   var img = document.getElementById('output');
   var val = document.getElementById("zoom-value");
   var xs = document.getElementById("x-value");
   var ys = document.getElementById("y-value");
+	newImg.src = url;
+      	document.body.appendChild(newImg);
+	document.body.removeChild(newImg);
   ctx.drawImage(newImg,0,0);
 };
 function crop() {	
