@@ -96,4 +96,5 @@ function draw1() {
 function crop() {	
 	window.scrollTo(0,785);
 	draw1();
+	draw1();
 };
