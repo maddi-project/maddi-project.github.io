@@ -79,7 +79,7 @@ function update_ynumber1() {
 
 function draw1() {
    	var canvas = document.getElementById("canvas");
-     	var url = canvas.toDataURL();
+     	var url = canvas.toDataURL('image/png');
       	var newImg = document.createElement("img");
       		newImg.src = url;
   var c = document.getElementById('canvas2');
