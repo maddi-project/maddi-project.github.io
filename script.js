@@ -90,8 +90,8 @@ function draw1() {
   var xs = document.getElementById("x-value");
   var ys = document.getElementById("y-value");*/
 
-      	document.body.canvas.appendChild(newImg);
-	/*document.body.removeChild(newImg);*/
+      	/*document.body.appendChild(newImg);
+	document.body.removeChild(newImg);*/
   ctx.drawImage(newImg,0,0);
 };
 function crop() {
