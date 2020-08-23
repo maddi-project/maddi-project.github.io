@@ -90,7 +90,7 @@ function draw1() {
 	var xi = margin + left + i*space;
 	var xj = margin + top + j*space;*/
 
-  	ctx.drawImage(newImg,200,200,10,10,x,y,100,100);
+  	ctx.drawImage(newImg,200,200,10,10,20,20,100,100);
 };
 function crop() {
 	draw1();
