@@ -90,7 +90,7 @@ function draw1() {
   var xs = document.getElementById("x-value");
   var ys = document.getElementById("y-value");*/
 
-      	document.c.appendChild(newImg);
+      	document.body.canvas.appendChild(newImg);
 	/*document.body.removeChild(newImg);*/
   ctx.drawImage(newImg,0,0);
 };
