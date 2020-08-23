@@ -77,7 +77,7 @@ function update_ynumber1() {
 	draw();
 };
 
-function crop1(var i, var j) {
+function crop1() {
    	var canvas = document.getElementById("canvas");
 	var newImg = new Image();
 	newImg.src = canvas.toDataURL('image/png');
