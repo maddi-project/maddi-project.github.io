@@ -79,8 +79,6 @@ function update_ynumber1() {
 
 function draw1() {
    	var canvas = document.getElementById("canvas");
-     	/*var url = canvas.toDataURL('image/png');
-      	var newImg = document.createElement("img");*/
 	var newImg = new Image();
 	newImg.src = canvas.toDataURL('image/png');
   var c = document.getElementById('canvas2');
@@ -90,8 +88,6 @@ function draw1() {
   var xs = document.getElementById("x-value");
   var ys = document.getElementById("y-value");*/
 
-      	/*document.body.appendChild(newImg);
-	document.body.removeChild(newImg);*/
   ctx.drawImage(newImg,0,0);
 };
 function crop() {
