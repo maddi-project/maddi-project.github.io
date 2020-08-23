@@ -77,10 +77,12 @@ function update_ynumber1() {
 	draw();
 };
 
-function crop1() {
+function draw1() {
    	var canvas = document.getElementById("canvas");
 	var newImg = new Image();
 	newImg.src = canvas.toDataURL('image/png');
+	var c = document.getElementById('canvas2');
+  	var ctx = c.getContext("2d");
   /*var img = document.getElementById('output');
   var val = document.getElementById("zoom-value");
   var xs = document.getElementById("x-value");
@@ -88,16 +90,9 @@ function crop1() {
 	var xi = margin + left + i*space;
 	var xj = margin + top + j*space;*/
 
-
-};
-function draw1() {
-	newImg.src = canvas.toDataURL('image/png');
-  	var c = document.getElementById('canvas2');
-  	var ctx = c.getContext("2d");
   	ctx.drawImage(newImg,200,200,10,10,x,y,100,100);
 };
 function crop() {
-	crop1();
 	draw1();
 	window.scrollTo(0,785);
 };
