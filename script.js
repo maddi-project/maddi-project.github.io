@@ -108,15 +108,14 @@ function draw2(i,j) {
   var h = 490*zoom;
   var x = (744-w)*xp;
   var y = (490-h)*yp;
-	/*var xmargin = 
+	
+	var xmargin = 
 	var x = xmargin + left + i*space;
-	var y = margin + top + j*space;*/
+	var y = margin + top + j*space;
 
   	ctx.drawImage(img,0,0,10,10,0,0,100,100);
 };
 function crop() {
-	draw1(1,1);
-	draw1(1,1);
-	draw1(1,1);
+	draw2(1,1);
 	window.scrollTo(0,785);
 };
