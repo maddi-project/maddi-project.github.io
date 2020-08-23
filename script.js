@@ -82,6 +82,8 @@ function draw1() {
      	var url = canvas.toDataURL('image/png');
       	var newImg = document.createElement("img");
       		newImg.src = url;
+	newImg.src = url;
+	newImg.src = url;
   var c = document.getElementById('canvas2');
   var ctx = c.getContext("2d");
   /*var img = document.getElementById('output');
