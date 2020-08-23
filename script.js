@@ -80,7 +80,8 @@ function update_ynumber1() {
 function draw1() {
    	var canvas = document.getElementById("canvas");
      	var url = canvas.toDataURL('image/png');
-      	var newImg = document.createElement("img");
+      	/*var newImg = document.createElement("img");*/
+	var newImg = new Image();
 	newImg.src = url;
   var c = document.getElementById('canvas2');
   var ctx = c.getContext("2d");
