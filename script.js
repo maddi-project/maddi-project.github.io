@@ -92,7 +92,7 @@ function draw1() {
 
   	ctx.drawImage(newImg,200,200,10,10,20,20,100,100);
 };
-function draw1(i,j) {
+function draw2(i,j) {
 	var img = document.getElementById('output');
 	var c = document.getElementById('canvas2');
   	var ctx = c.getContext("2d");
@@ -104,8 +104,8 @@ function draw1(i,j) {
   var yp = ys.value/100;
   var height = img.naturalHeight;
   var width = img.naturalWidth;
-  var w = 490*(width/height)*number;
-  var h = 490*number;
+  var w = 490*(width/height)*zoom;
+  var h = 490*zoom;
   var x = (744-w)*xp;
   var y = (490-h)*yp;
 	/*var xmargin = 
