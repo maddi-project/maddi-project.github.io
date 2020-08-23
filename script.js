@@ -93,7 +93,7 @@ function draw1() {
   	ctx.drawImage(newImg,200,200,10,10,20,20,100,100);
 };
 function draw1(i,j) {
-	var newImg = document.getElementById('output');
+	var img = document.getElementById('output');
 	var c = document.getElementById('canvas2');
   	var ctx = c.getContext("2d");
   	var val = document.getElementById("zoom-value");
@@ -112,7 +112,7 @@ function draw1(i,j) {
 	var x = xmargin + left + i*space;
 	var y = margin + top + j*space;*/
 
-  	ctx.drawImage(newImg,0,0,10,10,0,0,100,100);
+  	ctx.drawImage(img,0,0,10,10,0,0,100,100);
 };
 function crop() {
 	draw1(1,1);
