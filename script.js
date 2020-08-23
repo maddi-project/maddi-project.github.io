@@ -84,10 +84,10 @@ function draw1() {
       		newImg.src = url;
   var c = document.getElementById('canvas2');
   var ctx = c.getContext("2d");
-  var img = document.getElementById('output');
+  /*var img = document.getElementById('output');
   var val = document.getElementById("zoom-value");
   var xs = document.getElementById("x-value");
-  var ys = document.getElementById("y-value");
+  var ys = document.getElementById("y-value");*/
 
       	document.body.appendChild(newImg);
 	document.body.removeChild(newImg);
