@@ -109,9 +109,9 @@ function draw2(i,j) {
   var x = (744-w)*xp;
   var y = (490-h)*yp;
 	
-	var xmargin = 
+	/*var xmargin = 
 	var x = xmargin + left + i*space;
-	var y = margin + top + j*space;
+	var y = margin + top + j*space;*/
 
   	ctx.drawImage(img,0,0,10,10,0,0,100,100);
 };
