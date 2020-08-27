@@ -122,16 +122,17 @@ function draw3(i,j) {
   var val = document.getElementById("zoom-value");
   var xs = document.getElementById("x-value");
   var ys = document.getElementById("y-value");
-  var number = val.value;
+  var zoom = val.value;
   var xp = xs.value/100;
   var yp = ys.value/100;
-  var height = img.naturalHeight;
-  var width = img.naturalWidth;
-  var w = 490*(width/height)*number;
-  var h = 490*number;
+  var proportion = img.naturalWidth/img.naturalHeight;
+  var w = 490*proportion*zoom;
+  var h = 490*zoom;
   var x = (744-w)*xp;
   var y = (490-h)*yp;
-  ctx.drawImage(img,x,y,w,h);
+	var posx = (-1*x)+0;
+	var posy = (-1*y)+0;
+  ctx.drawImage(img,posx,posy,100,100,0,0,100,100);
 };
 function crop() {
 	draw3(1,1);
