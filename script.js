@@ -76,45 +76,7 @@ function update_ynumber1() {
 	draw();
 };
 
-function draw1() {
-   	var canvas = document.getElementById("canvas");
-	var newImg = new Image();
-	newImg.src = canvas.toDataURL('image/png');
-	var c = document.getElementById('canvas2');
-  	var ctx = c.getContext("2d");
-  /*var img = document.getElementById('output');
-  var val = document.getElementById("zoom-value");
-  var xs = document.getElementById("x-value");
-  var ys = document.getElementById("y-value");
-	var xi = margin + left + i*space;
-	var xj = margin + top + j*space;*/
-
-  	ctx.drawImage(newImg,200,200,10,10,20,20,100,100);
-};
-function draw2(i,j) {
-	var img = document.getElementById('output');
-	var c = document.getElementById('canvas2');
-  	var ctx = c.getContext("2d");
-  	var val = document.getElementById("zoom-value");
-  	var xs = document.getElementById("x-value");
-  	var ys = document.getElementById("y-value");
-  var zoom = val.value;
-  var xp = xs.value/100;
-  var yp = ys.value/100;
-  var height = img.naturalHeight;
-  var width = img.naturalWidth;
-  var w = 490*(width/height)*zoom;
-  var h = 490*zoom;
-  var x = (744-w)*xp;
-  var y = (490-h)*yp;
-	
-	/*var xmargin = 
-	var x = xmargin + left + i*space;
-	var y = margin + top + j*space;*/
-
-  	ctx.drawImage(img,0,0,10,10,0,0,100,100);
-};
-function draw3(i,j) {
+function draw1(i,j) {
   	var c = document.getElementById('canvas2');
   	var ctx = c.getContext("2d");
   	var img = document.getElementById('output');
@@ -136,7 +98,7 @@ function draw3(i,j) {
 function crop() {
 	for (i = 0; i < 12; i++) {
   		for (j = 0; j < 8; j++) {
-			draw3(i,j);
+			draw1(i,j);
 		}
 	}
 	window.scrollTo(0,785);
