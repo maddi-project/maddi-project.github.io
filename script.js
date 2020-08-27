@@ -83,6 +83,7 @@ function draw1(i,j) {
   	var val = document.getElementById("zoom-value");
 	var xs = document.getElementById("x-value");
   	var ys = document.getElementById("y-value");
+	var dim = document.getElementById("dimension");
   	var zoom = val.value;
   	var xp = xs.value/100;
   	var yp = ys.value/100;
@@ -93,7 +94,7 @@ function draw1(i,j) {
   	var y = (490-h)*yp;
 	var posx = ((-1*x)+1.1*744/12.3+i*0.9*744/12.3)*img.naturalWidth/(490*proportion)/zoom;
 	var posy = ((-1*y)+0.7*490/8.1+j*0.9*490/8.1)*img.naturalHeight/490/zoom;
-  	ctx.drawImage(img,posx,posy,20,20,11+i*61,10+j*60,50,50);
+  	ctx.drawImage(img,posx,posy,dim.value,dim.value,11+i*61,10+j*60,50,50);
 };
 function crop() {
 	for (i = 0; i < 12; i++) {
