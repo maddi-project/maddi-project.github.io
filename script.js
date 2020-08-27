@@ -115,25 +115,29 @@ function draw2(i,j) {
   	ctx.drawImage(img,0,0,10,10,0,0,100,100);
 };
 function draw3(i,j) {
-  var c = document.getElementById('canvas2');
-  var ctx = c.getContext("2d");
-  var img = document.getElementById('output');
-  var val = document.getElementById("zoom-value");
-  var xs = document.getElementById("x-value");
-  var ys = document.getElementById("y-value");
-  var zoom = val.value;
-  var xp = xs.value/100;
-  var yp = ys.value/100;
-  var proportion = img.naturalWidth/img.naturalHeight;
-  var w = 490*proportion*zoom;
-  var h = 490*zoom;
-  var x = (744-w)*xp;
-  var y = (490-h)*yp;
-	var posx = ((-1*x)+0)*img.naturalWidth/(490*proportion)/zoom;
-	var posy = ((-1*y)+0)*img.naturalHeight/490/zoom;
-  ctx.drawImage(img,posx,posy,100,100,0,0,100,100);
+  	var c = document.getElementById('canvas2');
+  	var ctx = c.getContext("2d");
+  	var img = document.getElementById('output');
+  	var val = document.getElementById("zoom-value");
+	var xs = document.getElementById("x-value");
+  	var ys = document.getElementById("y-value");
+  	var zoom = val.value;
+  	var xp = xs.value/100;
+  	var yp = ys.value/100;
+  	var proportion = img.naturalWidth/img.naturalHeight;
+  	var w = 490*proportion*zoom;
+  	var h = 490*zoom;
+  	var x = (744-w)*xp;
+  	var y = (490-h)*yp;
+	var posx = ((-1*x)+margin_left*744/12.3+i*margin*744/12.3)*img.naturalWidth/(490*proportion)/zoom;
+	var posy = ((-1*y)+margin_top*490/8.1+j*margin*490/8.1)*img.naturalHeight/490/zoom;
+  	ctx.drawImage(img,posx,posy,100,100,30+i*130,30+j*130,100,100);
 };
 function crop() {
-	draw3(1,1);
+	for (i = 0; i < 12; i++) {
+  		for (j = 0; j < 8; j++) {
+			draw3(i,j);
+		}
+	}
 	window.scrollTo(0,785);
 };
