@@ -115,7 +115,25 @@ function draw2(i,j) {
 
   	ctx.drawImage(img,0,0,10,10,0,0,100,100);
 };
+function draw3(i,j) {
+  var c = document.getElementById('canvas2');
+  var ctx = c.getContext("2d");
+  var img = document.getElementById('output');
+  var val = document.getElementById("zoom-value");
+  var xs = document.getElementById("x-value");
+  var ys = document.getElementById("y-value");
+  var number = val.value;
+  var xp = xs.value/100;
+  var yp = ys.value/100;
+  var height = img.naturalHeight;
+  var width = img.naturalWidth;
+  var w = 490*(width/height)*number;
+  var h = 490*number;
+  var x = (744-w)*xp;
+  var y = (490-h)*yp;
+  ctx.drawImage(img,x,y,w,h);
+};
 function crop() {
-	draw2(1,1);
+	draw3(1,1);
 	window.scrollTo(0,785);
 };
