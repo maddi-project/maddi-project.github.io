@@ -130,8 +130,8 @@ function draw3(i,j) {
   var h = 490*zoom;
   var x = (744-w)*xp;
   var y = (490-h)*yp;
-	var posx = ((-1*x)+0)*img.naturalWidth/744;
-	var posy = ((-1*y)+0)*img.naturalHeight/490;
+	var posx = ((-1*x)+0);
+	var posy = ((-1*y)+0);
   ctx.drawImage(img,posx,posy,100,100,0,0,100,100);
 };
 function crop() {
