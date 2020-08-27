@@ -102,5 +102,5 @@ function crop() {
 			draw1(i,j);
 		}
 	}
-	window.scrollTo(0,785);
+	window.scrollTo(0,755);
 };
