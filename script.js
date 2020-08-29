@@ -105,6 +105,21 @@ function crop() {
 	window.scrollTo(0,695);
 };
 function get_data() {
-
+	
 	window.scrollTo(0,1390);
+};
+function table_to_array(table_id) {
+        var myData = document.getElementById(table_id).rows
+        //console.log(myData)
+        var my_liste = []
+        for (var i = 0; i < myData.length; i++) {
+        	var el = myData[i].children
+                var my_el = []
+                for (var j = 0; j < el.length; j++) {
+                	my_el.push(el[j].innerText);
+                }
+                my_liste.push(my_el)
+
+        }
+        return my_liste
 };
