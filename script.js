@@ -102,5 +102,9 @@ function crop() {
 			draw1(i,j);
 		}
 	}
-	window.scrollTo(0,755);
+	window.scrollTo(0,695);
+};
+function get_data() {
+
+	window.scrollTo(0,1330);
 };
