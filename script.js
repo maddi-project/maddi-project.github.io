@@ -106,5 +106,5 @@ function crop() {
 };
 function get_data() {
 
-	window.scrollTo(0,1330);
+	window.scrollTo(0,1390);
 };
