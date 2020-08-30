@@ -97,7 +97,7 @@ function draw1(i,j) {
   	ctx.drawImage(img,posx,posy,dim.value,dim.value,11+i*61,10+j*60,50,50);
 	
 	var RGB
-	RGB = img.getImageData(posx,posy,dim.value,dim.value);
+	RGB = ctx.getImageData(posx,posy,dim.value,dim.value);
 	return RGB;
 };
 function crop() {
