@@ -101,16 +101,31 @@ function draw1(i,j) {
 	return RGB;
 };
 function crop() {
-	var RGB = [];
+	var imgData = [];
 	for (i = 0; i < 12; i++) {
   		for (j = 0; j < 8; j++) {
-			RGB[j*12+i] = draw1(i,j);
+			imgData[j*12+i] = draw1(i,j);
 		}
 	}
 	window.scrollTo(0,695);
 };
 function get_data() {
-	
+	var R = [];
+	var G = [];
+	var B = [];
+	for (var i = 0; i < 96; i++) {
+		var Rp = 0;
+		var Gp = 0;
+		var Bp = 0;
+		for (var j = 0; j < imgData[i].data.length; j+=4) {
+  			Rp = Rp + imgData[i].data[j];
+  			Gp = Gp + imgData[i].data[j+1]
+  			Bp = Bp + imgData[i].data[j+2]
+  		}
+		R[i] = Rp/(imgData[i].data.length/4);
+		G[i] = Gp/(imgData[i].data.length/4);
+		B[i] = Bp/(imgData[i].data.length/4);
+	}
 	window.scrollTo(0,1390);
 };
 function table_to_array(table_id) {
