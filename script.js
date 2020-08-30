@@ -100,17 +100,21 @@ function draw1(i,j) {
 	RGB = ctx.getImageData(1.1*744/12.3+i*0.9*744/12.3,0.7*490/8.1+j*0.9*490/8.1,dim.value,dim.value);
 	return RGB;
 };
-var imgData = [];
-function crop() {
-	
+function crop1() {
+	var Data = [];
 	for (i = 0; i < 12; i++) {
   		for (j = 0; j < 8; j++) {
-			imgData[j*12+i] = draw1(i,j);
+			Data[j*12+i] = draw1(i,j);
 		}
 	}
+	return Data
+};
+function crop() {
+	crop1();
 	window.scrollTo(0,695);
 };
 function get_data() {
+	var imgData = crop1();
 	var R = [];
 	var G = [];
 	var B = [];
