@@ -101,12 +101,10 @@ function draw1(i,j) {
 	return RGB;
 };
 function crop() {
-	var RGB
-	var RGB_matrix = [][];
+	var RGB = [];
 	for (i = 0; i < 12; i++) {
   		for (j = 0; j < 8; j++) {
-			RGB = draw1(i,j);
-			RGB_matrix[i][j] = RGB;
+			RGB[j*12+i] = draw1(i,j);
 		}
 	}
 	window.scrollTo(0,695);
