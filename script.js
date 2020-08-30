@@ -102,7 +102,7 @@ function draw1(i,j) {
 };
 function crop() {
 	var RGB
-	var RGB_matrix = [];
+	var RGB_matrix = [][];
 	for (i = 0; i < 12; i++) {
   		for (j = 0; j < 8; j++) {
 			RGB = draw1(i,j);
