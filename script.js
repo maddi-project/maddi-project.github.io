@@ -96,14 +96,15 @@ function draw1(i,j) {
 	var posy = ((-1*y)+0.7*490/8.1+j*0.9*490/8.1)*img.naturalHeight/490/zoom;
   	ctx.drawImage(img,posx,posy,dim.value,dim.value,11+i*61,10+j*60,50,50);
 	
-	console.log(RGB);
-	RGB[i][j] = img.getImageData(posx,posy,dim.value,dim.value);
+	var RGB
+	RGB = img.getImageData(posx,posy,dim.value,dim.value);
+	return RGB;
 };
 function crop() {
 	var RGB = []
 	for (i = 0; i < 12; i++) {
   		for (j = 0; j < 8; j++) {
-			draw1(i,j);
+			RGB[i][j] = draw1(i,j);
 		}
 	}
 	window.scrollTo(0,695);
