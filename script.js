@@ -97,14 +97,16 @@ function draw1(i,j) {
   	ctx.drawImage(img,posx,posy,dim.value,dim.value,11+i*61,10+j*60,50,50);
 	
 	var RGB
-	RGB = ctx.getImageData(posx,posy,dim.value,dim.value);
+	RGB = ctx.getImageData(1.1*744/12.3+i*0.9*744/12.3,0.7*490/8.1+j*0.9*490/8.1,dim.value,dim.value);
 	return RGB;
 };
 function crop() {
 	var RGB
+	var RGB_matrix = [];
 	for (i = 0; i < 12; i++) {
   		for (j = 0; j < 8; j++) {
 			RGB = draw1(i,j);
+			RGB_matrix[i][j] = RGB;
 		}
 	}
 	window.scrollTo(0,695);
