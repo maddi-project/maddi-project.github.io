@@ -19,6 +19,11 @@
 	.image { 
 	    width: 100%;
         }
+	.cell { 
+		contenteditable: true;
+		width: 20px;
+        }
+
 		
 	.body_sec { 
 	    position: absolute;
@@ -179,17 +184,23 @@
 		<center>
 		<table border="3">
 			<thead>
-			<tr>Heading 1</tr>
-			<tr>Heading 2</tr>
+			<tr>Well</tr>
+			<tr>R</tr>
+			<tr>G</tr>
+			<tr>B</tr>
 			</thead>
 			<tbody>
 			<tr>
-			<td contenteditable='true'></td>
-			<td contenteditable='true'></td>
+			<td id="cell0x0" class="cell"></td>
+			<td id="cell0x1" class="cell"></td>
+			<td id="cell0x2" class="cell"></td>
+			<td id="cell0x3" class="cell"></td>
 			</tr>
 			<tr>
-			<td contenteditable='true'></td>
-			<td contenteditable='true'></td>
+			<td id="cell1x0" class="cell"></td>
+			<td id="cell1x1" class="cell"></td>
+			<td id="cell1x2" class="cell"></td>
+			<td id="cell1x3" class="cell"></td>
 			</tr>
 			</tbody>
 		</table>
