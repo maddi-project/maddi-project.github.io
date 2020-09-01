@@ -141,6 +141,8 @@ function get_data() {
 		var b = 'B' + i;
 		document.getElementById(b).innerHTML = RGB[i+192];
 	}
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementById("defaultOpen").click();
 	window.scrollTo(0,1390);
 };
 function table_to_array(table_id) {
@@ -178,7 +180,3 @@ function openPage(pageName, elmnt, color) {
   // Add the specific color to the button used to open the tab content
   elmnt.style.backgroundColor = color;
 }
-
-// Get the element with id="defaultOpen" and click on it
-// document.getElementById("defaultOpen").click();
-
