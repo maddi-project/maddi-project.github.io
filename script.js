@@ -116,9 +116,6 @@ function crop() {
 function get_data1() {
 	var imgData = crop1();
 	var RGB_values = [];
-	var R = [];
-	var G = [];
-	var B = [];
 	for (var i = 0; i < 96; i++) {
 		var Rp = 0;
 		var Gp = 0;
@@ -128,20 +125,17 @@ function get_data1() {
   			Gp = Gp + imgData[i].data[j+1]
   			Bp = Bp + imgData[i].data[j+2]
   		}
-		R[i] = Rp/(imgData[i].data.length/4);
-		G[i] = Gp/(imgData[i].data.length/4);
-		B[i] = Bp/(imgData[i].data.length/4);
+		RGB_values[i] = Rp/(imgData[i].data.length/4);
+		RGB_values[i+96] = Gp/(imgData[i].data.length/4);
+		RGB_values[i+192] = Bp/(imgData[i].data.length/4);
 	}
-	RGB_values[0] = R[];
-	RGB_values[1] = G[];
-	RGB_values[2] = B[];
 	return RGB_values	
 };
 function get_data() {
 	RGB = get_data1();
 	for (var i = 0; i < 96; i++) {
 		var x = 'R' + i;
-		document.getElementById(x).innerHTML = RGB[0][i];
+		document.getElementById(x).innerHTML = RGB[i];
 	}
 	window.scrollTo(0,1390);
 };
