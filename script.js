@@ -113,8 +113,9 @@ function crop() {
 	crop1();
 	window.scrollTo(0,695);
 };
-function get_data() {
+function get_data1() {
 	var imgData = crop1();
+	var RGB_values = [];
 	var R = [];
 	var G = [];
 	var B = [];
@@ -130,6 +131,21 @@ function get_data() {
 		R[i] = Rp/(imgData[i].data.length/4);
 		G[i] = Gp/(imgData[i].data.length/4);
 		B[i] = Bp/(imgData[i].data.length/4);
+	}
+	RGB_values[0] = R[];
+	RGB_values[1] = G[];
+	RGB_values[2] = B[];
+	return RGB_values	
+};
+function get_data() {
+	get_data1();
+	window.scrollTo(0,1390);
+};
+function get_values() {
+	RGB = get_data1();
+	for (var i = 0; i < 96; i++) {
+		var x = 'R' + i;
+		document.getElementById(x).innerHTML = RGB[0][i];
 	}
 	window.scrollTo(0,1390);
 };
