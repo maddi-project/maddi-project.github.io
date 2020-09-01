@@ -138,10 +138,6 @@ function get_data1() {
 	return RGB_values	
 };
 function get_data() {
-	get_data1();
-	window.scrollTo(0,1390);
-};
-function get_values() {
 	RGB = get_data1();
 	for (var i = 0; i < 96; i++) {
 		var x = 'R' + i;
