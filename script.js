@@ -134,8 +134,12 @@ function get_data1() {
 function get_data() {
 	RGB = get_data1();
 	for (var i = 0; i < 96; i++) {
-		var x = 'R' + i;
-		document.getElementById(x).innerHTML = RGB[i];
+		var r = 'R' + i;
+		document.getElementById(r).innerHTML = RGB[i];
+		var g = 'G' + i;
+		document.getElementById(g).innerHTML = RGB[i+96];
+		var b = 'B' + i;
+		document.getElementById(b).innerHTML = RGB[i+192];
 	}
 	window.scrollTo(0,1390);
 };
