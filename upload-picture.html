@@ -102,7 +102,6 @@ body, html {
 /* Style tab links */
 .tablink {
   background-color: #E6E6E6;
-  color: white;
   float: left;
   border: none;
   outline: none;
@@ -110,6 +109,16 @@ body, html {
   padding: 14px 16px;
   font-size: 17px;
   width: 33.33%;
+}
+.tablink1 {
+  background-color: #E6E6E6;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 50%;
 }
 
 .tablink:hover {
@@ -127,6 +136,8 @@ body, html {
 #R {background-color: #F78181;}
 #G {background-color: #81F781;}
 #B {background-color: #819FF7;}
+#Calibration {background-color: #BDBDBD;}
+#Samples {background-color: #BDBDBD;}
     </style> 
 </head>
 
@@ -333,7 +344,13 @@ body, html {
     <div class = "aside2"> 
         <div>
 		<center>
+		<button class="tablink1" onclick="openPage('Calibration', this, '#BDBDBD')" id="defaultOpen1">Calibration</button>
+		<button class="tablink1" onclick="openPage('Samples', this, '#BDBDBD')">Samples</button>
 
+		<div id="Calibration" class="tabcontent">
+		</div>
+		<div id="Samples" class="tabcontent">
+		</div>
 		</center>
 	</div>
     </div> 
