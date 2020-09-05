@@ -146,14 +146,14 @@ body, html {
 	/* Well selection */
 	.wrapper {
 	width:90%;
-	height:100px;
+	height:30%;
     	border: 1px solid blue;
 	background: white;
 	}
 	.box {
     	display: inline-block;
     	width:8%;
-    	height:10px;
+    	height:12%;
     	border: 1px solid red;
 	background: grey;
 	cursor: pointer;
@@ -370,9 +370,11 @@ body, html {
 		<div id="Calibration" class="tabcontent1">
 			<div class="wrapper">
 				<div>
-    					<div id="c0" class="box">a</div><div id="c1" class="box"></div><div id="c2" class="box"></div><div id="c3" class="box"></div><div id="c4" class="box"></div>
-				</div>
-
+    					<div id="c0" class="box" onclick="boxClick(c0)"/><div id="c0" class="box" onclick="boxClick(c1)"/>
+				<div>
+				<div>
+    					<div id="c12" class="box" onclick="boxClick(c12)"/><div id="c13" class="box" onclick="boxClick(c13)"/>
+				<div>
 			</div>
 		</div>
 		<div id="Samples" class="tabcontent1">
