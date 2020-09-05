@@ -127,7 +127,11 @@ body, html {
 
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
-  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 600px;
+}
+.tabcontent1 {
   display: none;
   padding: 100px 20px;
   height: 600px;
@@ -347,9 +351,9 @@ body, html {
 		<button class="tablink1" onclick="openPage1('Calibration', this, '#BDBDBD')" id="defaultOpen1">Calibration</button>
 		<button class="tablink1" onclick="openPage1('Samples', this, '#BDBDBD')">Samples</button>
 
-		<div id="Calibration" class="tabcontent">
+		<div id="Calibration" class="tabcontent1">
 		</div>
-		<div id="Samples" class="tabcontent">
+		<div id="Samples" class="tabcontent1">
 		</div>
 		</center>
 	</div>
