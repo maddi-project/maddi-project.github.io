@@ -202,3 +202,8 @@ function openPage1(pageName, elmnt, color) {
   // Add the specific color to the button used to open the tab content
   elmnt.style.backgroundColor = color;
 }
+
+//Selection table
+function boxClick(well) {
+	
+}
