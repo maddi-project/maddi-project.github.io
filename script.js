@@ -144,6 +144,7 @@ function get_data() {
 	}
 	// Get the element with id="defaultOpen" and click on it
 	document.getElementById("defaultOpen").click();
+	document.getElementById("defaultOpen1").click();
 	window.scrollTo(0,1390);
 };
 function table_to_array(table_id) {
