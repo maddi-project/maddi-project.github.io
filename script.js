@@ -205,5 +205,5 @@ function openPage1(pageName, elmnt, color) {
 
 //Selection table
 function boxClick(well) {
-	document.getElementById(well).style.backgroundColor = grey;
+	document.getElementById(well).bgColor = grey;
 }
