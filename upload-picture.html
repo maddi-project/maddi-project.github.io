@@ -144,18 +144,16 @@ body, html {
 #Samples {background-color: #BDBDBD;}
 		
 	/* Well selection */
-	.wrapper {
-	width:90%;
-	height:30%;
-    	border: 1px solid blue;
-	background: white;
-	}
 	.box {
-    	display: inline-block;
     	width:8%;
     	height:12%;
-    	border: 1px solid red;
 	background: grey;
+	cursor: pointer;
+	}
+	.box1 {
+    	width:8%;
+    	height:12%;
+	background: black;
 	cursor: pointer;
 	}
     </style> 
@@ -368,14 +366,18 @@ body, html {
 		<button class="tablink1" onclick="openPage1('Samples', this, '#BDBDBD')">Samples</button>
 
 		<div id="Calibration" class="tabcontent1">
-			<div class="wrapper">
-				<div>
-    					<div id="c0" class="box" onclick="boxClick(c0)"/><div id="c0" class="box" onclick="boxClick(c1)"/>
-				<div>
-				<div>
-    					<div id="c12" class="box" onclick="boxClick(c12)"/><div id="c13" class="box" onclick="boxClick(c13)"/>
-				<div>
-			</div>
+			<table border="3" style="width: 90%">
+				<thead>
+				</thead>
+				<tbody>
+				<tr>
+					<div id="c0" class="box" onclick="boxClick(c0)">X</td><div id="c1" class="box" onclick="boxClick(c1)">X</td>
+				</tr>
+				<tr>
+					<div id="c12" class="box" onclick="boxClick(c12)">X</td><div id="c13" class="box" onclick="boxClick(c13)">X</td>
+				</tr>
+				</tbody>
+			</table>
 		</div>
 		<div id="Samples" class="tabcontent1">
 			
