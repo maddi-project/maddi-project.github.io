@@ -205,6 +205,5 @@ function openPage1(pageName, elmnt, color) {
 
 //Selection table
 function boxClick(well) {
-	document.getElementById(well).classList.add('box1');
-	document.getElementById(well).classList.remove('box');
+	document.getElementById(well).style.backgroundColor = grey;
 }
