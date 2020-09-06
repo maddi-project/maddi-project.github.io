@@ -213,7 +213,7 @@ function show() {
 	for (i = 0; i < 96; i++) {
 		var well = 'c' + i
 		if (document.getElementById(well).style.backgroundColor == 'black';) {
-			count++;
+			count++
 		}
 	}
 	document.getElementById('R0').innerHTML = count;
