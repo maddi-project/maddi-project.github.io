@@ -264,15 +264,61 @@ function boxClick(well) {
 	document.getElementById(well).style.backgroundColor = 'black';
 	//document.getElementById(well).style.color = 'black';
 	document.getElementById(well).innerHTML = text;
+	
+	boxLocate();
+	if (this.corners[0] !== 0 && this.corners[1] !== 0) {
+		var a = this.corners[0];
+		var b = this.corners[1];
+		var pos = [0, a, 0, b];
+		while (a > 11) {
+			pos[0]++
+			a -= 12;
+			pos[1] = a;
+		}
+		while (b > 11) {
+			pos[2]++
+			b -= 12;
+			pos[3] = b;
+		}
+		for (y = pos[0]; y <= pos[2]; y++) {
+			for (x = pos[1]; x <= pos[3]; x++) {
+				var position = 'c' + y*12 + x;
+				document.getElementById(position).style.backgroundColor = 'grey';
+			}
+		}
+		document.getElementById('c' + a).style.backgroundColor = 'black';
+		document.getElementById('c' + b).style.backgroundColor = 'black';
+	} else if (
+		
 }
 
-function show() {
-	var count = 0;
+function boxLocate() {
 	for (i = 0; i < 96; i++) {
 		var well = 'c' + i
-		if (document.getElementById(well).style.backgroundColor == 'black') {
-			count++
+		if (document.getElementById(well).innerHTML = "W") {
+			this.corners[0] = i;
+		} else if (document.getElementById(well).innerHTML = "w") {
+			this.corners[1] = i;
+		} else if (document.getElementById(well).innerHTML = "S1") {
+			this.corners[2] = i;
+		} else if (document.getElementById(well).innerHTML = "s1") {
+			this.corners[3] = i;
+		} else if (document.getElementById(well).innerHTML = "S2") {
+			this.corners[4] = i;
+		} else if (document.getElementById(well).innerHTML = "s2") {
+			this.corners[5] = i;
+		} else if (document.getElementById(well).innerHTML = "S3") {
+			this.corners[6] = i;
+		} else if (document.getElementById(well).innerHTML = "s3") {
+			this.corners[7] = i;
+		} else if (document.getElementById(well).innerHTML = "S4") {
+			this.corners[8] = i;
+		} else if (document.getElementById(well).innerHTML = "s4") {
+			this.corners[9] = i;
+		} else if (document.getElementById(well).innerHTML = "C") {
+			this.corners[10] = i;
+		} else if (document.getElementById(well).innerHTML = "c") {
+			this.corners[11] = i;
 		}
 	}
-	document.getElementById('R0').innerHTML = count;
 }
