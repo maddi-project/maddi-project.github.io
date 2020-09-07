@@ -288,7 +288,7 @@ function boxClick(well) {
 		}
 		document.getElementById('c' + a).style.backgroundColor = 'black';
 		document.getElementById('c' + b).style.backgroundColor = 'black';
-	} else if (
+	} //else if (
 		
 }
 
