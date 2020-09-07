@@ -210,6 +210,12 @@ function boxClick(well) {
 	var set = document.getElementById("selectset").value;
 	var corner = document.getElementById("selectcorner").value;
 	var text = document.getElementById(well).innerHTML;
+	
+	if (text !== "X") {
+		document.getElementById(well).innerHTML = "X";
+		document.getElementById(well).style.backgroundColor = '';
+		return
+	}
 
 	if (set == "white set's") {
 		if (corner == "top left") {
