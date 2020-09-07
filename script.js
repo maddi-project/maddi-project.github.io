@@ -264,7 +264,7 @@ function boxClick(well) {
 	document.getElementById(well).style.backgroundColor = 'black';
 	//document.getElementById(well).style.color = 'black';
 	document.getElementById(well).innerHTML = text;
-	
+	/*
 	boxLocate();
 	if (this.corners[0] !== 100 && this.corners[1] !== 100) {
 		var a = this.corners[0];
@@ -289,7 +289,7 @@ function boxClick(well) {
 		document.getElementById('c' + a).style.backgroundColor = 'black';
 		document.getElementById('c' + b).style.backgroundColor = 'black';
 	} //else if (
-		
+		*/
 }
 
 function boxLocate() {
