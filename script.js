@@ -204,11 +204,41 @@ function openPage1(pageName, elmnt, color) {
 }
 
 //Selection table
-function boxClick(well) {
-	document.getElementById(well).style.backgroundColor = 'black';
-}
+var corners = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-var global;
+function boxClick(well) {
+	var set = document.getElementById("selectset").value;
+	var corner = document.getElementById("selectset").value;
+	var text = document.getElementById(well).innerHTML;
+
+	if (set == "white set's") {
+		if (corner == "top left") {
+			text = "W";
+		} else if (corner == "bottom right") {
+			text = "w";
+		}
+	} else if (set == "sample set 1's") {
+		text = "S";
+	} else if (set == "sample set 2's (optional)") {
+		text = "S";
+	} else if (set == "sample set 3's (optional)") {
+		text = "S";
+	} else if (set == "sample set 4's (optional)") {
+		text = "S";
+	} else if (set == "calibration set's (optional)") {
+		text = "C";
+	}
+	for (i = 0; i < 96; i++) {
+		var well = 'c' + i
+		if (document.getElementById(well).innerHTML == text) {
+			document.getElementById(well).innerHTML = "X";
+			document.getElementById(well).style.backgroundColor = '';
+		}
+	}
+	document.getElementById(well).style.backgroundColor = 'black';
+	//document.getElementById(well).style.color = 'black';
+	document.getElementById(well).innerHTML = text;
+}
 
 function show() {
 	var count = 0;
@@ -219,5 +249,4 @@ function show() {
 		}
 	}
 	document.getElementById('R0').innerHTML = count;
-	this.global = 0;
 }
