@@ -229,25 +229,25 @@ function boxClick(well) {
 		} else if (corner == "bottom right") {
 			text = "s1";
 		}
-	} else if (set == "sample set 2's (optional)") {
+	} else if (set == "sample set 2's") {
 		if (corner == "top left") {
 			text = "S2";
 		} else if (corner == "bottom right") {
 			text = "s2";
 		}
-	} else if (set == "sample set 3's (optional)") {
+	} else if (set == "sample set 3's") {
 		if (corner == "top left") {
 			text = "S3";
 		} else if (corner == "bottom right") {
 			text = "s3";
 		}
-	} else if (set == "sample set 4's (optional)") {
+	} else if (set == "sample set 4's") {
 		if (corner == "top left") {
 			text = "S4";
 		} else if (corner == "bottom right") {
 			text = "s4";
 		}
-	} else if (set == "calibration set's (optional)") {
+	} else if (set == "calibration set's") {
 		if (corner == "top left") {
 			text = "C";
 		} else if (corner == "bottom right") {
