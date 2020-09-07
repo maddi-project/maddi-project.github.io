@@ -218,15 +218,35 @@ function boxClick(well) {
 			text = "w";
 		}
 	} else if (set == "sample set 1's") {
-		text = "S";
+		if (corner == "top left") {
+			text = "S1";
+		} else if (corner == "bottom right") {
+			text = "s1";
+		}
 	} else if (set == "sample set 2's (optional)") {
-		text = "S";
+		if (corner == "top left") {
+			text = "S2";
+		} else if (corner == "bottom right") {
+			text = "s2";
+		}
 	} else if (set == "sample set 3's (optional)") {
-		text = "S";
+		if (corner == "top left") {
+			text = "S3";
+		} else if (corner == "bottom right") {
+			text = "s3";
+		}
 	} else if (set == "sample set 4's (optional)") {
-		text = "S";
+		if (corner == "top left") {
+			text = "S4";
+		} else if (corner == "bottom right") {
+			text = "s4";
+		}
 	} else if (set == "calibration set's (optional)") {
-		text = "C";
+		if (corner == "top left") {
+			text = "C";
+		} else if (corner == "bottom right") {
+			text = "c";
+		}
 	}
 	for (i = 0; i < 96; i++) {
 		var pos = 'c' + i
