@@ -229,10 +229,10 @@ function boxClick(well) {
 		text = "C";
 	}
 	for (i = 0; i < 96; i++) {
-		var well = 'c' + i
-		if (document.getElementById(well).innerHTML == text) {
-			document.getElementById(well).innerHTML = "X";
-			document.getElementById(well).style.backgroundColor = '';
+		var pos = 'c' + i
+		if (document.getElementById(pos).innerHTML == text) {
+			document.getElementById(pos).innerHTML = "X";
+			document.getElementById(pos).style.backgroundColor = '';
 		}
 	}
 	document.getElementById(well).style.backgroundColor = 'black';
