@@ -208,6 +208,8 @@ function boxClick(well) {
 	document.getElementById(well).style.backgroundColor = 'black';
 }
 
+var global;
+
 function show() {
 	var count = 0;
 	for (i = 0; i < 96; i++) {
@@ -217,4 +219,5 @@ function show() {
 		}
 	}
 	document.getElementById('R0').innerHTML = count;
+	this.global = 0;
 }
