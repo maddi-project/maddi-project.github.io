@@ -269,19 +269,19 @@ function boxClick(well) {
 	if (this.corners[0] !== 100 && this.corners[1] !== 100) {
 		var a = this.corners[0];
 		var b = this.corners[1];
-		var pos = [0, a, 0, b];
+		var pas = [0, a, 0, b];
 		while (a > 11) {
-			pos[0]++
+			pas[0]++
 			a -= 12;
-			pos[1] = a;
+			pas[1] = a;
 		}
 		while (b > 11) {
-			pos[2]++
+			pas[2]++
 			b -= 12;
-			pos[3] = b;
+			pas[3] = b;
 		}
-		for (y = pos[0]; y <= pos[2]; y++) {
-			for (x = pos[1]; x <= pos[3]; x++) {
+		for (y = pas[0]; y <= pas[2]; y++) {
+			for (x = pas[1]; x <= pas[3]; x++) {
 				var position = 'c' + y*12 + x;
 				document.getElementById(position).style.backgroundColor = 'grey';
 			}
@@ -293,6 +293,7 @@ function boxClick(well) {
 }
 
 function boxLocate() {
+	this.corners = [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100];
 	for (i = 0; i < 96; i++) {
 		var well = 'c' + i
 		if (document.getElementById(well).innerHTML = "W") {
