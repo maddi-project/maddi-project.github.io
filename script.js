@@ -208,7 +208,7 @@ var corners = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 function boxClick(well) {
 	var set = document.getElementById("selectset").value;
-	var corner = document.getElementById("selectset").value;
+	var corner = document.getElementById("selectcorner").value;
 	var text = document.getElementById(well).innerHTML;
 
 	if (set == "white set's") {
