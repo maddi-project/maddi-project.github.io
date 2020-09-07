@@ -204,7 +204,7 @@ function openPage1(pageName, elmnt, color) {
 }
 
 //Selection table
-var corners = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var corners = [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100];
 
 function boxClick(well) {
 	var set = document.getElementById("selectset").value;
@@ -266,7 +266,7 @@ function boxClick(well) {
 	document.getElementById(well).innerHTML = text;
 	
 	boxLocate();
-	if (this.corners[0] !== 0 && this.corners[1] !== 0) {
+	if (this.corners[0] !== 100 && this.corners[1] !== 100) {
 		var a = this.corners[0];
 		var b = this.corners[1];
 		var pos = [0, a, 0, b];
