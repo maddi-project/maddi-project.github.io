@@ -270,7 +270,6 @@ function boxClick(well) {
 		var a = this.corners[0];
 		var b = this.corners[1];
 		var pas = [0, a, 0, b];
-		/*
 		while (a > 11) {
 			pas[0]++
 			a -= 12;
@@ -286,9 +285,9 @@ function boxClick(well) {
 				var position = 'c' + y*12 + x;
 				document.getElementById(position).style.backgroundColor = 'grey';
 			}
-		}*/
-		document.getElementById('c' + a).style.backgroundColor = 'grey';
-		document.getElementById('c' + b).style.backgroundColor = 'grey';
+		}
+		document.getElementById('c' + a).style.backgroundColor = 'black';
+		document.getElementById('c' + b).style.backgroundColor = 'black';
 	} //else if (
 		
 }
