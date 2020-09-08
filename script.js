@@ -282,7 +282,7 @@ function boxClick(well) {
 		}
 		for (y = pas[0]; y <= pas[2]; y++) {
 			for (x = pas[1]; x <= pas[3]; x++) {
-				var position = 'c' + y*12 + x;
+				var position = 'c' + (y*12 + x);
 				document.getElementById(position).style.backgroundColor = 'grey';
 			}
 		}
