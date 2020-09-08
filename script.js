@@ -264,6 +264,11 @@ function boxClick(well) {
 	document.getElementById(well).style.backgroundColor = 'black';
 	document.getElementById(well).innerHTML = text;
 	
+	for (j = 0; j < 96; j++) {
+		if (document.getElementById('c' + j).style.color == 'grey') {
+			document.getElementById('c' + j).style.color = 'white';
+		}
+	}
 	boxLocate();
 	if (this.corners[0] !== 100 && this.corners[1] !== 100) {
 		var a = this.corners[0];
