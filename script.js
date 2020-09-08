@@ -283,7 +283,7 @@ function boxClick(well) {
 			for (x = pas[1]; x <= pas[3]; x++) {
 				var position = 'c' + (y*12 + x);
 				document.getElementById(position).style.backgroundColor = 'grey';
-				document.getElementById(well).style.color = 'grey';
+				document.getElementById(position).style.color = 'grey';
 			}
 		}
 		document.getElementById('c' + this.corners[0]).style.backgroundColor = 'black';
