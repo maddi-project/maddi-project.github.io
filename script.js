@@ -262,7 +262,6 @@ function boxClick(well) {
 		}
 	}
 	document.getElementById(well).style.backgroundColor = 'black';
-	//document.getElementById(well).style.color = 'black';
 	document.getElementById(well).innerHTML = text;
 	
 	boxLocate();
@@ -284,10 +283,13 @@ function boxClick(well) {
 			for (x = pas[1]; x <= pas[3]; x++) {
 				var position = 'c' + (y*12 + x);
 				document.getElementById(position).style.backgroundColor = 'grey';
+				document.getElementById(well).style.color = 'grey';
 			}
 		}
-		document.getElementById('c' + a).style.backgroundColor = 'black';
-		document.getElementById('c' + b).style.backgroundColor = 'black';
+		document.getElementById('c' + this.corners[0]).style.backgroundColor = 'black';
+		document.getElementById('c' + this.corners[0]).style.color = 'white';
+		document.getElementById('c' + this.corners[1]).style.backgroundColor = 'black';
+		document.getElementById('c' + this.corners[1]).style.color = 'white';
 	} //else if (
 		
 }
