@@ -297,29 +297,29 @@ function boxLocate() {
 	this.corners = [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100];
 	for (i = 0; i < 96; i++) {
 		var well = 'c' + i
-		if (document.getElementById(well).innerHTML = "W") {
+		if (document.getElementById(well).innerHTML == "W") {
 			this.corners[0] = i;
-		} else if (document.getElementById(well).innerHTML = "w") {
+		} else if (document.getElementById(well).innerHTML == "w") {
 			this.corners[1] = i;
-		} else if (document.getElementById(well).innerHTML = "S1") {
+		} else if (document.getElementById(well).innerHTML == "S1") {
 			this.corners[2] = i;
-		} else if (document.getElementById(well).innerHTML = "s1") {
+		} else if (document.getElementById(well).innerHTML == "s1") {
 			this.corners[3] = i;
-		} else if (document.getElementById(well).innerHTML = "S2") {
+		} else if (document.getElementById(well).innerHTML == "S2") {
 			this.corners[4] = i;
-		} else if (document.getElementById(well).innerHTML = "s2") {
+		} else if (document.getElementById(well).innerHTML == "s2") {
 			this.corners[5] = i;
-		} else if (document.getElementById(well).innerHTML = "S3") {
+		} else if (document.getElementById(well).innerHTML == "S3") {
 			this.corners[6] = i;
-		} else if (document.getElementById(well).innerHTML = "s3") {
+		} else if (document.getElementById(well).innerHTML == "s3") {
 			this.corners[7] = i;
-		} else if (document.getElementById(well).innerHTML = "S4") {
+		} else if (document.getElementById(well).innerHTML == "S4") {
 			this.corners[8] = i;
-		} else if (document.getElementById(well).innerHTML = "s4") {
+		} else if (document.getElementById(well).innerHTML == "s4") {
 			this.corners[9] = i;
-		} else if (document.getElementById(well).innerHTML = "C") {
+		} else if (document.getElementById(well).innerHTML == "C") {
 			this.corners[10] = i;
-		} else if (document.getElementById(well).innerHTML = "c") {
+		} else if (document.getElementById(well).innerHTML == "c") {
 			this.corners[11] = i;
 		}
 	}
