@@ -144,7 +144,6 @@ function get_data() {
 	}
 	// Get the element with id="defaultOpen" and click on it
 	document.getElementById("defaultOpen").click();
-	document.getElementById("defaultOpen1").click();
 	window.scrollTo(0,1390);
 };
 function table_to_array(table_id) {
@@ -182,26 +181,6 @@ function openPage(pageName, elmnt, color) {
   // Add the specific color to the button used to open the tab content
   elmnt.style.backgroundColor = color;
 }
-function openPage1(pageName, elmnt, color) {
-  // Hide all elements with class="tabcontent" by default */
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent1");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Remove the background color of all tablinks/buttons
-  tablinks = document.getElementsByClassName("tablink1");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-
-  // Show the specific tab content
-  document.getElementById(pageName).style.display = "block";
-
-  // Add the specific color to the button used to open the tab content
-  elmnt.style.backgroundColor = color;
-}
 
 //Selection table
 var corners = [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100];
@@ -210,37 +189,64 @@ function boxClick(well) {
 	var set = document.getElementById("selectset").value;
 	var corner = document.getElementById("selectcorner").value;
 	var text = document.getElementById(well).innerHTML;
+	var color;
+	
+	if (set == "white set's") {
+		color = '#BDBDBD'
+	} else if (set == "sample set 1's") {
+		color = '#F78181'
+	} else if (set == "sample set 2's") {
+		color = '#81F781'
+	} else if (set == "sample set 3's") {
+		color = '#81BEF7'
+	} else if (set == "sample set 4's") {
+		color = '#F4FA58'
+	} else if (set == "calibration set's") {
+		color = '#DA81F5'
+	}
+	if (document.getElementById(well).style.backgroundColor !== color) {
+		return		
+	}
 	
 	if (text !== "X") {
 		document.getElementById(well).innerHTML = "X";
 		document.getElementById(well).style.backgroundColor = '';
-		var color;
 		if (text == "W") {
 			this.corners[0] = 100;
-			color = 'grey';
+			color = '#BDBDBD';
 		} else if (text == "w") {
 			this.corners[1] = 100;
-			color = 'grey';
+			color = '#BDBDBD';
 		} else if (text == "S1") {
 			this.corners[2] = 100;
+			color = '#F78181';
 		} else if (text == "s1") {
 			this.corners[3] = 100;
+			color = '#F78181';
 		} else if (text == "S2") {
 			this.corners[4] = 100;
+			color = '#81F781';
 		} else if (text == "s2") {
 			this.corners[5] = 100;
+			color = '#81F781';
 		} else if (text == "S3") {
 			this.corners[6] = 100;
+			color = '#81BEF7';
 		} else if (text == "s3") {
 			this.corners[7] = 100;
+			color = '#81BEF7';
 		} else if (text == "S4") {
 			this.corners[8] = 100;
+			color = '#F4FA58';
 		} else if (text == "s4") {
 			this.corners[9] = 100;
+			color = '#F4FA58';
 		} else if (text == "C") {
 			this.corners[10] = 100;
+			color = '#DA81F5';
 		} else if (text == "C") {
 			this.corners[11] = 100;
+			color = '#DA81F5';
 		}
 		for (j = 0; j < 96; j++) {
 			if (document.getElementById('c' + j).style.color == color) {
@@ -299,13 +305,12 @@ function boxClick(well) {
 	document.getElementById(well).innerHTML = text;
 	
 	for (j = 0; j < 96; j++) {
-		if (document.getElementById('c' + j).style.color == 'grey') {
+		if (document.getElementById('c' + j).style.color == color) {
 			document.getElementById('c' + j).style.backgroundColor = 'white';
 			document.getElementById('c' + j).style.color = 'white';
 		}
 	}
 	boxLocate();
-	
 	if (this.corners[0] !== 100 && this.corners[1] !== 100) {
 		var a = this.corners[0];
 		var b = this.corners[1];
@@ -323,13 +328,13 @@ function boxClick(well) {
 		for (y = pas[0]; y <= pas[2]; y++) {
 			for (x = pas[1]; x <= pas[3]; x++) {
 				var position = 'c' + (y*12 + x);
-				document.getElementById(position).style.backgroundColor = 'grey';
-				document.getElementById(position).style.color = 'grey';
+				document.getElementById(position).style.backgroundColor = '#BDBDBD';
+				document.getElementById(position).style.color = '#BDBDBD';
 			}
 		}
-		document.getElementById('c' + this.corners[0]).style.backgroundColor = 'black';
+		document.getElementById('c' + this.corners[0]).style.backgroundColor = 'grey';
 		document.getElementById('c' + this.corners[0]).style.color = 'white';
-		document.getElementById('c' + this.corners[1]).style.backgroundColor = 'black';
+		document.getElementById('c' + this.corners[1]).style.backgroundColor = 'grey';
 		document.getElementById('c' + this.corners[1]).style.color = 'white';
 	} 
 	if (this.corners[2] !== 100 && this.corners[3] !== 100) {
@@ -349,13 +354,13 @@ function boxClick(well) {
 		for (y = pas[0]; y <= pas[2]; y++) {
 			for (x = pas[1]; x <= pas[3]; x++) {
 				var position = 'c' + (y*12 + x);
-				document.getElementById(position).style.backgroundColor = 'grey';
-				document.getElementById(position).style.color = 'grey';
+				document.getElementById(position).style.backgroundColor = '#F78181';
+				document.getElementById(position).style.color = '#F78181';
 			}
 		}
-		document.getElementById('c' + this.corners[2]).style.backgroundColor = 'black';
+		document.getElementById('c' + this.corners[2]).style.backgroundColor = 'red';
 		document.getElementById('c' + this.corners[2]).style.color = 'white';
-		document.getElementById('c' + this.corners[3]).style.backgroundColor = 'black';
+		document.getElementById('c' + this.corners[3]).style.backgroundColor = 'red';
 		document.getElementById('c' + this.corners[3]).style.color = 'white';
 	} 
 	if (this.corners[4] !== 100 && this.corners[5] !== 100) {
@@ -375,13 +380,13 @@ function boxClick(well) {
 		for (y = pas[0]; y <= pas[2]; y++) {
 			for (x = pas[1]; x <= pas[3]; x++) {
 				var position = 'c' + (y*12 + x);
-				document.getElementById(position).style.backgroundColor = 'grey';
-				document.getElementById(position).style.color = 'grey';
+				document.getElementById(position).style.backgroundColor = '#81F781';
+				document.getElementById(position).style.color = '#81F781';
 			}
 		}
-		document.getElementById('c' + this.corners[4]).style.backgroundColor = 'black';
+		document.getElementById('c' + this.corners[4]).style.backgroundColor = 'green';
 		document.getElementById('c' + this.corners[4]).style.color = 'white';
-		document.getElementById('c' + this.corners[5]).style.backgroundColor = 'black';
+		document.getElementById('c' + this.corners[5]).style.backgroundColor = 'green';
 		document.getElementById('c' + this.corners[5]).style.color = 'white';
 	} 
 	if (this.corners[6] !== 100 && this.corners[7] !== 100) {
@@ -401,13 +406,13 @@ function boxClick(well) {
 		for (y = pas[0]; y <= pas[2]; y++) {
 			for (x = pas[1]; x <= pas[3]; x++) {
 				var position = 'c' + (y*12 + x);
-				document.getElementById(position).style.backgroundColor = 'grey';
-				document.getElementById(position).style.color = 'grey';
+				document.getElementById(position).style.backgroundColor = '#81BEF7';
+				document.getElementById(position).style.color = '#81BEF7';
 			}
 		}
-		document.getElementById('c' + this.corners[6]).style.backgroundColor = 'black';
+		document.getElementById('c' + this.corners[6]).style.backgroundColor = 'blue';
 		document.getElementById('c' + this.corners[6]).style.color = 'white';
-		document.getElementById('c' + this.corners[7]).style.backgroundColor = 'black';
+		document.getElementById('c' + this.corners[7]).style.backgroundColor = 'blue';
 		document.getElementById('c' + this.corners[7]).style.color = 'white';
 	}
 	if (this.corners[8] !== 100 && this.corners[9] !== 100) {
@@ -427,13 +432,13 @@ function boxClick(well) {
 		for (y = pas[0]; y <= pas[2]; y++) {
 			for (x = pas[1]; x <= pas[3]; x++) {
 				var position = 'c' + (y*12 + x);
-				document.getElementById(position).style.backgroundColor = 'grey';
-				document.getElementById(position).style.color = 'grey';
+				document.getElementById(position).style.backgroundColor = '#F4FA58';
+				document.getElementById(position).style.color = '#F4FA58';
 			}
 		}
-		document.getElementById('c' + this.corners[8]).style.backgroundColor = 'black';
+		document.getElementById('c' + this.corners[8]).style.backgroundColor = 'yellow';
 		document.getElementById('c' + this.corners[8]).style.color = 'white';
-		document.getElementById('c' + this.corners[9]).style.backgroundColor = 'black';
+		document.getElementById('c' + this.corners[9]).style.backgroundColor = 'yellow';
 		document.getElementById('c' + this.corners[9]).style.color = 'white';
 	}
 	if (this.corners[10] !== 100 && this.corners[11] !== 100) {
@@ -453,18 +458,17 @@ function boxClick(well) {
 		for (y = pas[0]; y <= pas[2]; y++) {
 			for (x = pas[1]; x <= pas[3]; x++) {
 				var position = 'c' + (y*12 + x);
-				document.getElementById(position).style.backgroundColor = 'grey';
-				document.getElementById(position).style.color = 'grey';
+				document.getElementById(position).style.backgroundColor = '#DA81F5';
+				document.getElementById(position).style.color = '#DA81F5';
 			}
 		}
-		document.getElementById('c' + this.corners[10]).style.backgroundColor = 'black';
+		document.getElementById('c' + this.corners[10]).style.backgroundColor = '#BF00FF';
 		document.getElementById('c' + this.corners[10]).style.color = 'white';
-		document.getElementById('c' + this.corners[11]).style.backgroundColor = 'black';
+		document.getElementById('c' + this.corners[11]).style.backgroundColor = '#BF00FF';
 		document.getElementById('c' + this.corners[11]).style.color = 'white';
 	} 
 		
 }
-
 function boxLocate() {
 	this.corners = [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100];
 	for (i = 0; i < 96; i++) {
