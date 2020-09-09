@@ -212,10 +212,15 @@ function boxClick(well) {
 	var text = document.getElementById(well).innerHTML;
 	
 	if (text !== "X") {
+		document.getElementById(well).innerHTML = "X";
+		document.getElementById(well).style.backgroundColor = '';
+		var color;
 		if (text == "W") {
 			this.corners[0] = 100;
+			color = 'grey';
 		} else if (text == "w") {
 			this.corners[1] = 100;
+			color = 'grey';
 		} else if (text == "S1") {
 			this.corners[2] = 100;
 		} else if (text == "s1") {
@@ -237,8 +242,13 @@ function boxClick(well) {
 		} else if (text == "C") {
 			this.corners[11] = 100;
 		}
-		document.getElementById(well).innerHTML = "X";
-		document.getElementById(well).style.backgroundColor = '';
+		for (j = 0; j < 96; j++) {
+			if (document.getElementById('c' + j).style.color == color) {
+				document.getElementById('c' + j).style.backgroundColor = 'white';
+				document.getElementById('c' + j).style.color = 'white';
+			}
+		}
+		return
 	}
 
 	if (set == "white set's") {
