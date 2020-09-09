@@ -204,7 +204,7 @@ function boxClick(well) {
 	} else if (set == "calibration set's") {
 		color = '#DA81F5'
 	}
-	if (document.getElementById(well).style.backgroundColor !== color) {
+	if (document.getElementById(well).style.backgroundColor !== color && document.getElementById(well).style.backgroundColor !== '') {
 		return		
 	}
 	
