@@ -200,7 +200,7 @@ function boxClick(well) {
 	} else if (set == "sample set 3's") {
 		color = '#81BEF7'
 	} else if (set == "sample set 4's") {
-		color = '#F4FA58'
+		color = '#F3F781'
 	} else if (set == "calibration set's") {
 		color = '#DA81F5'
 	}
@@ -237,10 +237,10 @@ function boxClick(well) {
 			color = '#81BEF7';
 		} else if (text == "S4") {
 			this.corners[8] = 100;
-			color = '#F4FA58';
+			color = '#F3F781';
 		} else if (text == "s4") {
 			this.corners[9] = 100;
-			color = '#F4FA58';
+			color = '#F3F781';
 		} else if (text == "C") {
 			this.corners[10] = 100;
 			color = '#DA81F5';
@@ -256,43 +256,49 @@ function boxClick(well) {
 		}
 		return
 	}
-
+	var color1;
 	if (set == "white set's") {
 		if (corner == "top left") {
 			text = "W";
 		} else if (corner == "bottom right") {
 			text = "w";
 		}
+		color1 = 'grey';
 	} else if (set == "sample set 1's") {
 		if (corner == "top left") {
 			text = "S1";
 		} else if (corner == "bottom right") {
 			text = "s1";
 		}
+		color1 = 'red';
 	} else if (set == "sample set 2's") {
 		if (corner == "top left") {
 			text = "S2";
 		} else if (corner == "bottom right") {
 			text = "s2";
 		}
+		color1 = 'green';
 	} else if (set == "sample set 3's") {
 		if (corner == "top left") {
 			text = "S3";
 		} else if (corner == "bottom right") {
 			text = "s3";
 		}
+		color1 = 'blue';
 	} else if (set == "sample set 4's") {
 		if (corner == "top left") {
 			text = "S4";
 		} else if (corner == "bottom right") {
 			text = "s4";
 		}
+		color1 = 'yellow';
 	} else if (set == "calibration set's") {
 		if (corner == "top left") {
 			text = "C";
 		} else if (corner == "bottom right") {
 			text = "c";
 		}
+		color1 = '#BF00FF';
 	}
 	for (i = 0; i < 96; i++) {
 		var pos = 'c' + i
@@ -301,7 +307,7 @@ function boxClick(well) {
 			document.getElementById(pos).style.backgroundColor = '';
 		}
 	}
-	document.getElementById(well).style.backgroundColor = 'black';
+	document.getElementById(well).style.backgroundColor = color1;
 	document.getElementById(well).innerHTML = text;
 	
 	for (j = 0; j < 96; j++) {
@@ -432,8 +438,8 @@ function boxClick(well) {
 		for (y = pas[0]; y <= pas[2]; y++) {
 			for (x = pas[1]; x <= pas[3]; x++) {
 				var position = 'c' + (y*12 + x);
-				document.getElementById(position).style.backgroundColor = '#F4FA58';
-				document.getElementById(position).style.color = '#F4FA58';
+				document.getElementById(position).style.backgroundColor = '#F3F781';
+				document.getElementById(position).style.color = '#F3F781';
 			}
 		}
 		document.getElementById('c' + this.corners[8]).style.backgroundColor = 'yellow';
