@@ -212,8 +212,6 @@ function boxClick(well) {
 	var text = document.getElementById(well).innerHTML;
 	
 	if (text !== "X") {
-		document.getElementById(well).innerHTML = "X";
-		document.getElementById(well).style.backgroundColor = '';
 		if (text == "W") {
 			this.corners[0] = 100;
 		} else if (text == "w") {
@@ -239,6 +237,8 @@ function boxClick(well) {
 		} else if (text == "C") {
 			this.corners[11] = 100;
 		}
+		document.getElementById(well).innerHTML = "X";
+		document.getElementById(well).style.backgroundColor = '';
 	}
 
 	if (set == "white set's") {
