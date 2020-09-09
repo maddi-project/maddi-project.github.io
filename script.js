@@ -189,8 +189,8 @@ function boxClick(well) {
 	var set = document.getElementById("selectset").value;
 	var corner = document.getElementById("selectcorner").value;
 	var text = document.getElementById(well).innerHTML;
-	var color;
 	
+	var color;
 	if (set == "white set's") {
 		color = '#BDBDBD'
 	} else if (set == "sample set 1's") {
@@ -208,48 +208,49 @@ function boxClick(well) {
 		return		
 	}
 	
+	var color2;
 	if (text !== "X") {
 		document.getElementById(well).innerHTML = "X";
 		document.getElementById(well).style.backgroundColor = '';
 		if (text == "W") {
 			this.corners[0] = 100;
-			color = '#BDBDBD';
+			color2 = '#BDBDBD';
 		} else if (text == "w") {
 			this.corners[1] = 100;
-			color = '#BDBDBD';
+			color2 = '#BDBDBD';
 		} else if (text == "S1") {
 			this.corners[2] = 100;
-			color = '#F78181';
+			color2 = '#F78181';
 		} else if (text == "s1") {
 			this.corners[3] = 100;
-			color = '#F78181';
+			color2 = '#F78181';
 		} else if (text == "S2") {
 			this.corners[4] = 100;
-			color = '#81F781';
+			color2 = '#81F781';
 		} else if (text == "s2") {
 			this.corners[5] = 100;
-			color = '#81F781';
+			color2 = '#81F781';
 		} else if (text == "S3") {
 			this.corners[6] = 100;
-			color = '#81BEF7';
+			color2 = '#81BEF7';
 		} else if (text == "s3") {
 			this.corners[7] = 100;
-			color = '#81BEF7';
+			color2 = '#81BEF7';
 		} else if (text == "S4") {
 			this.corners[8] = 100;
-			color = '#F3F781';
+			color2 = '#F3F781';
 		} else if (text == "s4") {
 			this.corners[9] = 100;
-			color = '#F3F781';
+			color2 = '#F3F781';
 		} else if (text == "C") {
 			this.corners[10] = 100;
-			color = '#DA81F5';
+			color2 = '#DA81F5';
 		} else if (text == "C") {
 			this.corners[11] = 100;
-			color = '#DA81F5';
+			color2 = '#DA81F5';
 		}
 		for (j = 0; j < 96; j++) {
-			if (document.getElementById('c' + j).style.color == color) {
+			if (document.getElementById('c' + j).style.color == color2) {
 				document.getElementById('c' + j).style.backgroundColor = 'white';
 				document.getElementById('c' + j).style.color = 'white';
 			}
@@ -311,7 +312,7 @@ function boxClick(well) {
 	document.getElementById(well).innerHTML = text;
 	
 	for (j = 0; j < 96; j++) {
-		if (document.getElementById('c' + j).style.color == color) {
+		if (document.getElementById('c' + j).style.color !== '') {
 			document.getElementById('c' + j).style.backgroundColor = 'white';
 			document.getElementById('c' + j).style.color = 'white';
 		}
