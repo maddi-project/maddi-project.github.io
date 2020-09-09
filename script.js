@@ -216,27 +216,27 @@ function boxClick(well) {
 		document.getElementById(well).style.backgroundColor = '';
 		if (text == "W") {
 			this.corners[0] = 100;
-		else if (text == "w") {
+		} else if (text == "w") {
 			this.corners[1] = 100;
-		else if (text == "S1") {
+		} else if (text == "S1") {
 			this.corners[2] = 100;
-		else if (text == "s1") {
+		} else if (text == "s1") {
 			this.corners[3] = 100;
-		else if (text == "S2") {
+		} else if (text == "S2") {
 			this.corners[4] = 100;
-		else if (text == "s2") {
+		} else if (text == "s2") {
 			this.corners[5] = 100;
-		else if (text == "S3") {
+		} else if (text == "S3") {
 			this.corners[6] = 100;
-		else if (text == "s3") {
+		} else if (text == "s3") {
 			this.corners[7] = 100;
-		else if (text == "S4") {
+		} else if (text == "S4") {
 			this.corners[8] = 100;
-		else if (text == "s4") {
+		} else if (text == "s4") {
 			this.corners[9] = 100;
-		else if (text == "C") {
+		} else if (text == "C") {
 			this.corners[10] = 100;
-		else if (text == "C") {
+		} else if (text == "C") {
 			this.corners[11] = 100;
 		}
 	}
