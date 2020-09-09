@@ -191,20 +191,27 @@ function boxClick(well) {
 	var text = document.getElementById(well).innerHTML;
 	
 	var color;
+	var color3;
 	if (set == "white set's") {
-		color = '#BDBDBD'
+		color = '#BDBDBD';
+		color3 = 'grey';
 	} else if (set == "sample set 1's") {
-		color = '#F78181'
+		color = '#F78181';
+		color3 = 'red';
 	} else if (set == "sample set 2's") {
-		color = '#81F781'
+		color = '#81F781';
+		color3 = 'green';
 	} else if (set == "sample set 3's") {
-		color = '#81BEF7'
+		color = '#81BEF7';
+		color3 = 'blue';
 	} else if (set == "sample set 4's") {
-		color = '#F3F781'
+		color = '#F3F781';
+		color3 = 'yellow';
 	} else if (set == "calibration set's") {
-		color = '#DA81F5'
+		color = '#DA81F5';
+		color3 = '#BF00FF';
 	}
-	if (document.getElementById(well).style.backgroundColor !== color && document.getElementById(well).style.backgroundColor !== '') {
+	if (document.getElementById(well).style.backgroundColor !== color && document.getElementById(well).style.backgroundColor !== '' && document.getElementById(well).style.backgroundColor !== color3) {
 		return		
 	}
 	
