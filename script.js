@@ -212,7 +212,7 @@ function boxClick(well) {
 		color3 = '#BF00FF';
 	}
 	
-	if (document.getElementById(well).style.backgroundColor !== color && document.getElementById(well).style.backgroundColor !== '') {
+	if (document.getElementById(well).style.backgroundColor !== color || document.getElementById(well).style.backgroundColor !== '' || document.getElementById(well).style.backgroundColor !== color3) {
 		return		
 	}
 	
