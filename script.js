@@ -515,3 +515,10 @@ function boxLocate() {
 		}
 	}
 }
+function clear() {
+	for (i = 0; i < 96; i++) {
+		var pos = 'c' + i
+		document.getElementById(pos).innerHTML = "X";
+		document.getElementById(pos).style.backgroundColor = '';
+	}
+}
