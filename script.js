@@ -263,7 +263,7 @@ function boxClick(well) {
 				document.getElementById('c' + j).style.color = 'white';
 			}
 		}
-		return
+		//return
 	}
 	var color1;
 	if (set == "white set's") {
