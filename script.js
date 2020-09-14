@@ -259,7 +259,7 @@ function boxClick(well) {
 		}
 		for (j = 0; j < 96; j++) {
 			if (document.getElementById('c' + j).style.color == color2) {
-				document.getElementById('c' + j).style.backgroundColor = 'white';
+				document.getElementById('c' + j).style.backgroundColor = '';
 				document.getElementById('c' + j).style.color = 'white';
 			}
 		}
