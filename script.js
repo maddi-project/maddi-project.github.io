@@ -212,7 +212,7 @@ function boxClick(well) {
 		color3 = '#BF00FF';
 	}
 	
-	if (document.getElementById(well).style.backgroundColor !== color || document.getElementById(well).style.backgroundColor !== '' || document.getElementById(well).style.backgroundColor !== color3) {
+	if (document.getElementById(well).style.backgroundColor !== color && document.getElementById(well).style.backgroundColor !== '') {
 		return		
 	}
 	
@@ -321,7 +321,7 @@ function boxClick(well) {
 	
 	for (j = 0; j < 96; j++) {
 		if (document.getElementById('c' + j).style.color !== '') {
-			document.getElementById('c' + j).style.backgroundColor = 'white';
+			document.getElementById('c' + j).style.backgroundColor = '';
 			document.getElementById('c' + j).style.color = 'white';
 		}
 	}
