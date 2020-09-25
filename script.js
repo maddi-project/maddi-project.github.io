@@ -517,6 +517,13 @@ function boxLocate() {
 }
 function clear() {
 	for (i = 0; i < 96; i++) {
+		document.getElementById('c' + i).innerHTML = "X";
+		document.getElementById('c' + i).style.backgroundColor = '';
+	}
+	this.corners = [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100];
+}
+function clear1() {
+	for (i = 0; i < 96; i++) {
 		var pos = 'c' + i
 		document.getElementById(pos).innerHTML = "X";
 		document.getElementById(pos).style.backgroundColor = '';
