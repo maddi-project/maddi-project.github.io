@@ -535,4 +535,12 @@ function clear1() {
 function show() {
 	document.getElementById('c0').innerHTML = "1";
 	document.getElementById('c0').style.color = 'black';
+	for (i = 13; i < 16; i++) {
+		document.getElementById('c' + i).innerHTML = "1";
+		document.getElementById('c' + i).style.color = '';
+	}
+	for (j = 25; j < 28; j++) {
+		document.getElementById('c' + j).innerHTML = "1";
+		document.getElementById('c' + j).style.color = '';
+	}
 }
