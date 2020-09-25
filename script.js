@@ -841,3 +841,84 @@ function hide() {
 		document.getElementById('c' + this.corners[11]).innerHTML = "c";
 	} 
 }
+function getabsorbances() {
+	RGB = get_data1();
+	var whites = 0;
+	var set1 = 0;
+	var set2 = 0;
+	var set3 = 0;
+	var set4 = 0;
+	var calibration = 0;
+	var absW = [0, 0, 0];
+	var absS1 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
+	var absS2 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
+	var absS3 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
+	var absS4 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
+	var absC = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
+	show();
+	for (i = 0; i < 96; i++) {
+		if (document.getElementById('c' + i).style.backgroundColor == '#BDBDBD') {
+			absW[0] +=  RGB[i];
+			absW[1] +=  RGB[i + 96];
+			absW[2] +=  RGB[i + 192];
+			whites++
+		} else if (document.getElementById('c' + i).style.backgroundColor == '#F78181') {
+			absS1[document.getElementById('c' + i).innerHTML][0] +=  RGB[i];
+			absS1[document.getElementById('c' + i).innerHTML][1] +=  RGB[i + 96];
+			absS1[document.getElementById('c' + i).innerHTML][2] +=  RGB[i + 192];
+			if (document.getElementById('c' + i).innerHTML == 1) {
+				set1++
+			}
+		} else if (document.getElementById('c' + i).style.backgroundColor == '#81F781') {
+			absS2[document.getElementById('c' + i).innerHTML][0] +=  RGB[i];
+			absS2[document.getElementById('c' + i).innerHTML][1] +=  RGB[i + 96];
+			absS2[document.getElementById('c' + i).innerHTML][2] +=  RGB[i + 192];
+			if (document.getElementById('c' + i).innerHTML == 1) {
+				set2++
+			}
+		} else if (document.getElementById('c' + i).style.backgroundColor == '#81BEF7') {
+			absS3[document.getElementById('c' + i).innerHTML][0] +=  RGB[i];
+			absS3[document.getElementById('c' + i).innerHTML][1] +=  RGB[i + 96];
+			absS3[document.getElementById('c' + i).innerHTML][2] +=  RGB[i + 192];
+			if (document.getElementById('c' + i).innerHTML == 1) {
+				set3++
+			}
+		} else if (document.getElementById('c' + i).style.backgroundColor == '#F3F781') {
+			absS4[document.getElementById('c' + i).innerHTML][0] +=  RGB[i];
+			absS4[document.getElementById('c' + i).innerHTML][1] +=  RGB[i + 96];
+			absS4[document.getElementById('c' + i).innerHTML][2] +=  RGB[i + 192];
+			if (document.getElementById('c' + i).innerHTML == 1) {
+				set4++
+			}
+		} else if (document.getElementById('c' + i).style.backgroundColor == '#DA81F5') {
+			absC[document.getElementById('c' + i).innerHTML][0] +=  RGB[i];
+			absC[document.getElementById('c' + i).innerHTML][1] +=  RGB[i + 96];
+			absC[document.getElementById('c' + i).innerHTML][2] +=  RGB[i + 192];
+			if (document.getElementById('c' + i).innerHTML == 1) {
+				calibration++
+			}
+		}
+	}
+	absW[0] = absW[0]/whites;
+	absW[1] = absW[1]/whites;
+	absW[2] = absW[2]/whites;
+	for (j = 0; j < 12; j++) {
+		for  (k = 0; j < 3; k++) {
+			absS1[j][k] = absS1[j][k]/set1;
+			absS2[j][k] = absS2[j][k]/set2;
+			absS3[j][k] = absS3[j][k]/set3;
+			absS4[j][k] = absS4[j][k]/set3;
+			absC[j][k] = absC[j][k]/calibration;
+		}
+	}
+	for (j = 0; j < 12; j++) {
+		for  (k = 0; j < 3; k++) {
+			absS1[j][k] = Math.log10(absW[k]/absS1[j][k]);
+			absS2[j][k] = Math.log10(absW[k]/absS2[j][k]);
+			absS3[j][k] = Math.log10(absW[k]/absS3[j][k]);
+			absS4[j][k] = Math.log10(absW[k]/absS4[j][k]);
+			absC[j][k] = Math.log10(absW[k]/absC[j][k]);
+		}
+	}
+	hide();
+}
