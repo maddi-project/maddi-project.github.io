@@ -529,3 +529,6 @@ function clear1() {
 		document.getElementById(pos).style.backgroundColor = '';
 	}
 }
+function show() {
+	document.getElementById('c0').innerHTML = "1";
+}
