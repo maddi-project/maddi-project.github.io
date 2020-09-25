@@ -515,7 +515,7 @@ function boxLocate() {
 		}
 	}
 }
-function clear() {
+function cleartable() {
 	document.getElementById('c' + 0).innerHTML = "A";
 	this.corners = [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100];
 	for (i = 0; i < 96; i++) {
