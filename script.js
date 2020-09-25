@@ -715,7 +715,7 @@ function hide() {
 		document.getElementById('c' + this.corners[2]).innerHTML = "S1";
 		document.getElementById('c' + this.corners[3]).style.backgroundColor = 'red';
 		document.getElementById('c' + this.corners[3]).style.color = 'white';
-		document.getElementById('c' + this.corners[2]).innerHTML = "s1";
+		document.getElementById('c' + this.corners[3]).innerHTML = "s1";
 	} 
 	if (this.corners[4] !== 100 && this.corners[5] !== 100) {
 		var a = this.corners[4];
