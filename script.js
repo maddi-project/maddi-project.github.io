@@ -517,6 +517,7 @@ function boxLocate() {
 }
 function clear() {
 	this.corners = [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100];
+	var k
 	for (k = 0; k < 96; k++) {
 		document.getElementById('c' + k).innerHTML = "X";
 		document.getElementById('c' + k).style.backgroundColor = '';
@@ -533,5 +534,5 @@ function clear1() {
 }
 function show() {
 	document.getElementById('c0').innerHTML = "1";
-	document.getElementById('c0').style.color = '';
+	document.getElementById('c0').style.color = 'black';
 }
