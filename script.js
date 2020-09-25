@@ -658,3 +658,6 @@ function show() {
 		}
 	} 
 }
+function hide() {
+	boxClick('c100');
+}
