@@ -521,6 +521,21 @@ function cleartable() {
 }
 
 function show() {
+	for (i = 0; i < 96; i++) {
+		if (document.getElementById('c' + i).style.backgroundColor == 'grey') {
+			document.getElementById('c' + i).style.backgroundColor = '#BDBDBD';
+		} else if (document.getElementById('c' + i).style.backgroundColor == 'red') {
+			document.getElementById('c' + i).style.backgroundColor = '#F78181';
+		} else if (document.getElementById('c' + i).style.backgroundColor == 'green') {
+			document.getElementById('c' + i).style.backgroundColor = '#81F781';
+		} else if (document.getElementById('c' + i).style.backgroundColor == 'blue') {
+			document.getElementById('c' + i).style.backgroundColor = '#81BEF7';
+		} else if (document.getElementById('c' + i).style.backgroundColor == 'yellow') {
+			document.getElementById('c' + i).style.backgroundColor = '#F3F781';
+		} else if (document.getElementById('c' + i).style.backgroundColor == '#BF00FF') {
+			document.getElementById('c' + i).style.backgroundColor = '#DA81F5';
+		}
+	}
 	if (this.corners[0] !== 100 && this.corners[1] !== 100) {
 		var a = this.corners[0];
 		var b = this.corners[1];
@@ -653,21 +668,6 @@ function show() {
 				document.getElementById(position).innerHTML = x - pas[1] + 1;
 				document.getElementById(position).style.color = '';
 			}
-		}
-	}
-	for (i = 0; i < 96; i++) {
-		if (document.getElementById('c' + i).style.backgroundColor == 'grey') {
-			document.getElementById('c' + i).style.backgroundColor = '#BDBDBD';
-		} else if (document.getElementById('c' + i).style.backgroundColor == 'red') {
-			ocument.getElementById('c' + i).style.backgroundColor = '#F78181';
-		} else if (document.getElementById('c' + i).style.backgroundColor == 'green') {
-			ocument.getElementById('c' + i).style.backgroundColor = '#81F781';
-		} else if (document.getElementById('c' + i).style.backgroundColor == 'blue') {
-			ocument.getElementById('c' + i).style.backgroundColor = '#81BEF7';
-		} else if (document.getElementById('c' + i).style.backgroundColor == 'yellow') {
-			ocument.getElementById('c' + i).style.backgroundColor = '#F3F781';
-		} else if (document.getElementById('c' + i).style.backgroundColor == '#BF00FF') {
-			ocument.getElementById('c' + i).style.backgroundColor = '#DA81F5';
 		}
 	}
 }
