@@ -516,32 +516,145 @@ function boxLocate() {
 	}
 }
 function cleartable() {
-	document.getElementById('c' + 0).innerHTML = "A";
 	this.corners = [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100];
 	for (i = 0; i < 96; i++) {
 		document.getElementById('c' + i).innerHTML = "X";
 		document.getElementById('c' + i).style.backgroundColor = '';
 		document.getElementById('c' + i).style.color = '';
 	}
-	document.getElementById('c' + 95).innerHTML = "A";
 }
-function clear1() {
-	for (i = 0; i < 96; i++) {
-		var pos = 'c' + i
-		document.getElementById(pos).innerHTML = "X";
-		document.getElementById(pos).style.backgroundColor = '';
-		document.getElementById(pos).style.color = '';
-	}
-}
+
 function show() {
-	document.getElementById('c0').innerHTML = "1";
-	document.getElementById('c0').style.color = 'black';
-	for (i = 13; i < 16; i++) {
-		document.getElementById('c' + i).innerHTML = "1";
-		document.getElementById('c' + i).style.color = '';
+	if (this.corners[0] !== 100 && this.corners[1] !== 100) {
+		var a = this.corners[0];
+		var b = this.corners[1];
+		var pas = [0, a, 0, b];
+		while (a > 11) {
+			pas[0]++
+			a -= 12;
+			pas[1] = a;
+		}
+		while (b > 11) {
+			pas[2]++
+			b -= 12;
+			pas[3] = b;
+		}
+		for (y = pas[0]; y <= pas[2]; y++) {
+			for (x = pas[1]; x <= pas[3]; x++) {
+				var position = 'c' + (y*12 + x);
+				document.getElementById(position).innerHTML == x - pas[1] + 1;
+				document.getElementById(position).style.color = '';
+			}
+		}
+	} 
+	if (this.corners[2] !== 100 && this.corners[3] !== 100) {
+		var a = this.corners[2];
+		var b = this.corners[3];
+		var pas = [0, a, 0, b];
+		while (a > 11) {
+			pas[0]++
+			a -= 12;
+			pas[1] = a;
+		}
+		while (b > 11) {
+			pas[2]++
+			b -= 12;
+			pas[3] = b;
+		}
+		for (y = pas[0]; y <= pas[2]; y++) {
+			for (x = pas[1]; x <= pas[3]; x++) {
+				var position = 'c' + (y*12 + x);
+				document.getElementById(position).innerHTML == x - pas[1] + 1;
+				document.getElementById(position).style.color = '';
+			}
+		}
+	} 
+	if (this.corners[4] !== 100 && this.corners[5] !== 100) {
+		var a = this.corners[4];
+		var b = this.corners[5];
+		var pas = [0, a, 0, b];
+		while (a > 11) {
+			pas[0]++
+			a -= 12;
+			pas[1] = a;
+		}
+		while (b > 11) {
+			pas[2]++
+			b -= 12;
+			pas[3] = b;
+		}
+		for (y = pas[0]; y <= pas[2]; y++) {
+			for (x = pas[1]; x <= pas[3]; x++) {
+				var position = 'c' + (y*12 + x);
+				document.getElementById(position).innerHTML == x - pas[1] + 1;
+				document.getElementById(position).style.color = '';
+			}
+		}
+	} 
+	if (this.corners[6] !== 100 && this.corners[7] !== 100) {
+		var a = this.corners[6];
+		var b = this.corners[7];
+		var pas = [0, a, 0, b];
+		while (a > 11) {
+			pas[0]++
+			a -= 12;
+			pas[1] = a;
+		}
+		while (b > 11) {
+			pas[2]++
+			b -= 12;
+			pas[3] = b;
+		}
+		for (y = pas[0]; y <= pas[2]; y++) {
+			for (x = pas[1]; x <= pas[3]; x++) {
+				var position = 'c' + (y*12 + x);
+				document.getElementById(position).innerHTML == x - pas[1] + 1;
+				document.getElementById(position).style.color = '';
+			}
+		}
 	}
-	for (j = 25; j < 28; j++) {
-		document.getElementById('c' + j).innerHTML = "1";
-		document.getElementById('c' + j).style.color = '';
+	if (this.corners[8] !== 100 && this.corners[9] !== 100) {
+		var a = this.corners[8];
+		var b = this.corners[9];
+		var pas = [0, a, 0, b];
+		while (a > 11) {
+			pas[0]++
+			a -= 12;
+			pas[1] = a;
+		}
+		while (b > 11) {
+			pas[2]++
+			b -= 12;
+			pas[3] = b;
+		}
+		for (y = pas[0]; y <= pas[2]; y++) {
+			for (x = pas[1]; x <= pas[3]; x++) {
+				var position = 'c' + (y*12 + x);
+				document.getElementById(position).innerHTML == x - pas[1] + 1;
+				document.getElementById(position).style.color = '';
+			}
+		}
 	}
+	if (this.corners[10] !== 100 && this.corners[11] !== 100) {
+		var a = this.corners[10];
+		var b = this.corners[11];
+		var pas = [0, a, 0, b];
+		while (a > 11) {
+			pas[0]++
+			a -= 12;
+			pas[1] = a;
+		}
+		while (b > 11) {
+			pas[2]++
+			b -= 12;
+			pas[3] = b;
+		}
+		for (y = pas[0]; y <= pas[2]; y++) {
+			for (x = pas[1]; x <= pas[3]; x++) {
+				var position = 'c' + (y*12 + x);
+				document.getElementById(position).innerHTML == x - pas[1] + 1;
+				document.getElementById(position).style.color = '';
+			}
+		}
+	} 
 }
