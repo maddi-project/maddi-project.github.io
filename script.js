@@ -903,7 +903,7 @@ function getabsorbances() {
 	absW[1] = absW[1]/whites;
 	absW[2] = absW[2]/whites;
 	for (j = 0; j < 12; j++) {
-		for  (k = 0; j < 3; k++) {
+		for  (k = 0; k < 3; k++) {
 			absS1[j][k] = absS1[j][k]/set1;
 			absS2[j][k] = absS2[j][k]/set2;
 			absS3[j][k] = absS3[j][k]/set3;
@@ -912,7 +912,7 @@ function getabsorbances() {
 		}
 	}
 	for (j = 0; j < 12; j++) {
-		for  (k = 0; j < 3; k++) {
+		for  (k = 0; k < 3; k++) {
 			absS1[j][k] = Math.log10(absW[k]/absS1[j][k]);
 			absS2[j][k] = Math.log10(absW[k]/absS2[j][k]);
 			absS3[j][k] = Math.log10(absW[k]/absS3[j][k]);
