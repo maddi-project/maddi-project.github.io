@@ -516,19 +516,22 @@ function boxLocate() {
 	}
 }
 function clear() {
-	for (i = 0; i < 96; i++) {
-		document.getElementById('c' + i).innerHTML = "X";
-		document.getElementById('c' + i).style.backgroundColor = '';
-	}
 	this.corners = [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100];
+	for (k = 0; k < 96; k++) {
+		document.getElementById('c' + k).innerHTML = "X";
+		document.getElementById('c' + k).style.backgroundColor = '';
+		document.getElementById('c' + k).style.color = '';
+	}
 }
 function clear1() {
 	for (i = 0; i < 96; i++) {
 		var pos = 'c' + i
 		document.getElementById(pos).innerHTML = "X";
 		document.getElementById(pos).style.backgroundColor = '';
+		document.getElementById(pos).style.color = '';
 	}
 }
 function show() {
 	document.getElementById('c0').innerHTML = "1";
+	document.getElementById('c0').style.color = '';
 }
