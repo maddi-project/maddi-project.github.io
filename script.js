@@ -181,6 +181,26 @@ function openPage(pageName, elmnt, color) {
   // Add the specific color to the button used to open the tab content
   elmnt.style.backgroundColor = color;
 }
+function openPage1(pageName, elmnt, color) {
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent1");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove the background color of all tablinks/buttons
+  tablinks = document.getElementsByClassName("tablink1");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+
+  // Show the specific tab content
+  document.getElementById(pageName).style.display = "block";
+
+  // Add the specific color to the button used to open the tab content
+  elmnt.style.backgroundColor = color;
+}
 
 //Selection table
 var corners = [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100];
@@ -921,4 +941,6 @@ function getabsorbances() {
 		}
 	}
 	hide();
+	document.getElementById("defaultOpen1").click();
+	window.scrollTo(0,2085);
 }
