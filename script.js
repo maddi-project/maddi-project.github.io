@@ -954,10 +954,9 @@ function getabsorbances() {
 	var m = 0;
 	var n = 0;
 	while (m < 12 && absS1[m] !== 0) {
-		n = m+1;
-		document.getElementById('1a' + n + '.2').innerHTML = absS1[m];
-		document.getElementById('1a' + n + '.3').innerHTML = absS1[m + 12];
-		document.getElementById('1a' + n + '.4').innerHTML = absS1[m + 24];
+		document.getElementById('1a' + m + '.2').innerHTML = absS1[m];
+		document.getElementById('1a' + m + '.3').innerHTML = absS1[m + 12];
+		document.getElementById('1a' + m + '.4').innerHTML = absS1[m + 24];
 		m++
 	}
 	document.getElementById("defaultOpen1").click();
