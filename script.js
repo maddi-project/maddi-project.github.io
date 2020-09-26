@@ -135,12 +135,9 @@ function get_data1() {
 function get_data() {
 	RGB = get_data1();
 	for (var i = 0; i < 96; i++) {
-		var r = 'R' + i;
-		document.getElementById(r).innerHTML = RGB[i];
-		var g = 'G' + i;
-		document.getElementById(g).innerHTML = RGB[i+96];
-		var b = 'B' + i;
-		document.getElementById(b).innerHTML = RGB[i+192];
+		document.getElementById('R' + i).innerHTML = RGB[i];
+		document.getElementById('G' + i).innerHTML = RGB[i+96];
+		document.getElementById('B' + i).innerHTML = RGB[i+192];
 	}
 	// Get the element with id="defaultOpen" and click on it
 	document.getElementById("defaultOpen").click();
@@ -876,7 +873,7 @@ function getabsorbances() {
 	var absS4 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 	var absC = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 	show();
-	for (i = 0; i < 96; i++) {
+	for (var i = 0; i < 96; i++) {
 		if (document.getElementById('c' + i).style.backgroundColor == '#BDBDBD') {
 			absW[0] +=  RGB[i];
 			absW[1] +=  RGB[i + 96];
@@ -919,11 +916,12 @@ function getabsorbances() {
 			}
 		}
 	}
+	document.getElementById('1a1.2').innerHTML = absS1[0];
 	absW[0] = absW[0]/whites;
 	absW[1] = absW[1]/whites;
 	absW[2] = absW[2]/whites;
-	for (j = 0; j < 12; j++) {
-		for  (k = 0; k < 3; k++) {
+	for (var j = 0; j < 12; j++) {
+		for  (var k = 0; k < 3; k++) {
 			absS1[j + k*12] = absS1[j + k*12]/set1;
 			absS2[j + k*12] = absS2[j + k*12]/set2;
 			absS3[j + k*12] = absS3[j + k*12]/set3;
@@ -931,8 +929,9 @@ function getabsorbances() {
 			absC[j + k*12] = absC[j + k*12]/calibration;
 		}
 	}
-	for (j = 0; j < 12; j++) {
-		for  (k = 0; k < 3; k++) {
+	document.getElementById('1a2.2').innerHTML = absS1[0];
+	for (var j = 0; j < 12; j++) {
+		for  (var k = 0; k < 3; k++) {
 			absS1[j + k*12] = Math.log10(absW[k]/absS1[j + k*12]);
 			absS2[j + k*12] = Math.log10(absW[k]/absS2[j + k*12]);
 			absS3[j + k*12] = Math.log10(absW[k]/absS3[j + k*12]);
@@ -940,6 +939,7 @@ function getabsorbances() {
 			absC[j + k*12] = Math.log10(absW[k]/absC[j + k*12]);
 		}
 	}
+	document.getElementById('1a3.2').innerHTML = absS1[0];
 	hide();
 	var m = 0;
 	var n = 0;
