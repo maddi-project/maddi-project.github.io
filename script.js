@@ -876,14 +876,13 @@ function getabsorbances() {
 	document.getElementById('2a4.2').innerHTML = RGB[0];
 	for (var i = 0; i < 96; i++) {
 		var color = document.getElementById('c' + i).style.backgroundColor;
-		var sample = document.getElementById('c' + i).innerHTML;
 		if (document.getElementById('c' + i).style.backgroundColor == '#BDBDBD') {
 			absW[0] += RGB[i];
 			absW[1] += RGB[i + 96];
 			absW[2] += RGB[i + 192];
 			whites++
-		} else if (color == '#F78181') {
-			absS1[1] += RGB[i];
+		} else if ('#F78181' == '#F78181') {
+			absS1[document.getElementById('c' + i).innerHTML] += RGB[i];
 			absS1[document.getElementById('c' + i).innerHTML + 12] += RGB[i + 96];
 			absS1[document.getElementById('c' + i).innerHTML + 24] += RGB[i + 192];
 			if (document.getElementById('c' + i).innerHTML == 1) {
