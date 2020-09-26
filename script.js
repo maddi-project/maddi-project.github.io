@@ -890,37 +890,37 @@ function getabsorbances() {
 			absW[2] += RGB[i + 192];
 			whites++
 		} else if (document.getElementById('c' + i).style.backgroundColor == "rgb(247, 129, 129)") {
-			absS1[document.getElementById('c' + i).innerHTML] += RGB[i];
-			absS1[document.getElementById('c' + i).innerHTML + 12] += RGB[i + 96];
-			absS1[document.getElementById('c' + i).innerHTML + 24] += RGB[i + 192];
+			absS1[document.getElementById('c' + i).innerHTML - 1] += RGB[i];
+			absS1[document.getElementById('c' + i).innerHTML + 11] += RGB[i + 96];
+			absS1[document.getElementById('c' + i).innerHTML + 23] += RGB[i + 192];
 			if (document.getElementById('c' + i).innerHTML == 1) {
 				set1++
 			}
 		} else if (document.getElementById('c' + i).style.backgroundColor == "rgb(129, 247, 129)") {
-			absS2[document.getElementById('c' + i).innerHTML] += RGB[i];
-			absS2[document.getElementById('c' + i).innerHTML + 12] += RGB[i + 96];
-			absS2[document.getElementById('c' + i).innerHTML + 24] += RGB[i + 192];
+			absS2[document.getElementById('c' + i).innerHTML - 1] += RGB[i];
+			absS2[document.getElementById('c' + i).innerHTML + 11] += RGB[i + 96];
+			absS2[document.getElementById('c' + i).innerHTML + 23] += RGB[i + 192];
 			if (document.getElementById('c' + i).innerHTML == 1) {
 				set2++
 			}
 		} else if (document.getElementById('c' + i).style.backgroundColor == "rgb(129, 190, 247)") {
-			absS3[document.getElementById('c' + i).innerHTML] += RGB[i];
-			absS3[document.getElementById('c' + i).innerHTML + 12] += RGB[i + 96];
-			absS3[document.getElementById('c' + i).innerHTML + 24] += RGB[i + 192];
+			absS3[document.getElementById('c' + i).innerHTML - 1] += RGB[i];
+			absS3[document.getElementById('c' + i).innerHTML + 11] += RGB[i + 96];
+			absS3[document.getElementById('c' + i).innerHTML + 23] += RGB[i + 192];
 			if (document.getElementById('c' + i).innerHTML == 1) {
 				set3++
 			}
 		} else if (document.getElementById('c' + i).style.backgroundColor == "rgb(243, 247, 129)") {
-			absS4[document.getElementById('c' + i).innerHTML] += RGB[i];
-			absS4[document.getElementById('c' + i).innerHTML + 12] += RGB[i + 96];
-			absS4[document.getElementById('c' + i).innerHTML + 24] += RGB[i + 192];
+			absS4[document.getElementById('c' + i).innerHTML - 1] += RGB[i];
+			absS4[document.getElementById('c' + i).innerHTML + 11] += RGB[i + 96];
+			absS4[document.getElementById('c' + i).innerHTML + 23] += RGB[i + 192];
 			if (document.getElementById('c' + i).innerHTML == 1) {
 				set4++
 			}
 		} else if (document.getElementById('c' + i).style.backgroundColor == "rgb(218, 129, 245)") {
-			absC[document.getElementById('c' + i).innerHTML] += RGB[i];
-			absC[document.getElementById('c' + i).innerHTML + 12] += RGB[i + 96];
-			absC[document.getElementById('c' + i).innerHTML + 24] += RGB[i + 192];
+			absC[document.getElementById('c' + i).innerHTML - 1] += RGB[i];
+			absC[document.getElementById('c' + i).innerHTML + 11] += RGB[i + 96];
+			absC[document.getElementById('c' + i).innerHTML + 23] += RGB[i + 192];
 			if (document.getElementById('c' + i).innerHTML == 1) {
 				calibration++
 			}
@@ -952,11 +952,10 @@ function getabsorbances() {
 	document.getElementById('2a3.2').innerHTML = absS1[0];
 	hide();
 	var m = 0;
-	var n = 0;
 	while (m < 12 && absS1[m] !== 0) {
-		document.getElementById('1a' + m + '.2').innerHTML = absS1[m];
-		document.getElementById('1a' + m + '.3').innerHTML = absS1[m + 12];
-		document.getElementById('1a' + m + '.4').innerHTML = absS1[m + 24];
+		document.getElementById('1a' + (m+1) + '.2').innerHTML = absS1[m];
+		document.getElementById('1a' + (m+1) + '.3').innerHTML = absS1[m + 12];
+		document.getElementById('1a' + (m+1) + '.4').innerHTML = absS1[m + 24];
 		m++
 	}
 	document.getElementById("defaultOpen1").click();
