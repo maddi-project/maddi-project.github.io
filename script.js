@@ -858,6 +858,14 @@ function hide() {
 		document.getElementById('c' + this.corners[11]).innerHTML = "c";
 	} 
 }
+function componentToHex(c) {
+  var hex = c.toString(16);
+  return hex.length == 1 ? "0" + hex : hex;
+}
+
+function rgbToHex(r, g, b) {
+  return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
 function getabsorbances() {
 	var RGB = get_data1();
 	var whites = 0;
@@ -874,6 +882,7 @@ function getabsorbances() {
 	var absC = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 	show();
 	document.getElementById('2a4.2').innerHTML = RGB[0];
+	document.getElementById('2a5.2').innerHTML = document.getElementById('c' + 26).style.backgroundColor;
 	for (var i = 0; i < 96; i++) {
 		var color = document.getElementById('c' + i).style.backgroundColor;
 		if (document.getElementById('c' + i).style.backgroundColor == '#BDBDBD') {
