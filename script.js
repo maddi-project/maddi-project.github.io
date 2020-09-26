@@ -884,14 +884,13 @@ function getabsorbances() {
 	document.getElementById('2a4.2').innerHTML = RGB[0];
 	document.getElementById('2a5.2').innerHTML = document.getElementById('c' + 26).style.backgroundColor;
 	for (var i = 0; i < 96; i++) {
-		var color = document.getElementById('c' + i).style.backgroundColor;
 		if (document.getElementById('c' + i).style.backgroundColor == "rgb(189, 189, 189)") {
 			absW[0] += RGB[i];
 			absW[1] += RGB[i + 96];
 			absW[2] += RGB[i + 192];
 			whites++
 		} else if (document.getElementById('c' + i).style.backgroundColor == "rgb(247, 129, 129)") {
-			absS1[document.getElementById('c' + i).innerHTML + 12] += RGB[i];
+			absS1[document.getElementById('c' + i).innerHTML] += RGB[i];
 			absS1[document.getElementById('c' + i).innerHTML + 12] += RGB[i + 96];
 			absS1[document.getElementById('c' + i).innerHTML + 24] += RGB[i + 192];
 			if (document.getElementById('c' + i).innerHTML == 1) {
