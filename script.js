@@ -859,7 +859,7 @@ function hide() {
 	} 
 }
 function getabsorbances() {
-	RGB = get_data1();
+	var RGB = get_data1();
 	var whites = 0;
 	var set1 = 0;
 	var set2 = 0;
