@@ -881,8 +881,6 @@ function getabsorbances() {
 	var absS4 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 	var absC = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 	show();
-	document.getElementById('2a4.2').innerHTML = RGB[0];
-	document.getElementById('2a5.2').innerHTML = document.getElementById('c' + 26).style.backgroundColor;
 	for (var i = 0; i < 96; i++) {
 		if (document.getElementById('c' + i).style.backgroundColor == "rgb(189, 189, 189)") {
 			absW[0] += RGB[i];
@@ -891,8 +889,8 @@ function getabsorbances() {
 			whites++
 		} else if (document.getElementById('c' + i).style.backgroundColor == "rgb(247, 129, 129)") {
 			absS1[document.getElementById('c' + i).innerHTML - 1] += RGB[i];
-			absS1[document.getElementById('c' + i).innerHTML + 11] += RGB[i + 96];
-			absS1[document.getElementById('c' + i).innerHTML + 23] += RGB[i + 192];
+			absS1[document.getElementById('c' + i).innerHTML + 11] += RGB[i+96];
+			absS1[document.getElementById('c' + i).innerHTML + 23] += RGB[i+192];
 			if (document.getElementById('c' + i).innerHTML == 1) {
 				set1++
 			}
@@ -926,7 +924,6 @@ function getabsorbances() {
 			}
 		}
 	}
-	document.getElementById('2a1.2').innerHTML = absS1[0];
 	absW[0] = absW[0]/whites;
 	absW[1] = absW[1]/whites;
 	absW[2] = absW[2]/whites;
@@ -939,7 +936,6 @@ function getabsorbances() {
 			absC[j + k*12] = absC[j + k*12]/calibration;
 		}
 	}
-	document.getElementById('2a2.2').innerHTML = absS1[0];
 	for (var j = 0; j < 12; j++) {
 		for  (var k = 0; k < 3; k++) {
 			absS1[j + k*12] = Math.log10(absW[k]/absS1[j + k*12]);
@@ -949,10 +945,9 @@ function getabsorbances() {
 			absC[j + k*12] = Math.log10(absW[k]/absC[j + k*12]);
 		}
 	}
-	document.getElementById('2a3.2').innerHTML = absS1[0];
 	hide();
 	var m = 0;
-	while (m < 12 && absS1[m] !== 0) {
+	while (m < 12 && absS1[m] !== Infinity) {
 		document.getElementById('1a' + (m+1) + '.2').innerHTML = absS1[m];
 		document.getElementById('1a' + (m+1) + '.3').innerHTML = absS1[m + 12];
 		document.getElementById('1a' + (m+1) + '.4').innerHTML = absS1[m + 24];
