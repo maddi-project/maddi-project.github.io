@@ -882,43 +882,42 @@ function getabsorbances() {
 	var absC = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 	show();
 	document.getElementById('2a4.2').innerHTML = RGB[0];
-	document.getElementById('2a5.2').innerHTML = document.getElementById('c' + 26).style.backgroundColor;
 	for (var i = 0; i < 96; i++) {
 		var color = document.getElementById('c' + i).style.backgroundColor;
-		if (document.getElementById('c' + i).style.backgroundColor == '#BDBDBD') {
+		if (document.getElementById('c' + i).style.backgroundColor == 'rgb(189,189,189)') {
 			absW[0] += RGB[i];
 			absW[1] += RGB[i + 96];
 			absW[2] += RGB[i + 192];
 			whites++
-		} else if (document.getElementById('c' + i).style.backgroundColor == '#F78181') {
-			absS1[0] += RGB[i];
+		} else if (document.getElementById('c' + i).style.backgroundColor == 'rgb(247,129,129)') {
+			absS1[document.getElementById('c' + i).innerHTML + 12] += RGB[i];
 			absS1[document.getElementById('c' + i).innerHTML + 12] += RGB[i + 96];
 			absS1[document.getElementById('c' + i).innerHTML + 24] += RGB[i + 192];
 			if (document.getElementById('c' + i).innerHTML == 1) {
 				set1++
 			}
-		} else if (document.getElementById('c' + i).style.backgroundColor == '#81F781') {
+		} else if (document.getElementById('c' + i).style.backgroundColor == 'rgb(129,247,129)') {
 			absS2[document.getElementById('c' + i).innerHTML] += RGB[i];
 			absS2[document.getElementById('c' + i).innerHTML + 12] += RGB[i + 96];
 			absS2[document.getElementById('c' + i).innerHTML + 24] += RGB[i + 192];
 			if (document.getElementById('c' + i).innerHTML == 1) {
 				set2++
 			}
-		} else if (document.getElementById('c' + i).style.backgroundColor == '#81BEF7') {
+		} else if (document.getElementById('c' + i).style.backgroundColor == 'rgb(129,190,247)') {
 			absS3[document.getElementById('c' + i).innerHTML] += RGB[i];
 			absS3[document.getElementById('c' + i).innerHTML + 12] += RGB[i + 96];
 			absS3[document.getElementById('c' + i).innerHTML + 24] += RGB[i + 192];
 			if (document.getElementById('c' + i).innerHTML == 1) {
 				set3++
 			}
-		} else if (document.getElementById('c' + i).style.backgroundColor == '#F3F781') {
+		} else if (document.getElementById('c' + i).style.backgroundColor == 'rgb(243,247,129)') {
 			absS4[document.getElementById('c' + i).innerHTML] += RGB[i];
 			absS4[document.getElementById('c' + i).innerHTML + 12] += RGB[i + 96];
 			absS4[document.getElementById('c' + i).innerHTML + 24] += RGB[i + 192];
 			if (document.getElementById('c' + i).innerHTML == 1) {
 				set4++
 			}
-		} else if (document.getElementById('c' + i).style.backgroundColor == '#DA81F5') {
+		} else if (document.getElementById('c' + i).style.backgroundColor == 'rgb(218,129,245)') {
 			absC[document.getElementById('c' + i).innerHTML] += RGB[i];
 			absC[document.getElementById('c' + i).innerHTML + 12] += RGB[i + 96];
 			absC[document.getElementById('c' + i).innerHTML + 24] += RGB[i + 192];
