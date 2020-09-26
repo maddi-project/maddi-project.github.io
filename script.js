@@ -873,6 +873,7 @@ function getabsorbances() {
 	var absS4 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 	var absC = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 	show();
+	document.getElementById('1a4.2').innerHTML = RGB[0];
 	for (var i = 0; i < 96; i++) {
 		if (document.getElementById('c' + i).style.backgroundColor == '#BDBDBD') {
 			absW[0] +=  RGB[i];
