@@ -147,8 +147,8 @@ body, html {
 #R {background-color: #F78181;}
 #G {background-color: #81F781;}
 #B {background-color: #81BEF7;}
-#Absorbances {background-color: #E6E6E6;}
 #Calibration {background-color: #E6E6E6;}
+#Absorbances {background-color: #E6E6E6;}
 		
 	/* Well selection */
 	.box {
@@ -158,6 +158,10 @@ body, html {
 	cursor: pointer;
 	text-align: center;
 	color: white;
+	}
+	
+	.box1 {
+	text-align: center;
 	}
 
     </style> 
@@ -435,15 +439,58 @@ body, html {
     <div class = "body_sec3"> 
         <section id="Content">
 		<center>
-			<button class="tablink1" onclick="openPage1('Absorbances', this, '#E6E6E6')" id="defaultOpen1">Absorbances</button>
-			<button class="tablink1" onclick="openPage1('Calibration', this, '#E6E6E6')">Calibration</button>
+			<button class="tablink1" onclick="openPage1('Calibration', this, '#E6E6E6')" id="defaultOpen1">Absorbances</button>
+			<button class="tablink1" onclick="openPage1('Absorbances', this, '#E6E6E6')">Calibration</button>
 
-			<div id="Absorbances" class="tabcontent1">
+			<div id="Calibration" class="tabcontent1">
 			Abs
 			</div>
 
-			<div id="Calibration" class="tabcontent1">
-			Cal
+			<div id="Absorbances" class="tabcontent1">
+			
+			<table border="3" style="width: 20%">
+				<thead>
+				</thead>
+				<tbody>
+				<tr>
+					<td id="1a1.1" class="box1">Set 1</td><td id="1a1.2" class="box1">A_R</td><td id="1a1.3" class="box1">A_G</td><td id="1a1.4" class="box1">A_B</td><td id="1a1.5" class="box1">Conc.</td>
+				</tr>
+				<tr>
+					<td id="1a2.1" class="box1"></td><td id="1a2.2" class="box1"></td><td id="1a2.3" class="box1"></td><td id="1a2.4" class="box1"></td><td id="1a2.5" class="box1"></td>
+				</tr>
+				<tr>
+					<td id="1a3.1" class="box1"></td><td id="1a3.2" class="box1"></td><td id="1a3.3" class="box1"></td><td id="1a3.4" class="box1"></td><td id="1a3.5" class="box1"></td>
+				</tr>
+				<tr>
+					<td id="1a4.1" class="box1"></td><td id="1a4.2" class="box1"></td><td id="1a4.3" class="box1"></td><td id="1a4.4" class="box1"></td><td id="1a4.5" class="box1"></td>
+				</tr>
+				<tr>
+					<td id="1a5.1" class="box1"></td><td id="1a5.2" class="box1"></td><td id="1a5.3" class="box1"></td><td id="1a5.4" class="box1"></td><td id="1a5.5" class="box1"></td>
+				</tr>
+				<tr>
+					<td id="1a6.1" class="box1"></td><td id="1a6.2" class="box1"></td><td id="1a6.3" class="box1"></td><td id="1a6.4" class="box1"></td><td id="1a6.5" class="box1"></td>
+				</tr>
+				<tr>
+					<td id="1a7.1" class="box1"></td><td id="1a7.2" class="box1"></td><td id="1a7.3" class="box1"></td><td id="1a7.4" class="box1"></td><td id="1a7.5" class="box1"></td>
+				</tr>
+				<tr>
+					<td id="1a8.1" class="box1"></td><td id="1a8.2" class="box1"></td><td id="1a8.3" class="box1"></td><td id="1a8.4" class="box1"></td><td id="1a8.5" class="box1"></td>
+				</tr>
+				<tr>
+					<td id="1a9.1" class="box1"></td><td id="1a9.2" class="box1"></td><td id="1a9.3" class="box1"></td><td id="1a9.4" class="box1"></td><td id="1a9.5" class="box1"></td>
+				</tr>
+				<tr>
+					<td id="1a10.1" class="box1"></td><td id="1a10.2" class="box1"></td><td id="1a10.3" class="box1"></td><td id="1a10.4" class="box1"></td><td id="1a10.5" class="box1"></td>
+				</tr>
+				<tr>
+					<td id="1a11.1" class="box1"></td><td id="1a11.2" class="box1"></td><td id="1a11.3" class="box1"></td><td id="1a11.4" class="box1"></td><td id="1a11.5" class="box1"></td>
+				</tr>
+				<tr>
+					<td id="1a12.1" class="box1"></td><td id="1a12.2" class="box1"></td><td id="1a12.3" class="box1"></td><td id="1a12.4" class="box1"></td><td id="1a12.5" class="box1"></td>
+				</tr>
+				</tbody>
+			</table>
+				
 			</div>
 		</center>
         </section> 
