@@ -92,6 +92,13 @@
             margin: 0;
 	    height: 60px;
         }
+	.body_sec3 { 
+	    position: absolute;
+	    left: 0px;
+	    top: 2115px;
+	    width: 100%;
+	    height: 665px;
+        } 
 /* Set height of body and the document to 100% to enable "full page tabs" */
 body, html {
   height: 100%;
@@ -415,11 +422,29 @@ body, html {
     </div> 
 
 <!-- SECTION 4 -->
-<!-- Separator -->
+	<!-- Separator -->
     <div class = "separator3"> 
 	<img class="image" 
 	     	src="separator.jpg" 
        		height="60" 
 	     	alt="separator"></a>
-    </div> 
+    </div>
+ 	<!-- Body section -->
+    <div class = "body_sec3"> 
+        <section id="Content">
+		<center>
+			<button class="tablink1" onclick="openPage1('Absorbances', this, '#F78181')" id="defaultOpen1">Absorbances</button>
+			<button class="tablink1" onclick="openPage1('Calibration', this, '#81F781')">Calibration</button>
+
+			<div id="Absorbances" class="tabcontent1">
+
+			</div>
+
+			<div id="Calibration" class="tabcontent1">
+
+			</div>
+		</center>
+        </section> 
+    </div>
+	
 </body>
