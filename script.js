@@ -883,7 +883,7 @@ function getabsorbances() {
 			absW[2] += RGB[i + 192];
 			whites++
 		} else if (color == '#F78181') {
-			absS1[sample] += RGB[i];
+			absS1[1] += RGB[i];
 			absS1[document.getElementById('c' + i).innerHTML + 12] += RGB[i + 96];
 			absS1[document.getElementById('c' + i).innerHTML + 24] += RGB[i + 192];
 			if (document.getElementById('c' + i).innerHTML == 1) {
