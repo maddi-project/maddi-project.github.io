@@ -943,7 +943,7 @@ function getabsorbances() {
 	hide();
 	var m = 0;
 	var n = 0;
-	while (absS1[m][0] !== 0)
+	while (absS1[m][0] !== 0) {
 		n = m+1;
 		document.getElementById('1a' + n + '.2').innerHTML = absS1[m][0];
 		document.getElementById('1a' + n + '.3').innerHTML = absS1[m][1];
