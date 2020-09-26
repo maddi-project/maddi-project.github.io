@@ -941,6 +941,15 @@ function getabsorbances() {
 		}
 	}
 	hide();
+	var m = 0;
+	var n = 0;
+	while (absS1[m][0] !== 0)
+		n = m+1;
+		document.getElementById('1a' + n + '.2').innerHTML = absS1[m][0];
+		document.getElementById('1a' + n + '.3').innerHTML = absS1[m][1];
+		document.getElementById('1a' + n + '.4').innerHTML = absS1[m][2];
+		m++
+	}
 	document.getElementById("defaultOpen1").click();
 	window.scrollTo(0,2085);
 }
