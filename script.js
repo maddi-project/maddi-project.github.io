@@ -870,11 +870,11 @@ function getabsorbances() {
 	var set4 = 0;
 	var calibration = 0;
 	var absW = [0, 0, 0];
-	var absS1 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
-	var absS2 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
-	var absS3 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
-	var absS4 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
-	var absC = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
+	var absS1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+	var absS2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+	var absS3 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+	var absS4 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+	var absC = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 	show();
 	for (i = 0; i < 96; i++) {
 		if (document.getElementById('c' + i).style.backgroundColor == '#BDBDBD') {
@@ -883,37 +883,37 @@ function getabsorbances() {
 			absW[2] +=  RGB[i + 192];
 			whites++
 		} else if (document.getElementById('c' + i).style.backgroundColor == '#F78181') {
-			absS1[document.getElementById('c' + i).innerHTML][0] +=  RGB[i];
-			absS1[document.getElementById('c' + i).innerHTML][1] +=  RGB[i + 96];
-			absS1[document.getElementById('c' + i).innerHTML][2] +=  RGB[i + 192];
+			absS1[document.getElementById('c' + i).innerHTML] +=  RGB[i];
+			absS1[document.getElementById('c' + i).innerHTML + 12] +=  RGB[i + 96];
+			absS1[document.getElementById('c' + i).innerHTML + 24] +=  RGB[i + 192];
 			if (document.getElementById('c' + i).innerHTML == 1) {
 				set1++
 			}
 		} else if (document.getElementById('c' + i).style.backgroundColor == '#81F781') {
-			absS2[document.getElementById('c' + i).innerHTML][0] +=  RGB[i];
-			absS2[document.getElementById('c' + i).innerHTML][1] +=  RGB[i + 96];
-			absS2[document.getElementById('c' + i).innerHTML][2] +=  RGB[i + 192];
+			absS2[document.getElementById('c' + i).innerHTML] +=  RGB[i];
+			absS2[document.getElementById('c' + i).innerHTML + 12] +=  RGB[i + 96];
+			absS2[document.getElementById('c' + i).innerHTML + 24] +=  RGB[i + 192];
 			if (document.getElementById('c' + i).innerHTML == 1) {
 				set2++
 			}
 		} else if (document.getElementById('c' + i).style.backgroundColor == '#81BEF7') {
-			absS3[document.getElementById('c' + i).innerHTML][0] +=  RGB[i];
-			absS3[document.getElementById('c' + i).innerHTML][1] +=  RGB[i + 96];
-			absS3[document.getElementById('c' + i).innerHTML][2] +=  RGB[i + 192];
+			absS3[document.getElementById('c' + i).innerHTML] +=  RGB[i];
+			absS3[document.getElementById('c' + i).innerHTML + 12] +=  RGB[i + 96];
+			absS3[document.getElementById('c' + i).innerHTML + 24] +=  RGB[i + 192];
 			if (document.getElementById('c' + i).innerHTML == 1) {
 				set3++
 			}
 		} else if (document.getElementById('c' + i).style.backgroundColor == '#F3F781') {
-			absS4[document.getElementById('c' + i).innerHTML][0] +=  RGB[i];
-			absS4[document.getElementById('c' + i).innerHTML][1] +=  RGB[i + 96];
-			absS4[document.getElementById('c' + i).innerHTML][2] +=  RGB[i + 192];
+			absS4[document.getElementById('c' + i).innerHTML] +=  RGB[i];
+			absS4[document.getElementById('c' + i).innerHTML + 12] +=  RGB[i + 96];
+			absS4[document.getElementById('c' + i).innerHTML + 24] +=  RGB[i + 192];
 			if (document.getElementById('c' + i).innerHTML == 1) {
 				set4++
 			}
 		} else if (document.getElementById('c' + i).style.backgroundColor == '#DA81F5') {
-			absC[document.getElementById('c' + i).innerHTML][0] +=  RGB[i];
-			absC[document.getElementById('c' + i).innerHTML][1] +=  RGB[i + 96];
-			absC[document.getElementById('c' + i).innerHTML][2] +=  RGB[i + 192];
+			absC[document.getElementById('c' + i).innerHTML] +=  RGB[i];
+			absC[document.getElementById('c' + i).innerHTML + 12] +=  RGB[i + 96];
+			absC[document.getElementById('c' + i).innerHTML + 24] +=  RGB[i + 192];
 			if (document.getElementById('c' + i).innerHTML == 1) {
 				calibration++
 			}
@@ -924,30 +924,30 @@ function getabsorbances() {
 	absW[2] = absW[2]/whites;
 	for (j = 0; j < 12; j++) {
 		for  (k = 0; k < 3; k++) {
-			absS1[j][k] = absS1[j][k]/set1;
-			absS2[j][k] = absS2[j][k]/set2;
-			absS3[j][k] = absS3[j][k]/set3;
-			absS4[j][k] = absS4[j][k]/set3;
-			absC[j][k] = absC[j][k]/calibration;
+			absS1[j + k*12] = absS1[j + k*12]/set1;
+			absS2[j + k*12] = absS2[j + k*12]/set2;
+			absS3[j + k*12] = absS3[j + k*12]/set3;
+			absS4[j + k*12] = absS4[j + k*12]/set3;
+			absC[j + k*12] = absC[j + k*12]/calibration;
 		}
 	}
 	for (j = 0; j < 12; j++) {
 		for  (k = 0; k < 3; k++) {
-			absS1[j][k] = Math.log10(absW[k]/absS1[j][k]);
-			absS2[j][k] = Math.log10(absW[k]/absS2[j][k]);
-			absS3[j][k] = Math.log10(absW[k]/absS3[j][k]);
-			absS4[j][k] = Math.log10(absW[k]/absS4[j][k]);
-			absC[j][k] = Math.log10(absW[k]/absC[j][k]);
+			absS1[j + k*12] = Math.log10(absW[k]/absS1[j + k*12]);
+			absS2[j + k*12] = Math.log10(absW[k]/absS2[j + k*12]);
+			absS3[j + k*12] = Math.log10(absW[k]/absS3[j + k*12]);
+			absS4[j + k*12] = Math.log10(absW[k]/absS4[j + k*12]);
+			absC[j + k*12] = Math.log10(absW[k]/absC[j + k*12]);
 		}
 	}
 	hide();
 	var m = 0;
 	var n = 0;
-	while (absS1[m][0] !== 0) {
+	while (m < 12 && absS1[m] !== 0) {
 		n = m+1;
-		document.getElementById('1a' + n + '.2').innerHTML = absS1[m][0];
-		document.getElementById('1a' + n + '.3').innerHTML = absS1[m][1];
-		document.getElementById('1a' + n + '.4').innerHTML = absS1[m][2];
+		document.getElementById('1a' + n + '.2').innerHTML = absS1[m];
+		document.getElementById('1a' + n + '.3').innerHTML = absS1[m + 12];
+		document.getElementById('1a' + n + '.4').innerHTML = absS1[m + 24];
 		m++
 	}
 	document.getElementById("defaultOpen1").click();
