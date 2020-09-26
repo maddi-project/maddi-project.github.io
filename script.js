@@ -890,7 +890,7 @@ function getabsorbances() {
 			absW[1] += RGB[i + 96];
 			absW[2] += RGB[i + 192];
 			whites++
-		} else if (document.getElementById('c' + i).style.backgroundColor == rgb(247,129,129)) {
+		} else if (document.getElementById('c' + i).style.backgroundColor == "rgb(247,129,129)") {
 			absS1[document.getElementById('c' + i).innerHTML + 12] += RGB[i];
 			absS1[document.getElementById('c' + i).innerHTML + 12] += RGB[i + 96];
 			absS1[document.getElementById('c' + i).innerHTML + 24] += RGB[i + 192];
