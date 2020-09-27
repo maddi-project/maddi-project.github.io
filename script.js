@@ -925,7 +925,7 @@ function getabsorbances() {
 			}
 		}
 	}
-	document.getElementById('2a1.2').innerHTML = absS1[12];
+	document.getElementById('2a2.2').innerHTML = absS1[12];
 	absW[0] = absW[0]/whites;
 	absW[1] = absW[1]/whites;
 	absW[2] = absW[2]/whites;
@@ -938,7 +938,7 @@ function getabsorbances() {
 			absC[j + k*12] = absC[j + k*12]/calibration;
 		}
 	}
-	document.getElementById('2a1.2').innerHTML = absS1[12];
+	document.getElementById('2a3.2').innerHTML = absS1[12];
 	for (var j = 0; j < 12; j++) {
 		for  (var k = 0; k < 3; k++) {
 			absS1[j + k*12] = Math.log10(absW[k]/absS1[j + k*12]);
@@ -948,7 +948,7 @@ function getabsorbances() {
 			absC[j + k*12] = Math.log10(absW[k]/absC[j + k*12]);
 		}
 	}
-	document.getElementById('2a1.2').innerHTML = absS1[12];
+	document.getElementById('2a4.2').innerHTML = absS1[12];
 	hide();
 	var m = 0;
 	while (m < 12 && absS1[m] !== Infinity) {
