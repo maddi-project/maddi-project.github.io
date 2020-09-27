@@ -933,7 +933,7 @@ function getabsorbances() {
 			if (num == 1) {
 				set4++
 			}
-		} else if (document.getElementById('c' + i).style.backgroundColor == "rgb(218, 129, 245)") {
+		} else if (document.getElementById('c' + i).style.backgroundColor == "rgb(218, 129, 245)" || document.getElementById('c' + i).style.backgroundColor == "rgb(191, 0, 255)") {
 			absC[num] += RGB[i];
 			absC[num + 12] += RGB[i + 96];
 			absC[num + 24] += RGB[i + 192];
@@ -999,9 +999,9 @@ function getabsorbances() {
 	m = 0;
 	n = isNaN(absC[m]);
 	while (m < 12 && absC[m] !== Infinity && n == false) {
-		document.getElementById('4a' + (m+1) + '.2').innerHTML = roundTo(absC[m], 3);
-		document.getElementById('4a' + (m+1) + '.3').innerHTML = roundTo(absC[m + 12], 3);
-		document.getElementById('4a' + (m+1) + '.4').innerHTML = roundTo(absC[m + 24], 3);
+		document.getElementById('Ca' + (m+1) + '.2').innerHTML = roundTo(absC[m], 3);
+		document.getElementById('Ca' + (m+1) + '.3').innerHTML = roundTo(absC[m + 12], 3);
+		document.getElementById('Ca' + (m+1) + '.4').innerHTML = roundTo(absC[m + 24], 3);
 		m++
 	}
 	document.getElementById("defaultOpen1").click();
