@@ -975,14 +975,16 @@ function getabsorbances() {
 		m++
 	}
 	m = 0;
-	while (m < 12 && absS3[m] !== Infinity && absS3[m] !== NaN) {
+	n = isNaN(absS3[m]);
+	while (m < 12 && absS3[m] !== Infinity && n == false) {
 		document.getElementById('3a' + (m+1) + '.2').innerHTML = roundTo(absS3[m], 3);
 		document.getElementById('3a' + (m+1) + '.3').innerHTML = roundTo(absS3[m + 12], 3);
 		document.getElementById('3a' + (m+1) + '.4').innerHTML = roundTo(absS3[m + 24], 3);
 		m++
 	}
 	m = 0;
-	while (m < 12 && absS4[m] !== Infinity && absS4[m] !== NaN) {
+	n = isNaN(absS4[m]);
+	while (m < 12 && absS4[m] !== Infinity && n == false) {
 		document.getElementById('4a' + (m+1) + '.2').innerHTML = roundTo(absS4[m], 3);
 		document.getElementById('4a' + (m+1) + '.3').innerHTML = roundTo(absS4[m + 12], 3);
 		document.getElementById('4a' + (m+1) + '.4').innerHTML = roundTo(absS4[m + 24], 3);
