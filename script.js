@@ -132,12 +132,22 @@ function get_data1() {
 	}
 	return RGB_values	
 };
+function roundTo(n, digits) {
+	if (digits === undefined) {
+       	digits = 0;
+     	}
+
+     	var multiplicator = Math.pow(10, digits);
+     	n = parseFloat((n * multiplicator).toFixed(11));
+     	var test =(Math.round(n) / multiplicator);
+     	return +(test.toFixed(digits));
+}
 function get_data() {
 	RGB = get_data1();
 	for (var i = 0; i < 96; i++) {
-		document.getElementById('R' + i).innerHTML = RGB[i];
-		document.getElementById('G' + i).innerHTML = RGB[i+96];
-		document.getElementById('B' + i).innerHTML = RGB[i+192];
+		document.getElementById('R' + i).innerHTML = roundTo(RGB[i], 2);
+		document.getElementById('G' + i).innerHTML = roundTo(RGB[i+96], 2);
+		document.getElementById('B' + i).innerHTML = roundTo(RGB[i+192], 2);
 	}
 	// Get the element with id="defaultOpen" and click on it
 	document.getElementById("defaultOpen").click();
@@ -867,16 +877,6 @@ function rgbToHex(r, g, b) {
   return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 
-function roundTo(n, digits) {
-	if (digits === undefined) {
-       	digits = 0;
-     	}
-
-     	var multiplicator = Math.pow(10, digits);
-     	n = parseFloat((n * multiplicator).toFixed(11));
-     	var test =(Math.round(n) / multiplicator);
-     	return +(test.toFixed(digits));
-}
 function getabsorbances() {
 	var RGB = get_data1();
 	var whites = 0;
@@ -959,28 +959,28 @@ function getabsorbances() {
 	}
 	hide();
 	var m = 0;
-	while (m < 12 && absS1[m] !== Infinity) {
+	while (m < 12 && absS1[m] !== Infinity && absS1[m] !== NaN) {
 		document.getElementById('1a' + (m+1) + '.2').innerHTML = roundTo(absS1[m], 3);
 		document.getElementById('1a' + (m+1) + '.3').innerHTML = roundTo(absS1[m + 12], 3);
 		document.getElementById('1a' + (m+1) + '.4').innerHTML = roundTo(absS1[m + 24], 3);
 		m++
 	}
 	m = 0;
-	while (m < 12 && absS2[m] !== Infinity) {
+	while (m < 12 && absS2[m] !== Infinity && absS2[m] !== NaN) {
 		document.getElementById('2a' + (m+1) + '.2').innerHTML = roundTo(absS2[m], 3);
 		document.getElementById('2a' + (m+1) + '.3').innerHTML = roundTo(absS2[m + 12], 3);
 		document.getElementById('2a' + (m+1) + '.4').innerHTML = roundTo(absS2[m + 24], 3);
 		m++
 	}
 	m = 0;
-	while (m < 12 && absS3[m] !== Infinity) {
+	while (m < 12 && absS3[m] !== Infinity && absS3[m] !== NaN) {
 		document.getElementById('3a' + (m+1) + '.2').innerHTML = roundTo(absS3[m], 3);
 		document.getElementById('3a' + (m+1) + '.3').innerHTML = roundTo(absS3[m + 12], 3);
 		document.getElementById('3a' + (m+1) + '.4').innerHTML = roundTo(absS3[m + 24], 3);
 		m++
 	}
 	m = 0;
-	while (m < 12 && absS4[m] !== Infinity) {
+	while (m < 12 && absS4[m] !== Infinity && absS4[m] !== NaN) {
 		document.getElementById('4a' + (m+1) + '.2').innerHTML = roundTo(absS4[m], 3);
 		document.getElementById('4a' + (m+1) + '.3').innerHTML = roundTo(absS4[m + 12], 3);
 		document.getElementById('4a' + (m+1) + '.4').innerHTML = roundTo(absS4[m + 24], 3);
