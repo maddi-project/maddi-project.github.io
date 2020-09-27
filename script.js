@@ -1,7 +1,7 @@
 function onload() {
 	alert("WARNING\nIf you continue you accept to cite any results gotten using this website.");
-	document.getElementById("defaultOpen").click();
-	document.getElementById("defaultOpen1").click();
+	//document.getElementById("defaultOpen").click();
+	//document.getElementById("defaultOpen1").click();
 }
 
 function draw() {
