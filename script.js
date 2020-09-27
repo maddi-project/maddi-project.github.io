@@ -960,30 +960,30 @@ function getabsorbances() {
 	hide();
 	var m = 0;
 	while (m < 12 && absS1[m] !== Infinity) {
-		document.getElementById('1a' + (m+1) + '.2').innerHTML = roundTo(absS1[m], 2);
-		document.getElementById('1a' + (m+1) + '.3').innerHTML = absS1[m + 12];
-		document.getElementById('1a' + (m+1) + '.4').innerHTML = absS1[m + 24];
+		document.getElementById('1a' + (m+1) + '.2').innerHTML = roundTo(absS1[m], 3);
+		document.getElementById('1a' + (m+1) + '.3').innerHTML = roundTo(absS1[m + 12], 3);
+		document.getElementById('1a' + (m+1) + '.4').innerHTML = roundTo(absS1[m + 24], 3);
 		m++
 	}
 	m = 0;
-	while (m < 12 && absS1[m] !== Infinity) {
-		document.getElementById('2a' + (m+1) + '.2').innerHTML = absS2[m];
-		document.getElementById('2a' + (m+1) + '.3').innerHTML = absS2[m + 12];
-		document.getElementById('2a' + (m+1) + '.4').innerHTML = absS2[m + 24];
+	while (m < 12 && absS2[m] !== Infinity) {
+		document.getElementById('2a' + (m+1) + '.2').innerHTML = roundTo(absS2[m], 3);
+		document.getElementById('2a' + (m+1) + '.3').innerHTML = roundTo(absS2[m + 12], 3);
+		document.getElementById('2a' + (m+1) + '.4').innerHTML = roundTo(absS2[m + 24], 3);
 		m++
 	}
 	m = 0;
-	while (m < 12 && absS1[m] !== Infinity) {
-		document.getElementById('3a' + (m+1) + '.2').innerHTML = absS3[m];
-		document.getElementById('3a' + (m+1) + '.3').innerHTML = absS3[m + 12];
-		document.getElementById('3a' + (m+1) + '.4').innerHTML = absS3[m + 24];
+	while (m < 12 && absS3[m] !== Infinity) {
+		document.getElementById('3a' + (m+1) + '.2').innerHTML = roundTo(absS3[m], 3);
+		document.getElementById('3a' + (m+1) + '.3').innerHTML = roundTo(absS3[m + 12], 3);
+		document.getElementById('3a' + (m+1) + '.4').innerHTML = roundTo(absS3[m + 24], 3);
 		m++
 	}
 	m = 0;
-	while (m < 12 && absS1[m] !== Infinity) {
-		document.getElementById('4a' + (m+1) + '.2').innerHTML = absS4[m];
-		document.getElementById('4a' + (m+1) + '.3').innerHTML = absS4[m + 12];
-		document.getElementById('4a' + (m+1) + '.4').innerHTML = absS4[m + 24];
+	while (m < 12 && absS4[m] !== Infinity) {
+		document.getElementById('4a' + (m+1) + '.2').innerHTML = roundTo(absS4[m], 3);
+		document.getElementById('4a' + (m+1) + '.3').innerHTML = roundTo(absS4[m + 12], 3);
+		document.getElementById('4a' + (m+1) + '.4').innerHTML = roundTo(absS4[m + 24], 3);
 		m++
 	}
 	document.getElementById("defaultOpen1").click();
