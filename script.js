@@ -996,6 +996,17 @@ function getabsorbances() {
 		document.getElementById('4a' + (m+1) + '.4').innerHTML = roundTo(absS4[m + 24], 3);
 		m++
 	}
+	m = 0;
+	n = isNaN(absC[m]);
+	while (m < 12 && absC[m] !== Infinity && n == false) {
+		document.getElementById('4a' + (m+1) + '.2').innerHTML = roundTo(absC[m], 3);
+		document.getElementById('4a' + (m+1) + '.3').innerHTML = roundTo(absC[m + 12], 3);
+		document.getElementById('4a' + (m+1) + '.4').innerHTML = roundTo(absC[m + 24], 3);
+		m++
+	}
 	document.getElementById("defaultOpen1").click();
 	window.scrollTo(0,2085);
+}
+function extrapolate() {
+	
 }
