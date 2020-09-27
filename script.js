@@ -866,6 +866,17 @@ function componentToHex(c) {
 function rgbToHex(r, g, b) {
   return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
+
+function roundTo(n, digits) {
+	if (digits === undefined) {
+       	digits = 0;
+     	}
+
+     	var multiplicator = Math.pow(10, digits);
+     	n = parseFloat((n * multiplicator).toFixed(11));
+     	var test =(Math.round(n) / multiplicator);
+     	return +(test.toFixed(digits));
+}
 function getabsorbances() {
 	var RGB = get_data1();
 	var whites = 0;
@@ -949,7 +960,7 @@ function getabsorbances() {
 	hide();
 	var m = 0;
 	while (m < 12 && absS1[m] !== Infinity) {
-		document.getElementById('1a' + (m+1) + '.2').innerHTML = absS1[m];
+		document.getElementById('1a' + (m+1) + '.2').innerHTML = roundTo(absS1[m], 2);
 		document.getElementById('1a' + (m+1) + '.3').innerHTML = absS1[m + 12];
 		document.getElementById('1a' + (m+1) + '.4').innerHTML = absS1[m + 24];
 		m++
