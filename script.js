@@ -1,3 +1,8 @@
+function onload() {
+	document.getElementById("defaultOpen").click();
+	document.getElementById("defaultOpen1").click();
+}
+
 function draw() {
   var c = document.getElementById('canvas');
   var ctx = c.getContext("2d");
