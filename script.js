@@ -1,4 +1,5 @@
 function onload() {
+	alert("WARNING\nIf you continue you accept to cite any results gotten using this website.");
 	document.getElementById("defaultOpen").click();
 	document.getElementById("defaultOpen1").click();
 }
@@ -997,8 +998,4 @@ function getabsorbances() {
 	}
 	document.getElementById("defaultOpen1").click();
 	window.scrollTo(0,2085);
-}
-function codeAddress() {
-
-	document.getElementById("defaultOpen1").click();
 }
