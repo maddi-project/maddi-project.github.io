@@ -1080,6 +1080,8 @@ function findLineByLeastSquares(values_x, values_y) {
     return [result_values_x, result_values_y];
 }
 
+function fun1(x) {return Math.sin(x);  }
+function fun2(x) {return Math.cos(3*x);}
 function drawGraph() {
  var canvas = document.getElementById("canvasGraph");
  if (null==canvas || !canvas.getContext) return;
