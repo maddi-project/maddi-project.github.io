@@ -1047,7 +1047,7 @@ function findLineByLeastSquares(values_x, values_y) {
     /*
      * Calculate the sum for each of the parts necessary.
      */
-    for (var v = 0; v &lt; values_length; v++) {
+    for (var v = 0; v < values_length; v++) {
         x = values_x[v];
         y = values_y[v];
         sum_x += x;
@@ -1070,7 +1070,7 @@ function findLineByLeastSquares(values_x, values_y) {
     var result_values_x = [];
     var result_values_y = [];
 
-    for (var v = 0; v &lt; values_length; v++) {
+    for (var v = 0; v < values_length; v++) {
         x = values_x[v];
         y = x * m + b;
         result_values_x.push(x);
