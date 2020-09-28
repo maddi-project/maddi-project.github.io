@@ -1011,10 +1011,10 @@ function getabsorbances() {
 //CALIBRATION
 function extrapolate() {
 	drawGraph();
-	if (document.getElementById('Ca2.5').innerHTML !== '' && document.getElementById('Ca1.5').innerHTML !== '') {
+	if (document.getElementById('Ca2.5').value !== '' && document.getElementById('Ca1.5').innerHTML !== '') {
 		var m = 3;
 		while (document.getElementById('Ca' + m + '.2').innerHTML !== '') {
-			document.getElementById('Ca' + m + '.5').innerHTML = (document.getElementById('Ca2.5').innerHTML - document.getElementById('Ca1.5').innerHTML)*(m - 1) + document.getElementById('Ca1.5').innerHTML;
+			document.getElementById('Ca' + m + '.5').innerHTML = (document.getElementById('Ca2.5').value - document.getElementById('Ca1.5').innerHTML)*(m - 1) + document.getElementById('Ca1.5').innerHTML;
 			m++
 		}
 	}
