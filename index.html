@@ -4,14 +4,18 @@
   <title>MADDI</title>
   <link rel="icon" href="tree1.png">
   <style>
+	.title { 
+	  font-family: helvetica;
+          font-size: 50px;
+        } 
       .text { 
-	        font-family: helvetica;
-          font-size: 30px;
+	  font-family: helvetica;
+          font-size: 20px;
         } 
       .button { 
 	        font-family: helvetica;
-          font-size: 20px;
-          display = "block";
+          font-size: 30px;
+          visibility: hidden;
         } 
     </style> 
 </head>
@@ -20,9 +24,9 @@
  function check() {
   var key = document.getElementById('key');
   if (key.value == "analitika1512") {
-  document.getElementById("maddi").style.display = "none";
-  document.getElementById("colorbar").style.display = "none";
-  document.getElementById("singlespot").style.display = "none";
+  document.getElementById("maddi").style.visibility: "visible";
+  document.getElementById("colorbar").style.visibility: "visible";
+  document.getElementById("singlespot").style.visibility: "visible";
   }
   };
  function maddi() {
@@ -38,7 +42,7 @@
   
 <body>
 <center>
-<h1 class="text">MADDI</h1>
+<h1 class="title">MADDI</h1>
 <p>
   <img src="tree3.jpg" 
        width="400" 
