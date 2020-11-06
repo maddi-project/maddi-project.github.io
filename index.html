@@ -3,30 +3,50 @@
 <head>
   <title>MADDI</title>
   <link rel="icon" href="tree1.png">
+  <style>
+      .text { 
+	        font-family: helvetica;
+          font-size: 30px;
+        } 
+      .button { 
+	        font-family: helvetica;
+          font-size: 20px;
+          display = block;
+        } 
+    </style> 
 </head>
 
 <script>
-function check() {
+ function check() {
   var key = document.getElementById('key');
   if (key.value == "analitika1512") {
-  window.open("https://maddi-project.github.io/picture-processing-1512.html",'_self');
+  document.getElementById("maddi").style.display = "none";
+  document.getElementById("colorbar").style.display = "none";
+  document.getElementById("singlespot").style.display = "none";
   }
-};
+  };
+ function maddi() {
+  window.open("https://maddi-project.github.io/picture-processing-1512.html",'_self');
+  };
+ function colorbar() {
+  window.open("",'_self');
+  };
+ function singlespot() {
+  window.open("",'_self');
+  };
 </script>
   
 <body>
 <center>
-<h1>MADDI</h1>
+<h1 class="text">MADDI</h1>
 <p>
   <img src="tree3.jpg" 
        width="400" 
        height="400" 
        alt="logo"> 
 </p>
-<p>Coming soon...</p>
-<p>Key:
-<input type="text" id="key" value=""/></p>
-<p><button type="button" onclick="check()">Enter</button></p>
+<p>Key:<input type="text" id="key" value=""/><button type="button" onclick="check()">Enter</button></p>
+<p><button class="button" id="maddi" type="button" onclick="maddi()">MADDI</button><button class="button" id="colorbar" type="button" onclick="colorbar()">Colorbar</button><button class="button" id="singlespot" type="button" onclick="singlespot()">Single spot</button></p>
 </center>
 </body>
 </html>
