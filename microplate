@@ -1,5 +1,5 @@
 <head>
-	<script type="text/javascript" src="script.js"></script> 
+	<script type="text/javascript" src="microplate.js"></script> 
 	<script type="text/javascript">
         window.onload = onload();
         </script>
