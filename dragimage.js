@@ -54,10 +54,10 @@ this.canvas.onmousedown = function(e) {
     var mouseY = e.pageY - this.offsetTop;
 
 
-    if (mouseX >= (currentX - star_img.width/2) &&
-        mouseX <= (currentX + star_img.width/2) &&
-        mouseY >= (currentY - star_img.height/2) &&
-        mouseY <= (currentY + star_img.height/2)) {
+    if (mouseX >= (this.currentX - this.star_img.width/2) &&
+        mouseX <= (this.currentX + this.star_img.width/2) &&
+        mouseY >= (this.currentY - this.star_img.height/2) &&
+        mouseY <= (this.currentY + this.star_img.height/2)) {
       this.isDraggable = true;
     }
 };
