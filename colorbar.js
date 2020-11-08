@@ -82,7 +82,7 @@ function update_ynumber1() {
 	draw();
 };
 
-function crop1() {
+function crop() {
   	var c = document.getElementById('canvas2');
   	var ctx = c.getContext("2d");
   	var img = document.getElementById('output');
@@ -100,19 +100,19 @@ function crop1() {
   	var y = (71-h)*yp;
 	
 	var RGB = [];
-	var posy = (0.5*71/1.54)*img.naturalHeight/71/zoom;
+	var posy = ((-1*y)+0.5*71/1.54)*img.naturalHeight/71/zoom;
 	
 	var posx = [];
-	posx[1] = (0.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[2] = (2.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[3] = (4.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[4] = (5.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[5] = (6.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[6] = (9*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[7] = (10.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[8] = (11.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[9] = (14*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[10] = (15.6*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[1] = ((-1*x)+0.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[2] = ((-1*x)+2.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[3] = ((-1*x)+4.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[4] = ((-1*x)+5.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[5] = ((-1*x)+6.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[6] = ((-1*x)+9*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[7] = ((-1*x)+10.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[8] = ((-1*x)+11.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[9] = ((-1*x)+14*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[10] = ((-1*x)+15.6*744/16)*img.naturalWidth/(71*proportion)/zoom;
 	
 	for (var i = 1; i < 11; i++) {
   		ctx.drawImage(img,posx[i],posy,dim.value,dim.value,22*i+50*(i-1),10,50,50);
@@ -122,10 +122,6 @@ function crop1() {
 	return RGB;
 };
 
-function crop() {
-	crop1();
-	window.scrollTo(0,695);
-};
 function get_data1() {
 	var imgData = crop1();
 	var RGB_values = [];
