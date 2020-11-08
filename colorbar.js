@@ -103,20 +103,20 @@ function crop() {
 	var posy = ((-1*y)+0.5*71/1.54)*img.naturalHeight/71/zoom;
 	
 	var posx = [];
-	posx[1] = ((-1*x)+0.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[2] = ((-1*x)+2.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[3] = ((-1*x)+4.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[4] = ((-1*x)+5.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[5] = ((-1*x)+6.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[6] = ((-1*x)+9*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[7] = ((-1*x)+10.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[8] = ((-1*x)+11.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[9] = ((-1*x)+14*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[10] = ((-1*x)+15.6*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[0] = ((-1*x)+0.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[1] = ((-1*x)+2.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[2] = ((-1*x)+4.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[3] = ((-1*x)+5.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[4] = ((-1*x)+6.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[5] = ((-1*x)+9*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[6] = ((-1*x)+10.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[7] = ((-1*x)+11.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[8] = ((-1*x)+14*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[9] = ((-1*x)+15.6*744/16)*img.naturalWidth/(71*proportion)/zoom;
 	
-	for (var i = 1; i < 11; i++) {
-  		ctx.drawImage(img,posx[i],posy,dim.value,dim.value,22*i+50*(i-1),10,50,50);
-		RGB[i] = ctx.getImageData(22*i+50*(i-1),10,50,50);
+	for (var i = 0; i < 10; i++) {
+  		ctx.drawImage(img,posx[i],posy,dim.value,dim.value,22*(+1)i+50*i,10,50,50);
+		RGB[i] = ctx.getImageData(22*(+1)i+50*i,10,50,50);
 	}
 	return RGB;
 };
