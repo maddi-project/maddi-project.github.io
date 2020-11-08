@@ -16,10 +16,10 @@ function draw10() {
   ctx.drawImage(img,x,y,w,h);
   
   this.canvas = document.getElementById('canvas');
-  this.context = canvas.getContext("2d");
+  this.context = this.canvas.getContext("2d");
 
-  this.currentX = canvas.width/2;
-  this.currentY = canvas.height/2;
+  this.currentX = this.canvas.width/2;
+  this.currentY = this.canvas.height/2;
 
   this.star_img.src = document.getElementById('output');
   this.star_img.onload = function() {
