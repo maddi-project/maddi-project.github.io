@@ -115,8 +115,8 @@ function crop() {
 	posx[9] = ((-1*x)+15.6*744/16)*img.naturalWidth/(71*proportion)/zoom;
 	
 	for (var i = 0; i < 10; i++) {
-  		ctx.drawImage(img,posx[i],posy,dim.value,dim.value,22*(+1)i+50*i,10,50,50);
-		RGB[i] = ctx.getImageData(22*(+1)i+50*i,10,50,50);
+  		ctx.drawImage(img,posx[i],posy,dim.value,dim.value,22*(i+1)+50*i,10,50,50);
+		RGB[i] = ctx.getImageData(22*(i+1)+50*i,10,50,50);
 	}
 	return RGB;
 };
