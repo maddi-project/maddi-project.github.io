@@ -118,14 +118,13 @@ function crop() {
   		ctx.drawImage(img,posx[i],posy,dim.value,dim.value,22*i+50*(i-1),10,50,50);
 		RGB [i] = ctx.getImageData(22*i+50*(i-1),10,50,50);
 	}
-	
 	return RGB;
 };
 
 function get_data1() {
-	var imgData = crop1();
+	var imgData = crop();
 	var RGB_values = [];
-	for (var i = 0; i < 96; i++) {
+	for (var i = 0; i < 10; i++) {
 		var Rp = 0;
 		var Gp = 0;
 		var Bp = 0;
@@ -135,8 +134,8 @@ function get_data1() {
   			Bp = Bp + imgData[i].data[j+2]
   		}
 		RGB_values[i] = Rp/(imgData[i].data.length/4);
-		RGB_values[i+96] = Gp/(imgData[i].data.length/4);
-		RGB_values[i+192] = Bp/(imgData[i].data.length/4);
+		RGB_values[i+10] = Gp/(imgData[i].data.length/4);
+		RGB_values[i+20] = Bp/(imgData[i].data.length/4);
 	}
 	return RGB_values	
 };
@@ -152,10 +151,10 @@ function roundTo(n, digits) {
 }
 function get_data() {
 	RGB = get_data1();
-	for (var i = 0; i < 96; i++) {
+	for (var i = 0; i < 10; i++) {
 		document.getElementById('R' + i).innerHTML = roundTo(RGB[i], 2);
-		document.getElementById('G' + i).innerHTML = roundTo(RGB[i+96], 2);
-		document.getElementById('B' + i).innerHTML = roundTo(RGB[i+192], 2);
+		document.getElementById('G' + i).innerHTML = roundTo(RGB[i+10], 2);
+		document.getElementById('B' + i).innerHTML = roundTo(RGB[i+20], 2);
 	}
 	// Get the element with id="defaultOpen" and click on it
 	document.getElementById("defaultOpen").click();
