@@ -1,6 +1,6 @@
 <head>
-	<script type="text/javascript" src="microplate.js"></script>
-	<script type="text/javascript" src="dragimage.js"></script> 
+	<script type="text/javascript" src="colorbar.js"></script>
+	<!--<script type="text/javascript" src="dragimage.js"></script>--> 
 	<script type="text/javascript">
         window.onload = onload();
         </script>
@@ -113,70 +113,6 @@ body, html {
   font-family: Helvetica;
 }
 
-/* Style tab links */
-.tablink {
-  background-color: #E6E6E6;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 33.33%;
-}
-.tablink1 {
-  background-color: #BDBDBD;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 50%;
-}
-
-.tablink:hover {
-  background-color: #E6E6E6;
-}
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  display: none;
-  padding: 100px 20px;
-  height: 470px;
-}
-.tabcontent1 {
-  display: none;
-  padding: 100px 20px;
-  height: 470px;
-}
-
-#R {background-color: #F78181;}
-#G {background-color: #81F781;}
-#B {background-color: #81BEF7;}
-#Calibration {background-color: #E6E6E6;}
-#Absorbances {background-color: #E6E6E6;}
-		
-	/* Well selection */
-	.box {
-    	width:8%;
-    	height:12%;
-	background: white;
-	cursor: pointer;
-	text-align: center;
-	color: white;
-	}
-	
-	.box1 {
-	text-align: center;
-	width:20%;
-	}
-	.abstable {
-	float: left;
-	margin: 2.5%;
-	background: white;
-	}
-
     </style> 
 </head>
 
@@ -199,7 +135,7 @@ body, html {
 		<center>
 		<p style=“margin-top:10px;”>
             	<input type="file"  accept="image/*" name="image" id="file" onchange="loadFile(event)">
-		<button type="button" onclick="draw10()">Upload</button> 
+		<button type="button" onclick="draw()">Upload</button> 
 		<img id="output" height="0" />
 		</p>
 		<p style=“margin-top:10px;”>
