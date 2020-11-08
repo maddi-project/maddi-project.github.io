@@ -1,5 +1,5 @@
 function onload() {
-	alert("WARNING\nIf you continue you accept to cite any results obtained using this website.");
+	alert("WARNING\nIf you continue you accept to cite any results obtained using this website. MADDI by Jokin Ezenarro.");
 	//document.getElementById("defaultOpen").click();
 	//document.getElementById("defaultOpen1").click();
 }
@@ -156,9 +156,7 @@ function get_data() {
 		document.getElementById('G' + i).innerHTML = roundTo(RGB[i+10], 2);
 		document.getElementById('B' + i).innerHTML = roundTo(RGB[i+20], 2);
 	}
-	// Get the element with id="defaultOpen" and click on it
-	document.getElementById("defaultOpen").click();
-	window.scrollTo(0,1390);
+	window.scrollTo(0,665);
 };
 function table_to_array(table_id) {
         var myData = document.getElementById(table_id).rows
