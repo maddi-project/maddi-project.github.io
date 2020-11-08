@@ -15,14 +15,14 @@ function draw10() {
   var y = (490-h)*yp;
   ctx.drawImage(img,x,y,w,h);
   
-  canvas = document.getElementById('canvas');
-  context = canvas.getContext("2d");
+  this.canvas = document.getElementById('canvas');
+  this.context = canvas.getContext("2d");
 
-  currentX = canvas.width/2;
-  currentY = canvas.height/2;
+  this.currentX = canvas.width/2;
+  this.currentY = canvas.height/2;
 
-  star_img.src = document.getElementById('output');
-  star_img.onload = function() {
+  this.star_img.src = document.getElementById('output');
+  this.star_img.onload = function() {
     _Go();
   };
 };
@@ -36,7 +36,7 @@ function _Go() {
 }
 
 function _DrawImage() {
-  context.drawImage(star_img, currentX-(star_img.width/2), currentY-(star_img.height/2));
+  context.drawImage(this.star_img, this.currentX-(this.star_img.width/2), this.currentY-(this.star_img.height/2));
 }
 
 setInterval(function() {
@@ -45,11 +45,11 @@ setInterval(function() {
 }, 1000/30);
 
 function _ResetCanvas() {
-  context.fillStyle = '#fff';
-  context.fillRect(0,0, canvas.width, canvas.height);
+  this.context.fillStyle = '#fff';
+  this.context.fillRect(0,0, this.canvas.width, this.canvas.height);
 }
 
-canvas.onmousedown = function(e) {
+this.canvas.onmousedown = function(e) {
     var mouseX = e.pageX - this.offsetLeft;
     var mouseY = e.pageY - this.offsetTop;
 
@@ -58,21 +58,21 @@ canvas.onmousedown = function(e) {
         mouseX <= (currentX + star_img.width/2) &&
         mouseY >= (currentY - star_img.height/2) &&
         mouseY <= (currentY + star_img.height/2)) {
-      isDraggable = true;
+      this.isDraggable = true;
     }
 };
 
-canvas.onmouseup = function(e) {
-    isDraggable = false;
+this.canvas.onmouseup = function(e) {
+    this.isDraggable = false;
   };
   
-canvas.onmouseout = function(e) {
-    isDraggable = false;
+this.canvas.onmouseout = function(e) {
+    this.isDraggable = false;
   };
   
-canvas.onmousemove = function(e) {
-   if (isDraggable) {
-      currentX = e.pageX - this.offsetLeft;
-      currentY = e.pageY - this.offsetTop;
+this.canvas.onmousemove = function(e) {
+   if (this.isDraggable) {
+      this.currentX = e.pageX - this.offsetLeft;
+      this.currentY = e.pageY - this.offsetTop;
     }
  };
