@@ -116,7 +116,7 @@ function crop() {
 	
 	for (var i = 1; i < 11; i++) {
   		ctx.drawImage(img,posx[i],posy,dim.value,dim.value,22*i+50*(i-1),10,50,50);
-		RGB [i] = ctx.getImageData(22*i+50*(i-1),10,50,50);
+		RGB[i] = ctx.getImageData(22*i+50*(i-1),10,50,50);
 	}
 	return RGB;
 };
