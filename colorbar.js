@@ -15,10 +15,10 @@ function draw() {
   var xp = xs.value/100;
   var yp = ys.value/100;
   var proportion = img.naturalWidth/img.naturalHeight;
-  var w = 490*proportion*zoom;
-  var h = 490*zoom;
+  var w = 71*proportion*zoom;
+  var h = 71*zoom;
   var x = (744-w)*xp;
-  var y = (490-h)*yp;
+  var y = (71-h)*yp;
   ctx.drawImage(img,x,y,w,h);
 };
 
@@ -82,7 +82,7 @@ function update_ynumber1() {
 	draw();
 };
 
-function draw1(i,j) {
+function crop1() {
   	var c = document.getElementById('canvas2');
   	var ctx = c.getContext("2d");
   	var img = document.getElementById('output');
@@ -94,28 +94,34 @@ function draw1(i,j) {
   	var xp = xs.value/100;
   	var yp = ys.value/100;
   	var proportion = img.naturalWidth/img.naturalHeight;
-  	var w = 490*proportion*zoom;
-  	var h = 490*zoom;
+  	var w = 71*proportion*zoom;
+  	var h = 71*zoom;
   	var x = (744-w)*xp;
-  	var y = (490-h)*yp;
-	var posx = ((-1*x)+1.1*744/12.3+i*0.9*744/12.3)*img.naturalWidth/(490*proportion)/zoom;
-	var posy = ((-1*y)+0.7*490/8.1+j*0.9*490/8.1)*img.naturalHeight/490/zoom;
-  	ctx.drawImage(img,posx,posy,dim.value,dim.value,11+i*61,10+j*60,50,50);
+  	var y = (71-h)*yp;
 	
-	var RGB
-	RGB = ctx.getImageData(11+i*61,10+j*60,50,50);
-	//RGB = ctx.getImageData(1.1*744/12.3+i*0.9*744/12.3,0.7*490/8.1+j*0.9*490/8.1,dim.value,dim.value);
+	var RGB = [];
+	var posy = (0.5*71/1.54)*img.naturalHeight/71/zoom;
+	
+	var posx = [];
+	posx[1] = (0.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[2] = (2.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[3] = (4.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[4] = (5.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[5] = (6.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[6] = (9*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[7] = (10.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[8] = (11.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[9] = (14*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	posx[10] = (15.6*744/16)*img.naturalWidth/(71*proportion)/zoom;
+	
+	for (var i = 0; i < 10; i++) {
+  		ctx.drawImage(img,posx[i],posy,dim.value,dim.value,22*(i+1)+50*i,10,50,50);
+		RGB [i] = ctx.getImageData(22*(i+1)+50*i,10,50,50);
+	}
+	
 	return RGB;
 };
-function crop1() {
-	var Data = [];
-	for (i = 0; i < 12; i++) {
-  		for (j = 0; j < 8; j++) {
-			Data[j*12+i] = draw1(i,j);
-		}
-	}
-	return Data
-};
+
 function crop() {
 	crop1();
 	window.scrollTo(0,695);
