@@ -1,5 +1,5 @@
 function onload() {
-	alert("WARNING\nIf you continue you accept to cite any results obtained using this website.");
+	alert("WARNING\nIf you continue you accept to cite any results obtained using this website. MADDI by Jokin Ezenarro.");
 	//document.getElementById("defaultOpen").click();
 	//document.getElementById("defaultOpen1").click();
 }
