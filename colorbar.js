@@ -156,7 +156,7 @@ function get_data() {
 		document.getElementById('G' + i).innerHTML = roundTo(RGB[i+10], 2);
 		document.getElementById('B' + i).innerHTML = roundTo(RGB[i+20], 2);
 	}
-	window.scrollTo(0,665);
+	document.getElementById("separator").scrollIntoView();
 };
 function table_to_array(table_id) {
         var myData = document.getElementById(table_id).rows
