@@ -20,7 +20,7 @@
             width: 100%; 
             background-color: #E6E6E6;  
             margin: 0;
-	    height: 60px;
+	    height: 10vh;
         }
 	.image { 
 	    width: 100%;
@@ -28,48 +28,29 @@
 		
 	.parent {
 		position: static;
-		height: 100vh;
-	}
-		
+		height: 85vh;
+	}	
 	.body_sec {
       	    position: absolute;
-	    
 	    height: 100%;
 	    left: 0px;
 	    width: 70%;
         }
 	.aside { 
 	    position: absolute;
-	   
 	    right: 0px;
 	    width: 30%;
 	    height: 100%;
 	    background-color: #BDBDBD;
         }
-
-	.separator1 { 
+	.separator { 
 	    left: 0px;
-            position: absolute;
+            position: static;
             width: 100%;
-            top: 665px; 
             background-color: #E6E6E6;  
             margin: 0;
-	    height: 60px;
-        }
-	.body_sec1 { 
-	    position: absolute;
-	    left: 0px;
-	    top: 725px;
-	    width: 70%;
-        } 	
-	.aside1 { 
-	    position: absolute;
-	    top: 725px;
-	    right: 0px;
-	    width: 30%;
-	    height: 635px;
-	    background-color: #BDBDBD;
-        } 
+	    height: 10vh;
+        }	
 	
 /* Set height of body and the document to 100% to enable "full page tabs" */
 body, html {
@@ -147,8 +128,9 @@ body, html {
 	     	alt="separator"></a>
     </div> 
 
+<div class = "parent">
  <!-- Body section -->
-    <div class = "body_sec1"> 
+    <div class = "body_sec"> 
         <section id="Content">
 		<center>
 			<table border="3" style="width: 30%" style="background-color: #BDBDBD;">
@@ -195,12 +177,13 @@ body, html {
     </div>
 	
     <!-- Aside section -->
-    <div class = "aside1"> 
+    <div class = "aside"> 
         <div>
 		<center>
 		
 		</center>
 	</div>
     </div> 
+</div> 
 
 </body>
