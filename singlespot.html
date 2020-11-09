@@ -1,0 +1,196 @@
+<head>
+	<script type="text/javascript" src="colorbar.js"></script>
+	<!--<script type="text/javascript" src="dragimage.js"></script>--> 
+	<script type="text/javascript">
+        window.onload = onload();
+        </script>
+    <title>MADDI</title>
+	<link rel="icon" href="tree1.png">
+	<style>
+	table, th, td {
+  		text-align: center;
+	}
+        .label { 
+	    font-family: helvetica;
+            font-size:20px;
+        } 
+	.header {
+	    left: 0px;
+            position: fixed;
+            width: 100%; 
+            background-color: #E6E6E6;  
+            margin: 0;
+	    height: 60px;
+        }
+	.image { 
+	    width: 100%;
+        }
+		
+	.body_sec {
+      position: fixed;
+	    left: 0px;
+	    width: 70%;
+        }
+	.aside { 
+	    position: fixed;
+	    right: 0px;
+	    width: 30%;
+	    height: 100vh;
+	    background-color: #BDBDBD;
+        }
+
+	.separator1 { 
+	    left: 0px;
+            position: absolute;
+            width: 100%;
+            top: 665px; 
+            background-color: #E6E6E6;  
+            margin: 0;
+	    height: 60px;
+        }
+	.body_sec1 { 
+	    position: absolute;
+	    left: 0px;
+	    top: 725px;
+	    width: 70%;
+        } 	
+	.aside1 { 
+	    position: absolute;
+	    top: 725px;
+	    right: 0px;
+	    width: 30%;
+	    height: 635px;
+	    background-color: #BDBDBD;
+        } 
+	
+/* Set height of body and the document to 100% to enable "full page tabs" */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Helvetica;
+}
+
+    </style> 
+</head>
+
+<body>
+	<!-- SECTION 1 -->
+	<!-- Header Section -->
+    <header>
+	<div class = "header">
+	<a href="index.html">
+	<img src="logo.png"
+		height="56" 
+	     	alt="logo"
+	     	style="margin-top:2px;"></a>
+	</div>
+    </header> 
+      
+    <!-- Body section -->
+    <div class = "body_sec"> 
+        <section id="Content">
+		<center>
+		<p style=“margin-top:20px;”>
+            	<input type="file"  accept="image/*" name="image" id="file" onchange="loadFile(event)">
+		<button type="button" onclick="draw()">Upload</button> 
+		<img id="output" height="0" />
+		</p>
+		<p style=“margin-top:200px;”>
+		<canvas id="canvas" width=744 height=71 style="background-image: url('canvas.jpg')"></canvas>
+		</p>
+		<p style=“margin-top:400px;”>
+		<canvas id="canvas2" width=744 height=71 style="background-image: url('canvas.jpg')"></canvas>
+		</p>
+		</center>
+        </section> 
+    </div>
+	
+    <!-- Aside section -->
+    <div class = "aside"> 
+        <div>
+		<center>
+		<p class = "label">Align the microplate with the canvas margins</p>
+		<p class = "label" style=“margin-top:100px;”>Zoom</p>
+  		<input type="range" min="1" max="15" value="1" step="0.1" class="slider" id="zoom" onchange="update_slider1()">
+		<input type="number" min="1" max="15" value="1" step="0.1" id="zoom-value" onchange="update_number1()">
+		<p class = "label">X</p>
+  		<input type="range" min="0" max="100" value="50" class="slider" id="x" onchange="update_x1()">
+		<input type="number" min="0" max="100" value="50" id="x-value" onchange="update_xnumber1()">
+		<p class = "label">Y</p>
+  		<input type="range" min="0" max="100" value="50" class="slider" id="y" onchange="update_y1()">
+		<input type="number" min="0" max="100" value="50" id="y-value" onchange="update_ynumber1()">
+		<p class = "label">Well dimensions:<input type="number" min="1" value="10" id="dimension"></p>
+		<p>__________________________</p>
+		<p><button type="button" onclick="crop()">Crop</button></p>
+		<p>__________________________</p>
+		<p><button type="button" onclick="get_data()">Get Data</button></p>
+		</center>
+	</div>
+    </div> 
+	
+<!-- SECTION 2 -->	
+<!-- Separator -->
+    <div class = "separator1"> 
+	<img class="image" 
+	     	src="separator.jpg" 
+       		height="60" 
+	     	alt="separator"></a>
+    </div> 
+
+ <!-- Body section -->
+    <div class = "body_sec1"> 
+        <section id="Content">
+		<center>
+			<table border="3" style="width: 30%" style="background-color: #BDBDBD;">
+			<thead>
+			</thead>
+			<tbody>
+			<tr>
+			<td>Color</td><td>R</td><td>G</td><td>B</td>
+			</tr>
+			<tr>
+			<td>Green 1</td><td id="R0"></td><td id="G0"></td><td id="B0"></td>
+			</tr>
+			<tr>
+			<td>White</td><td id="R1"></td><td id="G1"></td><td id="B1"></td>
+			</tr>
+			<tr>
+			<td>Red</td><td id="R2"></td><td id="G2"></td><td id="B2"></td>
+			</tr>
+			<tr>
+			<td>Beige</td><td id="R3"></td><td id="G3"></td><td id="B3"></td>
+			</tr>
+			<tr>
+			<td>Blue</td><td id="R4"></td><td id="G4"></td><td id="B4"></td>
+			</tr>
+			<tr>
+			<td>Grey</td><td id="R5"></td><td id="G5"></td><td id="B5"></td>
+			</tr>
+			<tr>
+			<td>Yellow</td><td id="R6"></td><td id="G6"></td><td id="B6"></td>
+			</tr>
+			<tr>
+			<td>Orange</td><td id="R7"></td><td id="G7"></td><td id="B7"></td>
+			</tr>
+			<tr>
+			<td>Black</td><td id="R8"></td><td id="G8"></td><td id="B8"></td>
+			</tr>
+			<tr>
+			<td>Green 2</td><td id="R9"></td><td id="G9"></td><td id="B9"></td>
+			</tr>
+			</tbody>
+		</table>
+		</center>
+        </section> 
+    </div>
+	
+    <!-- Aside section -->
+    <div class = "aside1"> 
+        <div>
+		<center>
+		
+		</center>
+	</div>
+    </div> 
+
+</body>
