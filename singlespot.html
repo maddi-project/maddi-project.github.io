@@ -26,16 +26,24 @@
 	    width: 100%;
         }
 		
+	.parent {
+		position: static;
+		height: 100vh;
+	}
+		
 	.body_sec {
-      position: static;
+      	    position: absolute;
+	    top: 0;
+	    height: 100%;
 	    left: 0px;
 	    width: 70%;
         }
 	.aside { 
-	   
+	    position: absolute;
+	    top: 0;
 	    right: 0px;
 	    width: 30%;
-	    height: 100vh;
+	    height: 100%;
 	    background-color: #BDBDBD;
         }
 
@@ -86,6 +94,7 @@ body, html {
 	</div>
     </header> 
       
+<div class = "parent">
     <!-- Body section -->
     <div class = "body_sec"> 
         <section id="Content">
@@ -127,6 +136,7 @@ body, html {
 		</center>
 	</div>
     </div> 
+</div>
 	
 <!-- SECTION 2 -->	
 <!-- Separator -->
