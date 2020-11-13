@@ -15,96 +15,67 @@
         } 
 	.header {
 	    left: 0px;
-            position: absolute;
-            width: 100%;
-            top: 0; 
+            position: static;
+            width: 100%; 
             background-color: #E6E6E6;  
             margin: 0;
-	    height: 60px;
+	    height: 10vh;
         }
 	.image { 
 	    width: 100%;
         }
-		
-	.body_sec { 
-	    position: absolute;
+	.parent {
+		position: static;
+		height: 85vh;
+	}
+	.body_sec {
+      	    position: absolute;
+	    height: 85vh;
 	    left: 0px;
-	    top: 60px;
 	    width: 70%;
         }
 	.aside { 
 	    position: absolute;
-	    top: 60px;
 	    right: 0px;
 	    width: 30%;
-	    height: 605px;
+	    height: 85vh;
 	    background-color: #BDBDBD;
         }
-
-	.separator1 { 
+	.parent1 {
+		position: static;
+		height: 90vh;
+	}	
+	.body_sec1 {
+      	    position: absolute;
+	    height: 90vh;
 	    left: 0px;
-            position: absolute;
-            width: 100%;
-            top: 665px; 
-            background-color: #E6E6E6;  
-            margin: 0;
-	    height: 60px;
-        }
-	.body_sec1 { 
-	    position: absolute;
-	    left: 0px;
-	    top: 725px;
 	    width: 70%;
-        } 	
+        }
 	.aside1 { 
 	    position: absolute;
-	    top: 725px;
 	    right: 0px;
 	    width: 30%;
-	    height: 635px;
+	    height: 90vh;
 	    background-color: #BDBDBD;
-        } 
-	
-	.separator2 { 
-	    left: 0px;
-            position: absolute;
-            width: 100%;
-            top: 1360px; 
-            background-color: #E6E6E6;  
-            margin: 0;
-	    height: 60px;
         }
-	.body_sec2 { 
-	    position: absolute;
+	.parent2 {
+		position: static;
+		height: 95vh;
+	}	
+	.body_sec2 {
+      	    position: absolute;
+	    height: 95vh;
 	    left: 0px;
-	    top: 1420px;
 	    width: 70%;
-        } 
-	.aside2 { 
-	    position: absolute;
-	    top: 1420px;
-	    right: 0px;
-	    width: 30%;
-	    height: 635px;
-	    background-color: #BDBDBD;
         }
-		
-	.separator3 { 
+	.separator { 
 	    left: 0px;
-            position: absolute;
+            position: static;
             width: 100%;
-            top: 2055px; 
             background-color: #E6E6E6;  
             margin: 0;
-	    height: 60px;
+	    height: 10vh;
         }
-	.body_sec3 { 
-	    position: absolute;
-	    left: 0px;
-	    top: 2115px;
-	    width: 100%;
-	    height: 665px;
-        } 
 /* Set height of body and the document to 100% to enable "full page tabs" */
 body, html {
   height: 100%;
@@ -191,7 +162,7 @@ body, html {
 	     	style="margin-top:2px;"></a>
 	</div>
     </header> 
-      
+<div class = "parent">
     <!-- Body section -->
     <div class = "body_sec"> 
         <section id="Content">
@@ -227,16 +198,16 @@ body, html {
 		</center>
 	</div>
     </div> 
-	
+</div>	
 <!-- SECTION 2 -->	
 <!-- Separator -->
-    <div class = "separator1"> 
+    <div class = "separator"> 
 	<img class="image" 
 	     	src="separator.jpg" 
        		height="60" 
 	     	alt="separator"></a>
     </div> 
-
+<div class = "parent1"> 
  <!-- Body section -->
     <div class = "body_sec1"> 
         <section id="Content">
@@ -256,18 +227,18 @@ body, html {
 		</center>
 	</div>
     </div> 
-
+</div> 
 <!-- SECTION 3 -->
 <!-- Separator -->
-    <div class = "separator2"> 
+    <div class = "separator"> 
 	<img class="image" 
 	     	src="separator.jpg" 
        		height="60" 
 	     	alt="separator"></a>
     </div> 
-
+<div class = "parent1">
  <!-- Body section -->
-    <div class = "body_sec2"> 
+    <div class = "body_sec1"> 
         <section id="Content">
 	<center>
 	<button class="tablink" onclick="openPage('R', this, '#F78181')" id="defaultOpen">R</button>
@@ -378,7 +349,7 @@ body, html {
     </div>
 	
     <!-- Aside section -->
-    <div class = "aside2"> 
+    <div class = "aside1"> 
         <div>
 		<center>
 			<p>Select the
@@ -432,17 +403,19 @@ body, html {
 		</center>
 	</div>
     </div> 
-
+</div>
 <!-- SECTION 4 -->
 	<!-- Separator -->
-    <div class = "separator3"> 
+    <div class = "separator"> 
 	<img class="image" 
 	     	src="separator.jpg" 
        		height="60" 
 	     	alt="separator"></a>
     </div>
+
+<div class = "parent2">
  	<!-- Body section -->
-    <div class = "body_sec3"> 
+    <div class = "body_sec2"> 
         <section id="Content">
 		<center>
 			<button class="tablink1" onclick="openPage1('Calibration', this, '#E6E6E6')" id="defaultOpen1">Calibration</button>
@@ -684,5 +657,6 @@ body, html {
 		</center>
         </section> 
     </div>
-	
+</div>
+						
 </body>
