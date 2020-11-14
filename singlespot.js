@@ -82,45 +82,6 @@ function update_ynumber1() {
 	draw();
 };
 
-function crop() {
-  	var c = document.getElementById('canvas2');
-  	var ctx = c.getContext("2d");
-  	var img = document.getElementById('output');
-  	var val = document.getElementById("zoom-value");
-	var xs = document.getElementById("x-value");
-  	var ys = document.getElementById("y-value");
-	var dim = document.getElementById("dimension");
-  	var zoom = val.value;
-  	var xp = xs.value/100;
-  	var yp = ys.value/100;
-  	var proportion = img.naturalWidth/img.naturalHeight;
-  	var w = 500*proportion*zoom;
-  	var h = 500*zoom;
-  	var x = (500-w)*xp;
-  	var y = (500-h)*yp;
-	
-	var RGB = [];
-	var posy = ((-1*y)+0.5*71/1.54)*img.naturalHeight/71/zoom;
-	
-	var posx = [];
-	posx[0] = ((-1*x)+0.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[1] = ((-1*x)+2.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[2] = ((-1*x)+4.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[3] = ((-1*x)+5.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[4] = ((-1*x)+6.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[5] = ((-1*x)+9*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[6] = ((-1*x)+10.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[7] = ((-1*x)+11.5*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[8] = ((-1*x)+14*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	posx[9] = ((-1*x)+15.6*744/16)*img.naturalWidth/(71*proportion)/zoom;
-	
-	for (var i = 0; i < 10; i++) {
-  		ctx.drawImage(img,posx[i],posy,dim.value,dim.value,22*(i+1)+50*i,10,50,50);
-		RGB[i] = ctx.getImageData(22*(i+1)+50*i,10,50,50);
-	}
-	return RGB;
-};
-
 function get_data1() {
 	var c = document.getElementById('canvas');
   	var ctx = c.getContext("2d");
