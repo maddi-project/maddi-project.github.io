@@ -152,8 +152,8 @@ function roundTo(n, digits) {
 function get_data() {
 	RGB = get_data1();
 	document.getElementById('R0').innerHTML = roundTo(RGB[0], 2);
-	document.getElementById('G1').innerHTML = roundTo(RGB[1], 2);
-	document.getElementById('B2').innerHTML = roundTo(RGB[2], 2);
+	document.getElementById('G0').innerHTML = roundTo(RGB[1], 2);
+	document.getElementById('B0').innerHTML = roundTo(RGB[2], 2);
 };
 function table_to_array(table_id) {
         var myData = document.getElementById(table_id).rows
