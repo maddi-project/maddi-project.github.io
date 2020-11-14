@@ -15,10 +15,10 @@ function draw() {
   var xp = xs.value/100;
   var yp = ys.value/100;
   var proportion = img.naturalWidth/img.naturalHeight;
-  var w = 71*proportion*zoom;
-  var h = 71*zoom;
-  var x = (744-w)*xp;
-  var y = (71-h)*yp;
+  var w = 500*proportion*zoom;
+  var h = 500*zoom;
+  var x = (500-w)*xp;
+  var y = (500-h)*yp;
   ctx.drawImage(img,x,y,w,h);
 };
 
@@ -94,10 +94,10 @@ function crop() {
   	var xp = xs.value/100;
   	var yp = ys.value/100;
   	var proportion = img.naturalWidth/img.naturalHeight;
-  	var w = 71*proportion*zoom;
-  	var h = 71*zoom;
-  	var x = (744-w)*xp;
-  	var y = (71-h)*yp;
+  	var w = 500*proportion*zoom;
+  	var h = 500*zoom;
+  	var x = (500-w)*xp;
+  	var y = (500-h)*yp;
 	
 	var RGB = [];
 	var posy = ((-1*y)+0.5*71/1.54)*img.naturalHeight/71/zoom;
@@ -122,21 +122,21 @@ function crop() {
 };
 
 function get_data1() {
-	var imgData = crop();
+	var c = document.getElementById('canvas');
+  	var ctx = c.getContext("2d");
+	var imgData = ctx.getImageData(0,0,500,500);
 	var RGB_values = [];
-	for (var i = 0; i < 10; i++) {
 		var Rp = 0;
 		var Gp = 0;
 		var Bp = 0;
-		for (var j = 0; j < imgData[i].data.length; j+=4) {
-  			Rp = Rp + imgData[i].data[j];
-  			Gp = Gp + imgData[i].data[j+1]
-  			Bp = Bp + imgData[i].data[j+2]
+		for (var j = 0; j < imgData.data.length; j+=4) {
+  			Rp = Rp + imgData.data[j];
+  			Gp = Gp + imgData.data[j+1]
+  			Bp = Bp + imgData.data[j+2]
   		}
-		RGB_values[i] = Rp/(imgData[i].data.length/4);
-		RGB_values[i+10] = Gp/(imgData[i].data.length/4);
-		RGB_values[i+20] = Bp/(imgData[i].data.length/4);
-	}
+		RGB_values[0] = Rp/(imgData.data.length/4);
+		RGB_values[1] = Gp/(imgData.data.length/4);
+		RGB_values[2] = Bp/(imgData.data.length/4);
 	return RGB_values	
 };
 function roundTo(n, digits) {
@@ -151,12 +151,9 @@ function roundTo(n, digits) {
 }
 function get_data() {
 	RGB = get_data1();
-	for (var i = 0; i < 10; i++) {
-		document.getElementById('R' + i).innerHTML = roundTo(RGB[i], 2);
-		document.getElementById('G' + i).innerHTML = roundTo(RGB[i+10], 2);
-		document.getElementById('B' + i).innerHTML = roundTo(RGB[i+20], 2);
-	}
-	document.getElementById("separator").scrollIntoView();
+	document.getElementById('R0').innerHTML = roundTo(RGB[0], 2);
+	document.getElementById('G1').innerHTML = roundTo(RGB[1], 2);
+	document.getElementById('B2').innerHTML = roundTo(RGB[2], 2);
 };
 function table_to_array(table_id) {
         var myData = document.getElementById(table_id).rows
