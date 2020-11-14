@@ -15,10 +15,10 @@ function draw() {
   var xp = xs.value/100;
   var yp = ys.value/100;
   var proportion = img.naturalWidth/img.naturalHeight;
-  var w = 500*proportion*zoom;
-  var h = 500*zoom;
-  var x = (500-w)*xp;
-  var y = (500-h)*yp;
+  var w = 250*proportion*zoom;
+  var h = 250*zoom;
+  var x = (250-w)*xp;
+  var y = (250-h)*yp;
   ctx.drawImage(img,x,y,w,h);
 };
 
@@ -85,7 +85,7 @@ function update_ynumber1() {
 function get_data1() {
 	var c = document.getElementById('canvas');
   	var ctx = c.getContext("2d");
-	var imgData = ctx.getImageData(0,0,500,500);
+	var imgData = ctx.getImageData(0,0,250,250);
 	var RGB_values = [];
 		var Rp = 0;
 		var Gp = 0;
